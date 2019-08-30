@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <script src="myScript.js"></script>
+    <link rel="stylesheet" type="text/css" href="myStyle.css">
+</head>
+
+<body>
+
+	<div class="opciones">
+		<select id="tema">
+			<option value="tema1">TEMA 1</option>
+			<option value="tema2">TEMA 2</option>
+			<option value="tema3">TEMA 3</option>
+			<option value="tema4">TEMA 4</option>
+		</select>
+		<div class="start" id="start" onclick="start()">START</div>
+		<select id="problema">
+			<option value="problema01"		>EJEMPLO 1</option>
+            <option value="problema02"		>EJEMPLO 2</option>
+            <option value="problema03"		>EJEMPLO 3</option>
+            <option value="problema04"		>EJEMPLO 4</option>
+            <option value="problema05"		>EJEMPLO 5</option>
+            <option value="problema06"		>EJEMPLO 6</option>
+            <option value="problema07"		>EJEMPLO 7</option>
+            <option value="problema08"		>EJEMPLO 8</option>
+            <option value="TODOS"			>TODOS</option>
+		</select>
+	</div>
+
+	<div class="flashCard" id="flashCard">
+		<div class="flashCardQuestion" id="flashCardQuestion" onclick="flash_card_flip()"></div>
+		<div class="flashCardAnswer"   id="flashCardAnswer"   onclick="flash_card_flip()"></div>
+	</div>
+
+</body>
+</html>
