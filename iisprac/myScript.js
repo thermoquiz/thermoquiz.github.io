@@ -5,6 +5,10 @@ var laFlashCardMuestraLa = "PREGUNTA";
 var QUESTION;
 var ANSWER;
 var DEBUG;
+var LaPregunta;
+var LaRespuesta;
+var contador;
+var registro=[];
 
 //------------------------------------------------------------------------------
 function start(){
@@ -33,13 +37,323 @@ function start(){
     
 }
 
+
+//----------------------------------------------------- EX_1_CONCEPTOS
+function HacerPreguntas_ex1()
+{
+    
+    var P = [];
+    var R = [];
+    var rnd = 1;
+
+    //-------------------------------------------- LEY DE BOYLE
+    
+    P[1] = "*La Ley de Boyle dice que, a temperatura constante, el volumen de una cantidad fija de gas es inversamente proporcional a su presión.";
+    R[1] = "V"
+
+    P[2] = "La Ley de Boyle dice que, a temperatura constante, el volumen de una cantidad fija de gas es directamente proporcional a su presión.";
+    R[2] = "F"
+
+    P[3] = "*A temperatura constate, el volumen de una cantidad fija de gas es inversamente proporcional a su presión.";
+    R[3] = "V";
+
+    P[4] = "A temperatura constate, el volumen de una cantidad fija de gas es directamente proporcional a su presión.";
+    R[4] = "F";
+
+
+    //-------------------------------------------- LEY DE CHARLES
+    
+    P[5] = "*La Ley de Charles dice que, a presión constante, el volumen de una cantidad fija de gas es directamente proporcional a su temperatura.";
+    R[5] = "V"
+
+    P[6] = "La Ley de Charles dice que, a presión constante, el volumen de una cantidad fija de gas es inversamente proporcional a su temperatura.";
+    R[6] = "F"
+
+    P[7] = "*A presión constante, el volumen de una cantidad fija de gas es directamente proporcional a su temperatura.";
+    R[7] = "V"
+
+    P[8] = "A presión constante, el volumen de una cantidad fija de gas es inversamente proporcional a su temperatura.";
+    R[8] = "F"
+
+
+    //-------------------------------------------- LEY DE AVOGADRO
+    
+    P[9] = "*La Ley de Avogadro dice que, a presión y temperatura constantes, el volumen de un gas es directamente proporcional a su cantidad de sustancia.";
+    R[9] = "V"
+
+    P[10] = "La Ley de Avogadro dice que, a presión y temperatura constantes, el volumen de un gas es inversamente proporcional a su cantidad de sustancia.";
+    R[10] = "F"
+
+    P[11] = "*A presión y temperatura constantes, el volumen de un gas es directamente proporcional a su cantidad de sustancia.";
+    R[11] = "V"
+
+    P[12] = "A presión y temperatura constantes, el volumen de un gas es inversamente proporcional a su cantidad de sustancia.";
+    R[12] = "F"
+
+    //--------------------------------------------- LIQUIDO & VAPOR
+    
+    P[13] = "* Un líquido subenfriado es un líquido que NO está a punto de evaporarse.";
+    R[13] = "V";
+
+    P[14] = "Un líquido subenfriado es un líquido que está a punto de evaporarse.";
+    R[14] = "F";
+
+    P[15] = "* Un líquido saturado es un líquido que está a punto de evaporarse.";
+    R[15] = "V";
+
+    P[16] = "Un líquido saturado es un líquido que NO está a punto de evaporarse.";
+    R[16] = "F";
+
+    P[17] = "* Un vapor saturado es un vapor que está a punto de condensarse.";
+    R[17] = "V";    
+
+    P[18] = "Un vapor saturado es un vapor que NO está a punto de condensarse.";
+    R[18] = "F";    
+
+    P[19] = "* Un vapor sobrecalentado es un vapor que NO está a punto de condensarse.";
+    R[19] = "V";   
+
+    P[20] = "Un vapor sobrecalentado es un vapor que está a punto de condensarse.";
+    R[20] = "F";  
+
+    //-------------------------------------------------------- TEMPERATURA
+    
+    P[21] = "*Desde un punto de vista microscópico, la temperatura es directamente proporcional a la energía cinética promedio de las partículas del sistema.";
+    R[21] = "V";
+
+    P[22] = "Desde un punto de vista microscópico, la temperatura es inversamente proporcional a la energía cinética promedio de las partículas del sistema.";
+    R[22] = "F";
+    
+    P[23] = "*La escala de temperatura Celcius es relativa.";
+    R[23] = "V";
+
+    P[24] = "La escala de temperatura Celcius es absoluta.";
+    R[24] = "F";
+    
+    P[25] = "*La escala de temperatura Fahrenheid es relativa.";
+    R[25] = "V";
+
+    P[26] = "La escala de temperatura Fahrenheid es absoluta.";
+    R[26] = "F";
+    
+    P[27] = "*La escala de temperatura Kelvin es absoluta.";
+    R[27] = "V";    
+
+    P[28] = "La escala de temperatura Kelvin es relativa.";
+    R[28] = "F";    
+    
+    P[29] = "*Una escala de temperatura absoluta sólo puede tener valores &ge; 0.";
+    R[29] = "V";
+    
+    P[30] = "Una escala de temperatura absoluta puede tener valores negativos.";
+    R[30] = "F";
+    
+    P[31] = "*0 °C &equals; 32 °F";
+    R[31] = "V";
+
+    P[32] = "0 °C &equals; &minus;32 °F";
+    R[32] = "F";
+
+    P[33] = "*0 °C &equals; 273.15 K";
+    R[33] = "V";
+
+    P[34] = "0 °C &equals; &minus;273.15 K";
+    R[34] = "F";
+
+    P[35] = "*0 K &equals; &minus;273.15 °C";
+    R[35] = "V";
+
+    P[36] = "*0 K &equals; 273.15 °C";
+    R[36] = "F";
+
+    //---------------------------------------------------PRESION
+    
+    P[37] = "*El barómetro se utiliza para medir la presión atmosférica.";
+    R[37] = "V";
+
+    P[38] = "El barómetro se utiliza para medir la presión de un gas confinado.";
+    R[38] = "F";    
+    
+    P[39] = "*El manómetro se utiliza para medir la presión de un gas confinado.";
+    R[39] = "V";    
+    
+    P[40] = "*El manómetro se utiliza principalmente para medir la presión atmosférica.";
+    R[40] = "F";
+    
+    P[41] = "*1 atm &equals; 760 mmHg";
+    R[41] = "V";
+    
+    P[42] = "1 atm &equals; 700 mmHg";
+    R[42] = "F";
+
+    P[43] = "*1 atm &equals; 101325 Pa";
+    R[43] = "V";
+    
+    P[44] = "1 atm &equals; 100000 Pa";
+    R[44] = "F";
+    
+    P[45] = "*Es preferible utilizar un manómetro de tubo U abierto si la presión del gas es superior a la atmosférica.";
+    R[45] = "V";
+
+    P[46] = "Es preferible utilizar un manómetro de tubo U cerrado si la presión del gas es superior a la atmosférica.";
+    R[46] = "F";    
+
+    P[47] = "*Es preferible utilizar un manómetro de tubo U cerrado si la presión del gas es menor a la atmosférica.";
+    R[47] = "V";
+
+    P[48] = "Es preferible utilizar un manómetro de tubo U abierto si la presión del gas es menor a la atmosférica.";
+    R[48] = "F";  
+    
+    //------------------------------------------------ UNIDADES SI
+
+    P[49] = "*En el SI, la unidad básica para medir la temperatura es el K.";
+    R[49] = "V";
+
+    P[50] = "En el SI, la unidad básica para medir la temperatura es el °C.";
+    R[50] = "F";
+
+    P[51] = "*En el SI, la unidad básica para medir la cantidad de sustancia es el mol.";
+    R[51] = "V";
+
+    P[52] = "En el SI, la unidad básica para medir la cantidad de sustancia es el kg.";
+    R[52] = "F";
+    
+    P[53] = "*Estas son las 7 unidades básicas del SI: m, kg, s, mol, K, cd y A.";
+    R[53] = "V";
+    
+    P[54] = "Estas son las 7 unidades básicas del SI: m, g, s, mol, K, cd y A.";
+    R[54] = "F";
+    
+    P[55] = "*Estas son las 8 unidades básicas del SI: m, kg, s, mol, K, cd, A y Pa.";
+    R[55] = "F";
+
+    P[56] = "Estas son las 7 unidades básicas del SI: km, kg, s, mol, K, cd y A.";
+    R[56] = "F";
+    
+    P[57] = "*La unidad derivada del SI para medir la presión es el Pa.";
+    R[57] = "V";
+
+    P[58] = "La unidad derivada del SI para medir la presión es la atm.";
+    R[58] = "F";    
+    
+    var opt = irand(1,8);
+    
+        if(opt===1)
+        {
+            P[59] = "*TPa &equals; 10<sup>12</sup> Pa";
+            R[59] = "V";   
+            P[60] = "TPa &equals; 10<sup>9</sup> Pa";
+            R[60] = "F";      
+        }
+        if(opt===2)
+        {
+            P[59] = "*GPa &equals; 10<sup>9</sup> Pa";
+            R[59] = "V";   
+            P[60] = "GPa &equals; 10<sup>12</sup> Pa";
+            R[60] = "F";   
+        }
+        if(opt===3)
+        {
+            P[59] = "*MPa &equals; 10<sup>6</sup> Pa";
+            R[59] = "V";   
+            P[60] = "MPa &equals; 10<sup>9</sup> Pa";
+            R[60] = "F";   
+        }    
+
+        if(opt===4)
+        {
+            P[59] = "*kPa &equals; 10<sup>3</sup> Pa";
+            R[59] = "V";   
+            P[60] = "kPa &equals; 10<sup>6</sup> Pa";
+            R[60] = "F";   
+        }
+
+        if(opt===5)
+        {
+            P[59] = "*mPa &equals; 10<sup>-3</sup> Pa";
+            R[59] = "V";   
+            P[60] = "mPa &equals; 10<sup>-6</sup> Pa";
+            R[60] = "F";   
+        }
+
+        if(opt===6)
+        {
+            P[59] = "*&mu;Pa &equals; 10<sup>-6</sup> Pa";
+            R[59] = "V";   
+            P[60] = "&mu;mPa &equals; 10<sup>-3</sup> Pa";
+            R[60] = "F";   
+        }
+
+        if(opt===7)
+        {
+            P[59] = "*nPa &equals; 10<sup>-9</sup> Pa";
+            R[59] = "V";   
+            P[60] = "nPa &equals; 10<sup>-6</sup> Pa";
+            R[60] = "F";   
+        }
+
+        if(opt===8)
+        {
+            P[59] = "*pPa &equals; 10<sup>-12</sup> Pa";
+            R[59] = "V";   
+            P[60] = "pPa &equals; 10<sup>-9</sup> Pa";
+            R[60] = "F";   
+        }
+
+        
+    //----------------------------------------------------
+    
+    var MAX = 60;
+       
+    if(contador===1)
+    {
+        rnd = irand(1,MAX);
+        registro[contador] = rnd;
+    }
+    else
+    {
+        while(1)
+        {
+            rnd = irand(1,MAX);
+            if(registro.includes(rnd)===false)
+            {
+                registro[contador] = rnd;
+                break;
+            }
+        }
+    }
+    contador += 1;
+
+
+    LaPregunta = P[rnd];
+    LaRespuesta = R[rnd];
+    
+    console.log(contador, registro);
+    
+}
+
 //----------------------------------------------------- EX_1_CONCEPTOS
 function ex_1_conceptos()
 {
-
-    QUESTION = "Proximamente :D"
     
-    ANSWER = "Ten paciencia! :V"
+    contador = 0;
+    registro = [];
+
+    QUESTION = "<center><b>¿Falso o Verdadero?</b></center><br>"
+    ANSWER = "<center><b>Respuestas</b></center><br>"
+    
+    QUESTION +="<ol>";
+    ANSWER +="<ol>";
+    
+    for(var i=0;i<20;i++)
+    {
+        HacerPreguntas_ex1()
+        QUESTION +="<li>" + LaPregunta + "<br><br>";
+        ANSWER   +="<li>" + LaRespuesta + "<br><br>";  
+    }
+    
+    QUESTION +="</ol>";
+    ANSWER += "</ol>";
     
 }
 
