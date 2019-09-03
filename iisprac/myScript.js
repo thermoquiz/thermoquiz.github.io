@@ -300,10 +300,80 @@ function HacerPreguntas_ex1()
             R[60] = "F";   
         }
 
-        
+    var opt = irand(1,6);
+    
+        if(opt===1)
+        {
+            P[61] = "La sublimación es el cambio de estado sólido a gaseoso.";
+            R[61] = "V";    
+
+            P[62] = "La sublimación es el cambio de estado gaseoso a sólido.";
+            R[62] = "F";                
+        }
+
+        if(opt===2)
+        {
+            P[61] = "La sublimación inversa es el cambio de estado gaseoso a sólido.";
+            R[61] = "V";   
+
+            P[62] = "La sublimación inversa es el cambio de estado sólido a gaseoso.";
+            R[62] = "F";              
+        }
+
+        if(opt===3)
+        {
+            P[61] = "La fusión es el cambio de estado sólido a líquido.";
+            R[61] = "V";       
+
+            P[62] = "La fusión es el cambio de estado líquido a sólido.";
+            R[62] = "F";             
+        }
+ 
+
+        if(opt===4)
+        {
+            P[61] = "La solidificación es el cambio de estado líquido a sólido.";
+            R[61] = "V"; 
+
+            P[62] = "La solidificación es el cambio de estado sólido a líquido.";
+            R[62] = "F";             
+        }
+      
+        if(opt===5)
+        {
+            P[61] = "La evaporación es el cambio de estado líquido a gaseoso.";
+            R[61] = "V";       
+
+            P[62] = "La evaporación es el cambio de estado gaseoso a líquido.";
+            R[62] = "F";             
+        }
+
+        if(opt===6)
+        {
+            P[61] = "La condensación es el cambio de estado gaseoso a líquido.";
+            R[61] = "V"; 
+
+            P[62] = "La condensación es el cambio de estado líquido a gaseoso.";
+            R[62] = "F";            
+        }
+
+    //---------------------------------------------------- TROLEANDO :V
+    
+    P[63] = "La Ley de Charles dice que, a temperatura constante, el volumen de una cantidad fija de gas es inversamente proporcional a su presión.";
+    R[63] = "F"
+
+    P[64] = "La Ley de Charles dice que, a temperatura constante, el volumen de una cantidad fija de gas es directamente proporcional a su presión.";
+    R[64] = "F"
+
+    P[65] = "La Ley de Boyle dice que, a presión constante, el volumen de una cantidad fija de gas es directamente proporcional a su temperatura.";
+    R[65] = "F"
+    
+    P[66] = "La Ley de Boyle dice que, a presión constante, el volumen de una cantidad fija de gas es inversamente proporcional a su temperatura.";
+    R[66] = "F"     
+
     //----------------------------------------------------
     
-    var MAX = 60;
+    var MAX = 66;
        
     if(contador===1)
     {
@@ -363,64 +433,116 @@ function ex_1_problemas()
 
     QUESTION = ""
     ANSWER = ""
-    var option = 1;
+
+    var rnd = irand(1,3);
     
-    QUESTION += "<b>Problema 1:</b><br><br>"
-    ANSWER += "<b>Respuesta 1:</b><br><br>"
-    
-    option = irand(1,2);
-    if(option === 1) prob_1_1();
-    if(option === 2) prob_1_2();
+    rnd = 1;
+       
+    if(rnd===1)
+    {
+        QUESTION += "<b>Problema 1:</b><br><br>"
+        ANSWER += "<b>Respuesta 1:</b><br><br>"
+        prob_ex1_charles();
+        
+        QUESTION += "<b>Problema 2:</b><br><br>"
+        ANSWER += "<b>Respuesta 2:</b><br><br>"
+        prob_ex1_boyle();
 
-    QUESTION += "<b>Problema 2:</b><br><br>"
-    ANSWER += "<b>Respuesta 2:</b><br><br>"
+        QUESTION += "<b>Problema 3:</b><br><br>"
+        ANSWER += "<b>Respuesta 3:</b><br><br>"
+        prob_ex1_avogadro();
 
-    option = irand(1,2);
-    if(option === 1) prob_1_1();
-    if(option === 2) prob_1_2();
+        QUESTION += "<b>Problema 4:</b><br><br>"
+        ANSWER += "<b>Respuesta 4:</b><br><br>"
+        prob_ex1_presion();
 
-    QUESTION += "<b>Problema 3:</b><br><br>"
-    ANSWER += "<b>Respuesta 3:</b><br><br>"
+        QUESTION += "<b>Problema 5:</b><br><br>"
+        ANSWER += "<b>Respuesta 5:</b><br><br>"
+        prob_ex1_charles();
+        
+        QUESTION += "<b>Problema 6:</b><br><br>"
+        ANSWER += "<b>Respuesta 6:</b><br><br>"
+        prob_ex1_boyle();
 
-    option = irand(1,2);
-    if(option === 1) prob_1_1();
-    if(option === 2) prob_1_2();
+        QUESTION += "<b>Problema 7:</b><br><br>"
+        ANSWER += "<b>Respuesta 7:</b><br><br>"
+        prob_ex1_avogadro();
 
-    QUESTION += "<b>Problema 4:</b><br><br>"
-    ANSWER += "<b>Respuesta 4:</b><br><br>"
+        QUESTION += "<b>Problema 8:</b><br><br>"
+        ANSWER += "<b>Respuesta 8:</b><br><br>"
+        prob_ex1_presion();    
+    }
 
-    option = irand(1,2);
-    if(option === 1) prob_1_1();
-    if(option === 2) prob_1_2();   
+    if(rnd===2)
+    {
+        QUESTION += "<b>Problema 1:</b><br><br>"
+        ANSWER += "<b>Respuesta 1:</b><br><br>"
+        prob_ex1_avogadro();
+        
+        QUESTION += "<b>Problema 2:</b><br><br>"
+        ANSWER += "<b>Respuesta 2:</b><br><br>"
+        prob_ex1_presion();
 
-    QUESTION += "<b>Problema 5:</b><br><br>"
-    ANSWER += "<b>Respuesta 5:</b><br><br>"
+        QUESTION += "<b>Problema 3:</b><br><br>"
+        ANSWER += "<b>Respuesta 3:</b><br><br>"
+        prob_ex1_charles();
 
-    option = irand(1,2);
-    if(option === 1) prob_1_1();
-    if(option === 2) prob_1_2();
+        QUESTION += "<b>Problema 4:</b><br><br>"
+        ANSWER += "<b>Respuesta 4:</b><br><br>"
+        prob_ex1_boyle();
 
-    QUESTION += "<b>Problema 6:</b><br><br>"
-    ANSWER += "<b>Respuesta 6:</b><br><br>"
+        QUESTION += "<b>Problema 5:</b><br><br>"
+        ANSWER += "<b>Respuesta 5:</b><br><br>"
+        prob_ex1_avogadro();
+        
+        QUESTION += "<b>Problema 6:</b><br><br>"
+        ANSWER += "<b>Respuesta 6:</b><br><br>"
+        prob_ex1_presion();
 
-    option = irand(1,2);
-    if(option === 1) prob_1_1();
-    if(option === 2) prob_1_2();
+        QUESTION += "<b>Problema 7:</b><br><br>"
+        ANSWER += "<b>Respuesta 7:</b><br><br>"
+        prob_ex1_charles();
 
-    QUESTION += "<b>Problema 7:</b><br><br>"
-    ANSWER += "<b>Respuesta 7:</b><br><br>"
+        QUESTION += "<b>Problema 8:</b><br><br>"
+        ANSWER += "<b>Respuesta 8:</b><br><br>"
+        prob_ex1_boyle();    
+    }
 
-    option = irand(1,2);
-    if(option === 1) prob_1_1();
-    if(option === 2) prob_1_2();
+    if(rnd===3)
+    {
+        QUESTION += "<b>Problema 1:</b><br><br>"
+        ANSWER += "<b>Respuesta 1:</b><br><br>"
+        prob_ex1_boyle();
+        
+        QUESTION += "<b>Problema 2:</b><br><br>"
+        ANSWER += "<b>Respuesta 2:</b><br><br>"
+        prob_ex1_avogadro();
 
-    QUESTION += "<b>Problema 8:</b><br><br>"
-    ANSWER += "<b>Respuesta 8:</b><br><br>"
+        QUESTION += "<b>Problema 3:</b><br><br>"
+        ANSWER += "<b>Respuesta 3:</b><br><br>"
+        prob_ex1_charles();
 
-    option = irand(1,2);
-    if(option === 1) prob_1_1();
-    if(option === 2) prob_1_2();
-    
+        QUESTION += "<b>Problema 4:</b><br><br>"
+        ANSWER += "<b>Respuesta 4:</b><br><br>"
+        prob_ex1_presion();
+
+        QUESTION += "<b>Problema 5:</b><br><br>"
+        ANSWER += "<b>Respuesta 5:</b><br><br>"
+        prob_ex1_avogadro();
+        
+        QUESTION += "<b>Problema 6:</b><br><br>"
+        ANSWER += "<b>Respuesta 6:</b><br><br>"
+        prob_ex1_presion();
+
+        QUESTION += "<b>Problema 7:</b><br><br>"
+        ANSWER += "<b>Respuesta 7:</b><br><br>"
+        prob_ex1_charles();
+
+        QUESTION += "<b>Problema 8:</b><br><br>"
+        ANSWER += "<b>Respuesta 8:</b><br><br>"
+        prob_ex1_boyle();    
+    }       
+
 }
 
 //----------------------------------------------------- EX_2_CONCEPTOS
@@ -485,25 +607,35 @@ function ex_4_problemas()
 
 
 //----------------------------------------------------- LEY DE CHARLES
-function prob_1_1()
+function prob_ex1_charles()
 {
-    var rnd = irand(1,2);
+    var rnd = irand(1,3);
+    
+    var T1 = 25;
+    var T2 = 25;
+    var V1 = 25;
+    var V2 = 25;
 
 	if(rnd === 1) //
 	{
         
-        var T1 = rand(20,30); //°C
-        var T2 = round2(T1 + rand(50,80)); //°C
-        var V1 = rand(20,25); //L
+        while(1)
+        {
+            T1 = rand(10,80);
+            T2 = rand(10,80);
+            if( Math.abs(T1 - T2) > 20.0 ) break;
+        }
+        V1 = rand(20,25); //L
 
-        QUESTION += "Un gas a "+T1+" °C ocupa "+V1+" L.<br>";
-        QUESTION += "¿Qué volumen ocupará si la temperatura aumenta a "+T2+" °C?<br>";
+        QUESTION += "A "+T1+" °C el volumen de un gas es de "+V1+" L. ";
+        QUESTION += "El gas se somete a un proceso a presión constante y la temperatura cambia a "+T2+" °C.<br>";
+        QUESTION += "¿Cuál será el volumen final del gas?<br>";
         QUESTION += "<br>";
 
-        T1 = _C2K_(T1);
-        T2 = _C2K_(T2);
+        T1 = T1 + 273.15;
+        T2 = T2 + 273.15;
 
-        var V2 = round2(V1*T2/T1);
+        V2 = round2(V1*T2/T1);
 
 		ANSWER += V2+" L.<br>";
         ANSWER += "<br>";
@@ -513,7 +645,34 @@ function prob_1_1()
 	if(rnd === 2) //
 	{
         
-        var T1 = rand(20,30); //°C
+        while(1)
+        {
+            V1 = rand(10,80);
+            V2 = rand(10,80);
+            if( Math.abs(V1 - V2) > 20.0 ) break;
+        }
+        T1 = rand(25,50); //°C
+
+        QUESTION += "A "+T1+" °C el volumen de un gas es de "+V1+" L. ";
+        QUESTION += "El gas se somete a un proceso a presión constante y el volumen cambia a "+V2+" L.<br>";
+        QUESTION += "¿Cuál será la temperatura final del gas?<br>";
+        QUESTION += "<br>";
+
+        T1 = T1 + 273.15;
+        
+        T2 = V2*T1/V1;
+        
+        T2 = round2( T2 - 273.15 );
+
+		ANSWER += T2+" °C.<br>";
+        ANSWER += "<br>";
+
+	}
+
+	if(rnd === 3) //
+	{
+        
+        T1 = rand(20,50); //°C
         
         var op=irand(1,4);
         
@@ -522,19 +681,19 @@ function prob_1_1()
         if(op===3) var factor = "un medio";
         if(op===4) var factor = "un tercio";
 
-        QUESTION += "Considere un gas a "+T1+" °C.<br>";
-        QUESTION += "¿Qué temperatura es necesaria para que el gas ocupe "+factor+" del volumen inicial?<br>";
+        QUESTION += "Al inicio de un proceso a presión constante, la temperatura de un gas es de "+T1+" °C. ";
+        QUESTION += "Al final del proceso, el volumen del gas es "+factor+" del volumen inicial.<br>";
+        QUESTION += "¿Cuál es la temperatura final del gas?<br>";
         QUESTION += "<br>";
 
-        T1 = _C2K_(T1);
+        T1 = T1 + 273.15;
         
-        if(op===1) var T2 = round2(2.0*T1);
-        if(op===2) var T2 = round2(3.0*T1);
-        if(op===3) var T2 = round2(1.0/2.0*T1);
-        if(op===4) var T2 = round2(1.0/3.0*T1);
+        if(op===1) T2 = round2(2.0*T1);
+        if(op===2) T2 = round2(3.0*T1);
+        if(op===3) T2 = round2(1.0/2.0*T1);
+        if(op===4) T2 = round2(1.0/3.0*T1);
         
-        
-        T2 = round2(_K2C_(T2));
+        T2 = round2(T2 - 273.15);
 
 		ANSWER += T2+" °C.<br>";
         ANSWER += "<br>";
@@ -543,24 +702,96 @@ function prob_1_1()
 
 }
 
-
-//----------------------------------------------------- LEY DE AVOGADRO
-function prob_1_2()
+//----------------------------------------------------- LEY DE BOYLE
+function prob_ex1_boyle()
 {
     var rnd = irand(1,2);
+
+    var P1 = 25;
+    var P2 = 25;
+    var V1 = 25;
+    var V2 = 25;
 
 	if(rnd === 1) //
 	{
         
-        var n1 = rand(1,4);
-        var V1 = rand(15,30);
-        var n2 = n1 + rand(1,4);
-
-        QUESTION += "Si "+n1+" moles de gas ocupan "+V1+" L,<br>";
-        QUESTION += "¿Qué volumen ocuparían "+round2(n2)+" mol de dicho gas?<br>";
+        P1 = rand(1,10);
+        
+        while(1)
+        {
+            V1 = rand(15,50);
+            V2 = rand(15,50);
+            if( Math.abs(V1 - V2) > 20.0 ) break;
+        }
+        
+        QUESTION += "A "+P1+" atm el volumen de un gas es de "+V1+" L. ";
+        QUESTION += "El gas se somete a un proceso a temperatura constante y su volumen cambia a "+V2+" L.<br>";
+        QUESTION += "¿Cuál es la presión final del gas?<br>";
         QUESTION += "<br>";
 
-        var V2 = round2(V1*n2/n1);
+        P2 = round2( V1*P1/V2 );
+
+		ANSWER += P2+" atm.<br>";
+        ANSWER += "<br>";
+
+	}
+
+	if(rnd === 2) //
+	{
+        
+        V1 = rand(15,50);
+        
+        while(1)
+        {
+            P1 = rand(1,15);
+            P2 = rand(1,15);
+            if( Math.abs(P1 - P2) > 3.0 ) break;
+        }
+        
+        QUESTION += "A "+P1+" atm el volumen de un gas es de "+V1+" L. ";
+        QUESTION += "El gas se somete a un proceso a temperatura constante y su presión cambia a "+P2+" atm.<br>";
+        QUESTION += "¿Cuál es el volumen final del gas?<br>";
+        QUESTION += "<br>";
+
+        V2 = round2( V1*P1/P2 );
+
+		ANSWER += V2+" L.<br>";
+        ANSWER += "<br>";
+
+	}
+
+}
+
+
+//----------------------------------------------------- LEY DE AVOGADRO
+function prob_ex1_avogadro()
+{
+    var rnd = irand(1,3);
+    
+    var n1 = 1;
+    var n2 = 1;
+    var V1 = 1;
+    var V2 = 1;
+    var particulas = 1;
+    var gramos = 1;
+
+	if(rnd === 1) //
+	{
+        
+        while(1)
+        {
+            n1 = rand(1,10);
+            n2 = rand(1,10);
+            if( Math.abs(n1 - n2) > 3.0 ) break;
+        }        
+        
+        V1 = rand(15,60);
+
+        QUESTION += "A cierta temperatura y presión, el volumen de "+n1+" mol de un gas desconocido es de "+V1+" L.<br>";
+        QUESTION += "¿Cuál será el volumen de "+n2+" mol de dicho gas a la misma temperatura y presión?<br>";
+        QUESTION += "<br>";
+
+        V2 = round2( V1*n2/n1 );
 
 		ANSWER += V2+" L.<br>";
         ANSWER += "<br>";
@@ -570,29 +801,121 @@ function prob_1_2()
 	if(rnd === 2) //
 	{
         
-        var gramos = rand(10,50);
-        var n1 = gramos/32.0;
-        var V1 = rand(15,50);
-        var V2 = V1 + rand(20,30);
+        gramos = rand(10,50);
+        n1 = gramos/32.0;
 
-        QUESTION += "Si "+gramos+" g de O2 [M=32 g/mol]ocupan "+V1+" L,<br>";
-        QUESTION += "¿Cuántas moléculas de O2 habría en "+round2(V2)+" L?<br>";
+        while(1)
+        {
+            V1 = rand(15,60);
+            V2 = rand(15,60);
+            if( Math.abs(V1 - V2) > 20.0 ) break;
+        }   
+
+        QUESTION += "Si "+gramos+" g de O<sub>2</sub> [M=32 g/mol] ocupan un volumen de "+V1+" L a cierta temperatura y presión.<br>";
+        QUESTION += "¿Cuántas moléculas de O<sub>2</sub> habrá en "+round2(V2)+" L a la misma temperatura y presión?<br>";
         QUESTION += "<br>";
 
-        var n2 = V2*n1/V1;
-        var moleculas = n2*6.022e23;
+        n2 = V2*n1/V1;
+        particulas = n2*6.022e23;
 
-		ANSWER += moleculas+" moléculas de O2.<br>";
+		ANSWER += particulas+" moléculas de O<sub>2</sub>.<br>";
+        ANSWER += "<br>";
+
+	}
+
+	if(rnd === 3) //
+	{
+        
+        gramos = rand(10,50);
+        n1 = gramos/40.0;
+
+        while(1)
+        {
+            V1 = rand(15,60);
+            V2 = rand(15,60);
+            if( Math.abs(V1 - V2) > 20.0 ) break;
+        }   
+
+        QUESTION += "Si "+gramos+" g de Ar [M=40 g/mol] ocupan un volumen de "+V1+" L a cierta temperatura y presión.<br>";
+        QUESTION += "¿Cuántos átomos de Ar habrá en "+round2(V2)+" L a la misma temperatura y presión?<br>";
+        QUESTION += "<br>";
+
+        n2 = V2*n1/V1;
+        particulas = n2*6.022e23;
+
+		ANSWER += particulas+" átomos de Ar.<br>";
         ANSWER += "<br>";
 
 	}
 
 }
 
+//----------------------------------------------------- PRESION
+function prob_ex1_presion()
+{
+
+    var rnd = irand(1,2);
+    
+    //rnd = 1;
+    
+    var rho = 13.604;   // g/L
+    var g = 9.81;       // m/s**2
+    var h = 1;
+    var Pabs = 1;
+    var Pmano = 1;
+    var Patm = 1;
+
+	if(rnd === 1) //
+	{
+        
+        Pmano = rand(100,1000);   // mmHg
+
+        QUESTION += "La medición en un manómetro de tubo U abierto es de "+Pmano+" mmHg. "
+        QUESTION += "Calcular la presión absoluta en Pascales.<br>";
+        QUESTION += "<br>";
+        
+        Pmano = Pmano;             // mmHg
+        Pmano = Pmano*(1.0/760.0); // atm
+        Pmano = Pmano*(101325);    // Pa
+        
+        Patm = 101325;             // Pa
+        
+        Pabs = round2( Pmano + Patm );
+        
+		ANSWER += Pabs+" Pa.<br>";
+        ANSWER += "<br>";
+
+    }        
+
+	if(rnd === 2) //
+	{
+        
+        Pmano = rand(100,700);   // mmHg
+
+        QUESTION += "La medición en un manómetro de tubo U cerrado es de "+Pmano+" mmHg. "
+        QUESTION += "Calcular la presión absoluta en Pascales.<br>";
+        QUESTION += "<br>";
+        
+        Pmano = Pmano;             // mmHg
+        Pmano = Pmano*(1.0/760.0); // atm
+        Pmano = Pmano*(101325);    // Pa
+        
+        Patm = 101325;             // Pa
+        
+        Pabs = round2( Patm - Pmano );
+        
+		ANSWER += Pabs+" Pa.<br>";
+        ANSWER += "<br>";
+
+    }       
+    
+}
+
 
 
 //------------------------------------------------------------------------------
-function flash_card_remove(){
+function flash_card_remove()
+{
 
 	if(DEBUG==="YES") console.log("flash_card_show()");
 
