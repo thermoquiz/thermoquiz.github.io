@@ -26,6 +26,9 @@ function start(){
 //----------------------------------------------------- EXAMEN 1
 function guia_1()
 {
+    
+    TXT += "<center><b>Guía para el Primer Examen Parcial de Termodinámica</b></center><br>";
+    TXT += "<center><sup>Prof. Octavio Juárez.</sup></center><br>";
 
     TXT += "<ol>";
 	TXT += "<li> Escribe las 7 unidades fundamentales del SI.<br><br>";
@@ -80,6 +83,8 @@ function guia_1()
         TXT += "<li>Ley de Boyle.";
         TXT += "</ul><br>";
     TXT += "</ol>";
+    
+    
     
     
 }

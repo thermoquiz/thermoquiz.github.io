@@ -20,6 +20,12 @@ user-select: none; /* Standard syntax */
 font-family: "Ubuntu";
 }
 
+.author{
+text-align: center;
+font-size: 200%;
+}
+
+
 .title{
 color: black;
 text-align: center;

@@ -409,7 +409,9 @@ function ex_1_conceptos()
     contador = 0;
     registro = [];
 
-    QUESTION = "<center><b>¿Falso o Verdadero?</b></center><br>"
+    QUESTION  = "<center><b>Primer Examen Parcial de Termodinámica: Conceptos.</b></center><br>";
+    QUESTION += "<center>Prof. Octavio Juárez.</center><br>";
+    QUESTION += "<b>Instrucciones:</b> Contesta ¿Falso o Verdadero?<br>"
     ANSWER = "<center><b>Respuestas</b></center><br>"
     
     QUESTION +="<ol>";
@@ -433,6 +435,9 @@ function ex_1_problemas()
 
     QUESTION = ""
     ANSWER = ""
+
+    QUESTION  = "<center><b>Primer Examen Parcial de Termodinámica: Problemas.</b></center><br>";
+    QUESTION += "<center>Prof. Octavio Juárez.</center><br>";
 
     var rnd = irand(1,3);
     
@@ -628,14 +633,14 @@ function prob_ex1_charles()
         V1 = rand(20,25); //L
 
         QUESTION += "A "+T1+" °C el volumen de un gas es de "+V1+" L. ";
-        QUESTION += "El gas se somete a un proceso a presión constante y la temperatura cambia a "+T2+" °C.<br>";
-        QUESTION += "¿Cuál será el volumen final del gas?<br>";
+        QUESTION += "El gas se somete a un proceso a presión constante y la temperatura cambia a "+T2+" °C. ";
+        QUESTION += "¿Cuál será el volumen final (en litros) del gas?<br>";
         QUESTION += "<br>";
 
         T1 = T1 + 273.15;
         T2 = T2 + 273.15;
 
-        V2 = round2(V1*T2/T1);
+        V2 = V1*T2/T1;
 
 		ANSWER += V2+" L.<br>";
         ANSWER += "<br>";
@@ -654,15 +659,15 @@ function prob_ex1_charles()
         T1 = rand(25,50); //°C
 
         QUESTION += "A "+T1+" °C el volumen de un gas es de "+V1+" L. ";
-        QUESTION += "El gas se somete a un proceso a presión constante y el volumen cambia a "+V2+" L.<br>";
-        QUESTION += "¿Cuál será la temperatura final del gas?<br>";
+        QUESTION += "El gas se somete a un proceso a presión constante y el volumen cambia a "+V2+" L. ";
+        QUESTION += "¿Cuál será la temperatura final (en °C) del gas?<br>";
         QUESTION += "<br>";
 
         T1 = T1 + 273.15;
         
         T2 = V2*T1/V1;
         
-        T2 = round2( T2 - 273.15 );
+        T2 = T2 - 273.15;
 
 		ANSWER += T2+" °C.<br>";
         ANSWER += "<br>";
@@ -682,18 +687,18 @@ function prob_ex1_charles()
         if(op===4) var factor = "un tercio";
 
         QUESTION += "Al inicio de un proceso a presión constante, la temperatura de un gas es de "+T1+" °C. ";
-        QUESTION += "Al final del proceso, el volumen del gas es "+factor+" del volumen inicial.<br>";
-        QUESTION += "¿Cuál es la temperatura final del gas?<br>";
+        QUESTION += "Al final del proceso, el volumen del gas es "+factor+" del volumen inicial. ";
+        QUESTION += "¿Cuál es la temperatura final (en °C) del gas?<br>";
         QUESTION += "<br>";
 
         T1 = T1 + 273.15;
         
-        if(op===1) T2 = round2(2.0*T1);
-        if(op===2) T2 = round2(3.0*T1);
-        if(op===3) T2 = round2(1.0/2.0*T1);
-        if(op===4) T2 = round2(1.0/3.0*T1);
+        if(op===1) T2 = 2.0*T1;
+        if(op===2) T2 = 3.0*T1;
+        if(op===3) T2 = 1.0/2.0*T1;
+        if(op===4) T2 = 1.0/3.0*T1;
         
-        T2 = round2(T2 - 273.15);
+        T2 = T2 - 273.15;
 
 		ANSWER += T2+" °C.<br>";
         ANSWER += "<br>";
@@ -705,7 +710,7 @@ function prob_ex1_charles()
 //----------------------------------------------------- LEY DE BOYLE
 function prob_ex1_boyle()
 {
-    var rnd = irand(1,2);
+    var rnd = irand(1,3);
 
     var P1 = 25;
     var P2 = 25;
@@ -725,13 +730,17 @@ function prob_ex1_boyle()
         }
         
         QUESTION += "A "+P1+" atm el volumen de un gas es de "+V1+" L. ";
-        QUESTION += "El gas se somete a un proceso a temperatura constante y su volumen cambia a "+V2+" L.<br>";
-        QUESTION += "¿Cuál es la presión final del gas?<br>";
+        QUESTION += "El gas se somete a un proceso a temperatura constante y su volumen cambia a "+V2+" L. ";
+        QUESTION += "¿Cuál es la presión final (en kPa) del gas?<br>";
         QUESTION += "<br>";
 
-        P2 = round2( V1*P1/V2 );
+        P2 = V1*P1/V2; // atm
+        
+        P2 = P2*101325.0; // Pa
+        
+        P2 = P2/1000.0; // kPa
 
-		ANSWER += P2+" atm.<br>";
+		ANSWER += P2+" Pa.<br>";
         ANSWER += "<br>";
 
 	}
@@ -739,7 +748,7 @@ function prob_ex1_boyle()
 	if(rnd === 2) //
 	{
         
-        V1 = rand(15,50);
+        V1 = irand(500,10000); // L
         
         while(1)
         {
@@ -749,13 +758,47 @@ function prob_ex1_boyle()
         }
         
         QUESTION += "A "+P1+" atm el volumen de un gas es de "+V1+" L. ";
-        QUESTION += "El gas se somete a un proceso a temperatura constante y su presión cambia a "+P2+" atm.<br>";
-        QUESTION += "¿Cuál es el volumen final del gas?<br>";
+        QUESTION += "El gas se somete a un proceso a temperatura constante y su presión cambia a "+P2+" atm. ";
+        QUESTION += "¿Cuál es el volumen final (en m<sup>3</sup>) del gas?<br>";
         QUESTION += "<br>";
 
-        V2 = round2( V1*P1/P2 );
+        V2 = V1*P1/P2; // L
+        
+        V2 = V2/1000.0 // m**3
 
-		ANSWER += V2+" L.<br>";
+		ANSWER += V2+" m<sup>3</sup>.<br>";
+        ANSWER += "<br>";
+
+	}
+
+
+	if(rnd === 3) //
+	{
+        
+        P1 = rand(1,10); // atm
+        
+        var op=irand(1,4);
+        
+        if(op===1) var factor = "el doble";
+        if(op===2) var factor = "el triple";
+        if(op===3) var factor = "un medio";
+        if(op===4) var factor = "un tercio";
+
+        QUESTION += "Al inicio de un proceso a temperatura constante, la presión de un gas es de "+P1+" atm. ";
+        QUESTION += "Al final del proceso, el volumen del gas es "+factor+" del volumen inicial. ";
+        QUESTION += "¿Cuál es la presión final (en kPa) del gas?<br>";
+        QUESTION += "<br>";
+        
+        if(op===1) P2 = P1/2.0;
+        if(op===2) P2 = P1/3.0;
+        if(op===3) P2 = 2*P1;
+        if(op===4) P2 = 3*P1;
+
+        P2 = P2*101325.0;  // Pa
+        
+        P2 = P2/1000.0; // kPa
+
+		ANSWER += P2+" kPa.<br>";
         ANSWER += "<br>";
 
 	}
@@ -785,15 +828,17 @@ function prob_ex1_avogadro()
             if( Math.abs(n1 - n2) > 3.0 ) break;
         }        
         
-        V1 = rand(15,60);
+        V1 = rand(1,10);
 
-        QUESTION += "A cierta temperatura y presión, el volumen de "+n1+" mol de un gas desconocido es de "+V1+" L.<br>";
-        QUESTION += "¿Cuál será el volumen de "+n2+" mol de dicho gas a la misma temperatura y presión?<br>";
+        QUESTION += "A cierta temperatura y presión, el volumen de "+n1+" mol de un gas desconocido es de "+V1+" L. ";
+        QUESTION += "¿Cuál será el volumen (en mL) de "+n2+" mol de dicho gas a la misma temperatura y presión?<br>";
         QUESTION += "<br>";
 
-        V2 = round2( V1*n2/n1 );
+        V2 = V1*n2/n1; // L
+        
+        V2 = V2*1000.0; //mL
 
-		ANSWER += V2+" L.<br>";
+		ANSWER += V2+" mL.<br>";
         ANSWER += "<br>";
 
 	}
@@ -811,7 +856,7 @@ function prob_ex1_avogadro()
             if( Math.abs(V1 - V2) > 20.0 ) break;
         }   
 
-        QUESTION += "Si "+gramos+" g de O<sub>2</sub> [M=32 g/mol] ocupan un volumen de "+V1+" L a cierta temperatura y presión.<br>";
+        QUESTION += "Si "+gramos+" g de O<sub>2</sub> [M=32 g/mol] ocupan un volumen de "+V1+" L a cierta temperatura y presión. ";
         QUESTION += "¿Cuántas moléculas de O<sub>2</sub> habrá en "+round2(V2)+" L a la misma temperatura y presión?<br>";
         QUESTION += "<br>";
 
@@ -836,7 +881,7 @@ function prob_ex1_avogadro()
             if( Math.abs(V1 - V2) > 20.0 ) break;
         }   
 
-        QUESTION += "Si "+gramos+" g de Ar [M=40 g/mol] ocupan un volumen de "+V1+" L a cierta temperatura y presión.<br>";
+        QUESTION += "Si "+gramos+" g de Ar [M=40 g/mol] ocupan un volumen de "+V1+" L a cierta temperatura y presión. ";
         QUESTION += "¿Cuántos átomos de Ar habrá en "+round2(V2)+" L a la misma temperatura y presión?<br>";
         QUESTION += "<br>";
 
@@ -854,35 +899,36 @@ function prob_ex1_avogadro()
 function prob_ex1_presion()
 {
 
-    var rnd = irand(1,2);
+    var rnd = irand(1,4);
     
-    //rnd = 1;
-    
-    var rho = 13.604;   // g/L
-    var g = 9.81;       // m/s**2
+    var rho = 1;   
+    var g = 9.81;       
     var h = 1;
     var Pabs = 1;
     var Pmano = 1;
     var Patm = 1;
+    var P = 1;
 
 	if(rnd === 1) //
 	{
         
-        Pmano = rand(100,1000);   // mmHg
+        Pmano = irand(100,1000)*1.0;   // mmHg
 
         QUESTION += "La medición en un manómetro de tubo U abierto es de "+Pmano+" mmHg. "
-        QUESTION += "Calcular la presión absoluta en Pascales.<br>";
+        QUESTION += "Calcular la presión absoluta en kPa.<br>";
         QUESTION += "<br>";
         
         Pmano = Pmano;             // mmHg
         Pmano = Pmano*(1.0/760.0); // atm
         Pmano = Pmano*(101325);    // Pa
         
-        Patm = 101325;             // Pa
+        Patm = 101325.0;             // Pa
         
-        Pabs = round2( Pmano + Patm );
+        Pabs = Pmano + Patm;  // Pa
         
-		ANSWER += Pabs+" Pa.<br>";
+        Pabs = Pabs/1000.0; // kPa
+        
+		ANSWER += Pabs+" kPa.<br>";
         ANSWER += "<br>";
 
     }        
@@ -890,24 +936,66 @@ function prob_ex1_presion()
 	if(rnd === 2) //
 	{
         
-        Pmano = rand(100,700);   // mmHg
+        Pmano = irand(100,700)*1.0;   // mmHg
 
         QUESTION += "La medición en un manómetro de tubo U cerrado es de "+Pmano+" mmHg. "
-        QUESTION += "Calcular la presión absoluta en Pascales.<br>";
+        QUESTION += "Calcular la presión absoluta en kPa.<br>";
         QUESTION += "<br>";
         
         Pmano = Pmano;             // mmHg
         Pmano = Pmano*(1.0/760.0); // atm
         Pmano = Pmano*(101325);    // Pa
         
-        Patm = 101325;             // Pa
+        Patm = 101325.0;             // Pa
         
-        Pabs = round2( Patm - Pmano );
+        Pabs = Patm - Pmano; // Pa
         
-		ANSWER += Pabs+" Pa.<br>";
+        Pabs = Pabs/1000.0; // kPa
+        
+		ANSWER += Pabs+" kPa.<br>";
         ANSWER += "<br>";
 
     }       
+    
+	if(rnd === 3) //
+	{
+        
+        h = irand(50,1000)*1.0; // cm
+        rho = 0.997; // g/mL
+
+        QUESTION += "Calcular (en kPa) la presión que ejerce una columna de agua [&rho; = "+rho+" g/mL] de "+h+" cm de altura. "
+        QUESTION += "<br><br>";
+        
+        rho = rho*1000.0;      // kg/m**3
+        h = h/100.0;           // m
+        g = 9.81;              // m/s**2        
+        P = rho*g*h;           // Pa
+        P = P/1000.0;          // kPa
+        
+		ANSWER += P+" kPa.<br>";
+        ANSWER += "<br>";
+
+    }    
+
+	if(rnd === 4) //
+	{
+        
+        P = rand(1,5);   // atm
+        rho = 1.027;     // g/mL
+
+        QUESTION += "Calcular la altura (en metros) de una columna de agua de mar [&rho; = "+rho+" g/mL] ";
+        QUESTION += "que ejerce una presión de "+P+" atm. <br>";
+        QUESTION += "<br>";
+        
+        rho = rho*1000.0;      // kg/m**3
+        g = 9.81;              // m/s**2        
+        P = P*101325.0;        // Pa
+        h = P/(rho*g);         // m
+        
+		ANSWER += h+" m.<br>";
+        ANSWER += "<br>";
+
+    } 
     
 }
 
