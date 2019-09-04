@@ -441,7 +441,7 @@ function ex_1_problemas()
 
     var rnd = irand(1,3);
     
-    rnd = 1;
+    //rnd = 1;
        
     if(rnd===1)
     {
