@@ -83,10 +83,7 @@ function guia_1()
         TXT += "<li>Ley de Boyle.";
         TXT += "</ul><br>";
     TXT += "</ol>";
-    
-    
-    
-    
+        
 }
 
 //----------------------------------------------------- EXAMEN 2
@@ -94,7 +91,42 @@ function guia_2()
 {
 
 
-    TXT += "Proximamente :D";
+    TXT += "<center><b>Guía para el Segundo Examen Parcial de Termodinámica</b></center><br>";
+    TXT += "<center><sup>Prof. Octavio Juárez.</sup></center><br>";
+
+    TXT += "<ol>";
+	TXT += "<li> Escribe las 5 características microscópicas que describen a un gas ideal.<br><br>";
+	TXT += "<li> Deduce la ecuación de estado del gas ideal a partir de las leyes de Boyle, Charles y Avogadro.<br><br>";
+	TXT += "<li> Escribe la ecuación del gas ideal en términos de la densidad y peso molecular del gas.<br><br>";
+    TXT += "<li> Escribe el valor de R (la constante universal de los gases) en las siguientes unidades:<br><br>";
+        TXT += "<ul>";
+        TXT += "<li>atm L / mol K";
+        TXT += "<li>Pa m<sup>3</sup> / mol K";
+        TXT += "</ul><br>";
+	TXT += "<li>Mediante la ecuación del gas ideal escribe una ecuación que relacione el estado inicial y final del gas.<br><br>";
+	TXT += "<li>Estudia y simplifica la ecuación anterior para los siguientes casos:<br><br>";
+        TXT += "<ul>";
+        TXT += "<li>Temperatura y cantidad de sustancia constantes.";
+        TXT += "<li>Presión y cantidad de sustancia constantes.";
+        TXT += "<li>Volumen y cantidad de sustancia constantes.";
+        TXT += "</ul><br>";    
+    TXT += "<li>Enuncia la ley de Dalton de las presiones parciales.<br><br>";    
+    TXT += "<li>Define qué es una presión parcial.<br><br>";    
+    TXT += "<li>Define qué es el factor de compresibilidad Z.<br><br>";    
+    TXT += "<li>Desde el punto de vista de las fuerzas intermoleculares, ¿qué significa lo siguiente?<br><br>";
+        TXT += "<ul>";
+        TXT += "<li>Z > 1";
+        TXT += "<li>Z = 1";
+        TXT += "<li>Z < 1";
+        TXT += "</ul><br>";
+    TXT += "<li>La ecuación de van der Waals incluye dos correcciones ¿Cuáles son?<br><br>";
+    TXT += "<li>Estudia y practica un método numérico para calcular el volumen en la ecuación de estado de van der Waals. <br><br>";
+    TXT += "<li>Define el punto crítico de una sustancia.<br><br>";
+    TXT += "<li>Define la presión, temperatura y volumen reducidos.<br><br>";
+    TXT += "<li>Escribe el principio de los estados correspondientes.<br><br>";
+    TXT += "<li>¿Bajo qué condiciones se considera que un gas real se comporta como un gas ideal?<br><br>";
+    TXT += "</ol>";
+
     
     
 }
