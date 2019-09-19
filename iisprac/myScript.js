@@ -564,9 +564,15 @@ function ex_2_conceptos()
 function ex_2_problemas()
 {
 
-    QUESTION = "Proximamente :D"
-    
-    ANSWER = "Ten paciencia! :V"
+    QUESTION = ""
+    ANSWER = ""
+
+    QUESTION  = "<center><b>Segundo Examen Parcial de Termodinámica: Problemas.</b></center><br>";
+    QUESTION += "<center>Prof. Octavio Juárez.</center><br>";
+
+    QUESTION += "<b>Problema 1:</b><br><br>"
+    ANSWER += "<b>Respuesta 1:</b><br><br>"
+    prob_ex2_vanderwaals2();
     
 }
 
@@ -998,6 +1004,189 @@ function prob_ex1_presion()
     } 
     
 }
+
+
+
+//----------------------------------------------------- LEY DE BOYLE
+function prob_ex2_vanderwaals()
+{
+    
+    var rnd = irand(1,6);
+    var NAME;
+    var a;
+    var b;
+    var T;
+    var P;
+    var R=0.08206;
+    var n;
+    var Vi;
+    var V;
+    
+    if(rnd===1)
+    {
+        NAME = "O<sub>2</sub>";
+        a = 1.36;
+        b = 0.0318;
+    }
+
+    if(rnd===2)
+    {
+        NAME = "CO<sub>2</sub>";
+        a = 3.61;
+        b = 4.29e-2;
+    }
+    
+    if(rnd===3)
+    {
+        NAME = "Cl<sub>2</sub>";
+        a = 6.49;
+        b = 0.0562;
+    }
+    
+    if(rnd===4)
+    {
+        NAME = "CH<sub>4</sub>";
+        a = 2.25;
+        b = 0.0428;
+    }
+
+    if(rnd===5)
+    {
+        NAME = "CCl<sub>4</sub>";
+        a = 20.4;
+        b = 0.138;
+    }
+
+    if(rnd===6)
+    {
+        NAME = "NH<sub>3</sub>";
+        a = 4.17;
+        b = 0.0371;
+    }
+
+
+
+    P = rand(5,10)*10;
+    T = rand(50,100)*10;
+    n = irand(1,5);
+
+    QUESTION += "Calcular el volumen (mediante la ecuación de van der Waals) de "+n+" mol de "+NAME+" a "+P+" atm y "+T+" K. <br>";
+    QUESTION += "a = "+a+" atm L<sup>2</sup> / mol<sup>2</sup>. <br>";
+    QUESTION += "b = "+b+" L / mol. ";
+    QUESTION += "<br>";
+
+    Vi = n*R*T/P;
+
+    V = 0.5*Vi;
+
+    while(1)
+    {
+        
+        var EQ = (P + a*n*n/(V*V))*(V - n*b) - n*R*T;
+        
+        console.log(V, EQ);
+        
+        if(Math.abs(EQ) <= 0.01 || V >= 2.0*Vi) break;
+        
+        V += 0.0001;
+        
+    }
+    
+    ANSWER += "V (ideal) = "+Vi + " L.<br>";
+    ANSWER += "V (real) = "+V + " L.<br>";
+    ANSWER += "<br>";
+    
+}
+
+//----------------------------------------------------- LEY DE BOYLE
+function prob_ex2_vanderwaals2()
+{
+    
+    var rnd = irand(1,4);
+    var NAME;
+    var a;
+    var b;
+    var T;
+    var P;
+    var R=0.08206;
+    var n;
+    var Vi;
+    var V;
+    
+
+    if(rnd===1)
+    {
+        NAME = "CO<sub>2</sub>";
+        a = 3.61;
+        b = 4.29e-2;
+    }
+    
+    if(rnd===2)
+    {
+        NAME = "Cl<sub>2</sub>";
+        a = 6.49;
+        b = 0.0562;
+    }
+    
+
+    if(rnd===3)
+    {
+        NAME = "CCl<sub>4</sub>";
+        a = 20.4;
+        b = 0.138;
+    }
+
+    if(rnd===4)
+    {
+        NAME = "NH<sub>3</sub>";
+        a = 4.17;
+        b = 0.0371;
+    }
+
+
+
+    P = rand(5,10)*10;
+    T = rand(50,100)*10;
+    n = irand(1,5);
+
+    QUESTION += "Calcular el volumen (mediante la ecuación de van der Waals) de "+n+" mol de "+NAME+" a "+P+" atm y "+T+" K. <br>";
+    QUESTION += "a = "+a+" atm L<sup>2</sup> / mol<sup>2</sup>. <br>";
+    QUESTION += "b = "+b+" L / mol. ";
+    QUESTION += "<br>";
+
+    Vi = n*R*T/P;
+
+    var F,FP;
+    var iter = 0;;
+    var imax = 100;
+    var tol = 0.001;
+    V = Vi;
+
+    console.log("......................");
+
+    while(1)
+    {
+                
+        F = P*V*V*V + (-P*n*b-n*R*T)*V*V + a*n*n*V - a*n*n*n*b;
+        
+        FP = 3*P*V*V + 2*(-P*n*b-n*R*T)*V + a*n*n;
+        
+        console.log(iter,V, F, FP);
+        
+        if(Math.abs(F) <= tol || iter >= imax) break;
+        
+        V = V - F/FP;
+        iter += 1;
+        
+    }
+    
+    ANSWER += "V <sub>ideal</sub> = "+Vi + " L.<br>";
+    ANSWER += "V <sub>real</sub> = "+V + " L.<br>";
+    ANSWER += "<br>";
+    
+}
+
+
 
 
 
