@@ -403,6 +403,165 @@ function HacerPreguntas_ex1()
 }
 
 //----------------------------------------------------- EX_1_CONCEPTOS
+function HacerPreguntas_ex2()
+{
+    
+    var P = [];
+    var R = [];
+    var rnd = 1;
+
+    //-------------------------------------------- PV = nRT ; PM = dRT
+    
+    P[1] = "El volumen de un gas ideal aumenta cuando su temperatura aumenta.";
+    R[1] = "V"
+
+    P[2] = "El volumen de un gas ideal aumenta cuando su temperatura disminuye.";
+    R[2] = "F"
+
+    P[3] = "El volumen de un gas ideal aumenta cuando su presión disminuye.";
+    R[3] = "V";
+
+    P[4] = "El volumen de un gas ideal aumenta cuando su presión aumenta.";
+    R[4] = "F";
+
+    P[5] = "La presión de un gas ideal aumenta cuando su temperatura aumenta.";
+    R[5] = "V";
+
+    P[6] = "La presión de un gas ideal aumenta cuando su temperatura disminuye.";
+    R[6] = "F";
+
+    P[7] = "La presión de un gas ideal aumenta cuando su volumen disminuye.";
+    R[7] = "V";
+
+    P[8] = "La presión de un gas ideal aumenta cuando su volumen aumenta.";
+    R[8] = "F";
+
+    P[9] = "La temperatura de un gas ideal aumenta cuando su presión aumenta.";
+    R[9] = "V";
+
+    P[10] = "La temperatura de un gas ideal aumenta cuando su presión disminuye.";
+    R[10] = "F";
+
+    P[11] = "La temperatura de un gas ideal aumenta cuando su volumen aumenta.";
+    R[11] = "V";
+
+    P[12] = "La temperatura de un gas ideal aumenta cuando su volumen disminuye.";
+    R[12] = "F";
+
+    P[13] = "La densidad de un gas ideal aumenta cuando su presión aumenta.";
+    R[13] = "V";
+
+    P[14] = "La densidad de un gas ideal aumenta cuando su presión disminuye.";
+    R[14] = "F";
+
+    P[15] = "La densidad de un gas ideal aumenta cuando su temperatura disminuye.";
+    R[15] = "V";
+
+    P[16] = "La densidad de un gas ideal aumenta cuando su temperatura aumenta.";
+    R[16] = "F";
+
+    //-------------------------------------------- Gas ideal, teoría cinética
+
+    P[17] = "Un gas ideal está compuesto por partículas de volumen insignificante.";
+    R[17] = "V";
+
+    P[18] = "Un gas ideal no está compuesto por partículas de volumen insignificante.";
+    R[18] = "F";
+
+    P[19] = "Las colisiones entre las particulas de un gas ideal son elásticas.";
+    R[19] = "V";
+
+    P[20] = "Las colisiones entre las particulas de un gas ideal son inelásticas.";
+    R[20] = "F";
+
+    P[21] = "Las partículas de un gas ideal no ejercen entre sí fuerzas de atracción o de repulsión.";
+    R[21] = "V";
+
+    P[22] = "Las partículas de un gas ideal ejercen entre sí fuerzas de atracción o de repulsión.";
+    R[22] = "F";
+
+    P[23] = "La temperatura de un gas ideal es directamente proporcional a la energía cinética promedio de sus partículas.";
+    R[23] = "V";
+
+    P[24] = "La temperatura de un gas ideal es inversamente proporcional a la energía cinética promedio de sus partículas.";
+    R[24] = "F";
+
+//-------------------------------------------- Ley de Dalton
+
+    P[25] = "La presión total de una mezcla de gases es igual a la suma de sus presión parciales.";
+    R[25] = "V";
+
+    P[26] = "La presión total de una mezcla de gases es igual al producto de sus presión parciales.";
+    R[26] = "F";
+
+//-------------------------------------------- Factor Z, compresibilidad
+
+    P[27] = "Las fuerzas de repulsión entre las partículas de un gas predominan cuando el factor de compresibilidad del gas es mayor a uno.";
+    R[27] = "V";
+
+    P[28] = "Las fuerzas de repulsión entre las partículas de un gas predominan cuando el factor de compresibilidad del gas es menor a uno.";
+    R[28] = "F";
+
+    P[29] = "Las fuerzas de atracción entre las partículas de un gas predominan cuando el factor de compresibilidad del gas es menor a uno.";
+    R[29] = "V";
+
+    P[30] = "Las fuerzas de atracción entre las partículas de un gas predominan cuando el factor de compresibilidad del gas es mayor a uno.";
+    R[30] = "F";
+
+    P[31] = "Bajo las mismas condiciones de temperatura y presión, el volumen de un gas real es mayor que el ideal si su factor de compresibilidad es mayor a uno.";
+    R[31] = "V";
+
+    P[32] = "Bajo las mismas condiciones de temperatura y presión, el volumen de un gas real es mayor que el ideal si su factor de compresibilidad es menor a uno.";
+    R[32] = "F";
+
+    P[33] = "Bajo las mismas condiciones de temperatura y presión, el volumen de un gas real es menor que el ideal si su factor de compresibilidad es menor a uno.";
+    R[33] = "V";
+
+    P[34] = "Bajo las mismas condiciones de temperatura y presión, el volumen de un gas real es menor que el ideal si su factor de compresibilidad es mayor a uno.";
+    R[34] = "F";
+
+//-------------------------------------------------- Principio de los estados correspondientes
+
+    P[35] = "En el punto crítico, un líquido y su vapor tienen la misma densidad.";
+    R[35] = "V";
+
+    P[36] = "En el punto crítico, un líquido y su vapor tienen diferente densidad.";
+    R[36] = "F";
+
+    //----------------------------------------------------
+    
+    var MAX = 36;
+       
+    if(contador===1)
+    {
+        rnd = irand(1,MAX);
+        registro[contador] = rnd;
+    }
+    else
+    {
+        while(1)
+        {
+            rnd = irand(1,MAX);
+            if(registro.includes(rnd)===false)
+            {
+                registro[contador] = rnd;
+                break;
+            }
+        }
+    }
+    contador += 1;
+
+
+    LaPregunta = P[rnd];
+    LaRespuesta = R[rnd];
+    
+    console.log(contador, registro);
+    
+}
+
+
+
+//----------------------------------------------------- EX_1_CONCEPTOS
 function ex_1_conceptos()
 {
     
@@ -554,9 +713,26 @@ function ex_1_problemas()
 function ex_2_conceptos()
 {
 
-    QUESTION = "Proximamente :D"
+    contador = 0;
+    registro = [];
+
+    QUESTION  = "<center><b>Segundo Examen Parcial de Termodinámica: Conceptos.</b></center><br>";
+    QUESTION += "<center>Prof. Octavio Juárez.</center><br>";
+    QUESTION += "<b>Instrucciones:</b> Contesta ¿Falso o Verdadero?<br>"
+    ANSWER = "<center><b>Respuestas</b></center><br>"
     
-    ANSWER = "Ten paciencia! :V"
+    QUESTION +="<ol>";
+    ANSWER +="<ol>";
+    
+    for(var i=0;i<20;i++)
+    {
+        HacerPreguntas_ex2()
+        QUESTION +="<li>" + LaPregunta + "<br><br>";
+        ANSWER   +="<li>" + LaRespuesta + "<br><br>";  
+    }
+    
+    QUESTION +="</ol>";
+    ANSWER += "</ol>";
     
 }
 
