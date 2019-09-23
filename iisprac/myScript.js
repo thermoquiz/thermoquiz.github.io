@@ -748,6 +748,22 @@ function ex_2_problemas()
 
     QUESTION += "<b>Problema 1:</b><br><br>"
     ANSWER += "<b>Respuesta 1:</b><br><br>"
+    prob_ex2_gasideal();
+
+    QUESTION += "<b>Problema 2:</b><br><br>"
+    ANSWER += "<b>Respuesta 2:</b><br><br>"
+    prob_ex2_gasideal2();
+
+    QUESTION += "<b>Problema 3:</b><br><br>"
+    ANSWER += "<b>Respuesta 3:</b><br><br>"
+    if(irand(1,2)===1)
+        prob_ex2_Z();
+    else
+        prob_ex2_dalton();
+
+
+    QUESTION += "<b>Problema 4:</b><br><br>"
+    ANSWER += "<b>Respuesta 4:</b><br><br>"
     prob_ex2_vanderwaals2();
     
 }
@@ -1181,7 +1197,302 @@ function prob_ex1_presion()
     
 }
 
+//--------------------------------------------- P1*V1/T1 = cte
 
+function prob_ex2_gasideal()
+{
+    var rnd = irand(1,6);
+
+    var P1 = 1;
+    var P2 = 1;
+    var V1 = 1;
+    var V2 = 1;
+    var T1 = 1;
+    var T2 = 1;
+    
+	if(rnd === 1) // T cte
+	{
+        while(1)
+        {
+            P1 = irand(1,10);
+            P2 = irand(1,10);     
+            if( Math.abs(P1 - P2) >= 1 ) break;            
+        }        
+        
+        V1 = irand(5,50);
+        V2 = P1*V1/P2;
+        
+        QUESTION += "A "+P1+" atm el volumen de un gas es de "+V1+" L. ";
+        QUESTION += "El gas se somete a un proceso a temperatura constante y su presión cambia a "+P2+" atm. ";
+        QUESTION += "¿Cuál es el volumen final del gas?<br>";
+        QUESTION += "<br>";
+        
+		ANSWER += V2+" L<br>";
+        ANSWER += "<br>";
+	}
+
+	if(rnd === 2) // T cte
+	{
+        while(1)
+        {
+            V1 = irand(10,50);
+            V2 = irand(10,50);     
+            if( Math.abs(V1 - V2) >= 5 ) break;            
+        }        
+        
+        P1 = irand(1,10);
+        P2 = P1*V1/V2;
+        
+        QUESTION += "A "+P1+" atm el volumen de un gas es de "+V1+" L. ";
+        QUESTION += "El gas se somete a un proceso a temperatura constante y su volumen cambia a "+V2+" L. ";
+        QUESTION += "¿Cuál es la presión final del gas?<br>";
+        QUESTION += "<br>";
+        
+		ANSWER += P2+" atm<br>";
+        ANSWER += "<br>";
+	}
+
+	if(rnd === 3) // P cte
+	{
+        while(1)
+        {
+            T1 = irand(10,100);
+            T2 = irand(10,100);     
+            if( Math.abs(T1 - T2) >= 20 ) break;            
+        }        
+        
+        V1 = irand(5,50);
+
+        
+        QUESTION += "A "+T1+" °C el volumen de un gas es de "+V1+" L. ";
+        QUESTION += "El gas se somete a un proceso a presión constante y su temperatura cambia a "+T2+" °C. ";
+        QUESTION += "¿Cuál es el volumen final del gas?<br>";
+        QUESTION += "<br>";
+        
+        T1 = T1 + 273.15;
+        T2 = T2 + 273.15;
+        V2 = V1*T2/T1;
+        
+		ANSWER += V2+" L<br>";
+        ANSWER += "<br>";
+	}
+
+	if(rnd === 4) // P cte
+	{
+        while(1)
+        {
+            V1 = irand(10,50);
+            V2 = irand(10,50);     
+            if( Math.abs(V1 - V2) >= 5 ) break;            
+        }        
+        
+        T1 = irand(10,100);
+        
+        QUESTION += "A "+T1+" °C el volumen de un gas es de "+V1+" L. ";
+        QUESTION += "El gas se somete a un proceso a presión constante y su volumen cambia a "+V2+" L. ";
+        QUESTION += "¿Cuál es la temperatura final del gas?<br>";
+        QUESTION += "<br>";
+        
+        T1 = T1 + 273.15;
+        T2 = V2*T1/V1;
+        T2 = T2 - 273.15;
+        
+		ANSWER += T2+" °C<br>";
+        ANSWER += "<br>";
+	}
+
+	if(rnd === 5) // V cte
+	{
+        while(1)
+        {
+            T1 = irand(10,100);
+            T2 = irand(10,100);     
+            if( Math.abs(T1 - T2) >= 20 ) break;            
+        }        
+        
+        P1 = irand(1,10);
+
+        QUESTION += "A "+T1+" °C la presión de un gas es de "+P1+" atm. ";
+        QUESTION += "El gas se somete a un proceso a volumen constante y su temperatura cambia a "+T2+" °C. ";
+        QUESTION += "¿Cuál es la presión final del gas?<br>";
+        QUESTION += "<br>";
+        
+        T1 = T1 + 273.15;
+        T2 = T2 + 273.15;
+        P2 = P1*T2/T1;
+        
+		ANSWER += P2+" atm<br>";
+        ANSWER += "<br>";
+	}
+
+	if(rnd === 6) // V cte
+	{
+        while(1)
+        {
+            P1 = irand(1,10);
+            P2 = irand(1,10);     
+            if( Math.abs(P1 - P2) >= 1 ) break;            
+        }        
+        
+        T1 = irand(10,100);
+        
+        QUESTION += "A "+P1+" atm la temperatura de un gas es de "+T1+" °C. ";
+        QUESTION += "El gas se somete a un proceso a volumen constante y su presión cambia a "+P2+" atm. ";
+        QUESTION += "¿Cuál es la temperatura final del gas?<br>";
+        QUESTION += "<br>";
+        
+        T1 = + T1 + 2173.15;
+        T2 = P2*T1/P1;
+        T2 = T2 - 273.15;
+        
+		ANSWER += T2+" °C<br>";
+        ANSWER += "<br>";
+	}
+
+}
+
+
+//--------------------------------------------- P M = d R T
+
+function prob_ex2_gasideal2()
+{
+    var rnd = irand(1,2);
+
+    var P = 1;
+    var V = 1;
+    var T = 1;
+    var d = 1;
+    var n = 1;
+    var M = 1;
+    var Z = 1;
+    var R = 0.08206;
+
+	if(rnd === 1)
+	{
+        var op=irand(1,5);
+        
+        if(op===1){NAME="H<sub>2</sub>"; M=2;}
+        if(op===2){NAME="CO<sub>2</sub>"; M=44;}
+        if(op===3){NAME="Ar"; M=40;}
+        if(op===4){NAME="He"; M=4;}
+        if(op===5){NAME="Cl<sub>2</sub>"; M=71;}
+        if(op===6){NAME="CH<sub>4</sub>"; M=16;}
+        
+        P = irand(1,10);
+        T = irand(10,80);
+        
+        QUESTION += "Suponiendo que el "+NAME+" (M = "+M+" g/mol) se comporta como un gas ideal, ";
+        QUESTION += "calcular su densidad a "+P+" atm y "+T+" °C. <br>";
+        QUESTION += "<br>";
+        
+        T = T + 273.15;
+        d = P*M/(R*T)
+        
+		ANSWER += d+" g/L<br>";
+        ANSWER += "<br>";
+	}
+    
+	if(rnd === 2)
+	{        
+        P = irand(1,10);
+        T = irand(10,80);
+        d = irand(1,10);
+        
+        QUESTION += "La densidad de un gas desconocido es de "+d+" g/L a "+P+" atm y "+T+" °C. <br>";
+        QUESTION += " Suponiendo que dicho gas se comporta idealmente, calcular su peso molecular.<br>";
+        QUESTION += "<br>";
+        
+        T = T + 273.15;
+        M = d*R*T/P;
+        
+		ANSWER += M+" g/mol<br>";
+        ANSWER += "<br>";
+	}
+  
+}
+
+function prob_ex2_Z()
+{
+    
+    var P = irand(1,10);
+    var T = irand(10,80);
+    var R = 0.08206;
+    var Vreal = rand(10,30);
+    var V = 1;
+    
+    QUESTION += "El volumen real de un mol de gas desconocido es de "+Vreal+" L (a "+P+" atm y "+T+" °C). ";
+    QUESTION += " Calcular su factor de compresibilidad.<br>";
+    QUESTION += "<br>";
+    
+    T = T + 273.15;
+    V = 1*R*T/P;        
+    Z = Vreal/V;
+    
+    ANSWER += "Z = "+Z+"<br>";
+    ANSWER += "<br>";
+    
+}
+
+function prob_ex2_dalton()
+{
+    var Ptotal = 1;
+    var P1 = 1;
+    var P2 = 1;
+    var V = irand(10,40);
+    var T = irand(10,80);
+    var R = 0.08206;
+    var X1 = 1;
+    var X2 = 1;
+    
+    var rnd = irand(1,2);
+    
+    if(rnd === 1)
+    {
+        while(1)
+        {
+            var n1 = rand(0.5,2.0);
+            var n2 = rand(0.5,2.0);
+            if( Math.abs(n1-n2)>0.5) break;
+        }
+
+        QUESTION += "Una mezcla de "+V+" L de gas contiene "+n1+" mol del gas A y "+n2+" mol del gas B. ";
+        QUESTION += "Suponiendo que ambos gases son ideales, calcular la presión total de la mezcla a "+T+" °C. <br>";
+        QUESTION += "<br>";
+        
+        T = T + 273.15;
+        P1 = n1*R*T/V;
+        P2 = n2*R*T/V;
+        Ptotal = P1 + P2;
+        
+        ANSWER += Ptotal+" atm<br>";
+        ANSWER += "<br>";
+    }
+    
+    if(rnd === 2)
+    {
+        P1 = irand(1,10);
+        X1 = rand2(0.1,0.9);
+        X1 = round2(X1);
+        
+        X1 = irand(1,9)/10.0;
+        
+        QUESTION += "Considere una mezcla de gases ideales de dos componentes. ";
+        QUESTION += "La presión parcial del primer componente es de "+P1+" atm y su fracción molar es de "+X1+". ";
+        QUESTION += "¿Cuál es la presión parcial del segundo componente?<br>";
+        QUESTION += "<br>";
+
+        Ptotal = P1/X1;
+        X2 = 1 - X1;
+        P2 = X2*Ptotal;
+
+        ANSWER += P2+" atm<br>";
+        ANSWER += "<br>";
+
+        
+    }
+
+    
+}
 
 //----------------------------------------------------- LEY DE BOYLE
 function prob_ex2_vanderwaals()
