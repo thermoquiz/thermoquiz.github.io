@@ -1341,7 +1341,7 @@ function prob_ex2_gasideal()
         QUESTION += "¿Cuál es la temperatura final del gas?<br>";
         QUESTION += "<br>";
         
-        T1 = + T1 + 273.15;
+        T1 = T1 + 273.15;
         T2 = P2*T1/P1;
         T2 = T2 - 273.15;
         
