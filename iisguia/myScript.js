@@ -136,8 +136,12 @@ function guia_3()
 {
 
 
-    TXT += "Proximamente :D";
+    TXT += "<center><b>Guía para el Tercer Examen Parcial de Termodinámica</b></center><br>";
+    TXT += "<center><sup>Prof. Octavio Juárez.</sup></center><br>";
     
+    TXT +="<br>";
+    TXT +='<center><a href="https://drive.google.com/open?id=15oOW9-u2l29nHL0ZZ60cxi0VPwMbMk5m">Click Me :D</a></center>';
+    TXT +="<br>";
     
 }
 
