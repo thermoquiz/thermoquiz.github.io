@@ -402,7 +402,290 @@ function HacerPreguntas_ex1()
     
 }
 
-//----------------------------------------------------- EX_1_CONCEPTOS
+//----------------------------------------------------- EX_3_CONCEPTOS
+function HacerPreguntas_ex3()
+{
+    
+    var P = [];
+    var R = [];
+    var rnd = 1;
+
+    //-------------------------------------------- 
+    
+    P[1] = "Un sistema abierto permite la transferencia de materia y energía con sus alrededores.";
+    R[1] = "V"
+
+    P[2] = "Un sistema abierto no permite la transferencia de materia y energía con sus alrededores.";
+    R[2] = "F"
+
+    P[3] = "Un sistema cerrado permite sólo la transferencia de energía con sus alrededores.";
+    R[3] = "V";
+
+    P[4] = "Un sistema cerrado no permite la transferencia de energía con sus alrededores.";
+    R[4] = "F";
+
+    P[5] = "Un sistema cerrado no permite la transferencia de materia con sus alrededores.";
+    R[5] = "V";
+
+    P[6] = "Un sistema cerrado permite la transferencia de materia con sus alrededores.";
+    R[6] = "F";
+
+    P[7] = "Un sistema aislado no permite la transferencia de materia con sus alrededores.";
+    R[7] = "V";
+
+    P[8] = "Un sistema aislado permite la transferencia de materia con sus alrededores.";
+    R[8] = "F";
+
+    P[9] = "Un sistema aislado no permite la transferencia de energía con sus alrededores.";
+    R[9] = "V";
+
+    P[10] = "Un sistema aislado permite la transferencia de energía con sus alrededores.";
+    R[10] = "F";
+
+    P[11] = "Una frontera diatérmica permite la transferencia de calor entre el sistema y sus alrededores.";
+    R[11] = "V";
+    
+    P[12] = "Una frontera diatérmica no permite la transferencia de calor entre el sistema y sus alrededores.";
+    R[12] = "F";
+
+    P[13] = "Una frontera adiabática no permite la transferencia de calor entre el sistema y sus alrededores.";
+    R[13] = "V";
+
+    P[14] = "Una frontera adiabática permite la transferencia de calor entre el sistema y sus alrededores.";
+    R[14] = "F";
+
+    P[15] = "Una frontera permeable permite la transferencia de materia entre el sistema y sus alrededores.";
+    R[15] = "V";
+    
+    P[16] = "Una frontera permeable no permite la transferencia de materia entre el sistema y sus alrededores.";
+    R[16] = "F";
+
+    P[17] = "Una frontera impermeable no permite la transferencia de materia entre el sistema y sus alrededores.";
+    R[17] = "V";
+
+    P[18] = "Una frontera impermeable permite la transferencia de materia entre el sistema y sus alrededores.";
+    R[18] = "F";    
+
+    P[19] = "Si la temperatura del sistema es diferente a la temperatura de los alrededores, entonces hay transferencia de calor";
+    R[19] = "V";
+
+    P[20] = "Si la temperatura del sistema es igual a la temperatura de los alrededores, entonces hay transferencia de calor";
+    R[20] = "F";
+    
+    P[21] = "En un sistema aislado la energía interna permanece constante.";
+    R[21] = "V";
+
+    P[22] = "En un sistema aislado la energía interna es variable (no es constante).";
+    R[22] = "F";
+
+    P[23] = "Según la IUPAC, toda la energía que entra al sistema se considera positiva.";
+    R[23] = "V";
+
+    P[24] = "Según la IUPAC, toda la energía que entra al sistema se considera negativa.";
+    R[24] = "F";
+
+    P[25] = "Según la IUPAC, toda la energía que sale del sistema se considera negativa.";
+    R[25] = "V";
+
+    P[26] = "Según la IUPAC, toda la energía que sale del sistema se considera positiva.";
+    R[26] = "F";
+    
+    P[27] = "En un proceso adiabático no hay transferencia de calor entre el sistema y sus alrededores.";
+    R[27] = "V";
+
+    P[28] = "En un proceso adiabático hay transferencia de calor entre el sistema y sus alrededores.";
+    R[28] = "F";
+    
+    P[29] = "En un proceso exotérmico el calor se transfiere desde el sistema a sus alrededores.";
+    R[29] = "V";
+
+    P[30] = "En un proceso exotérmico el calor se transfiere desde los alrededores al sistema.";
+    R[30] = "F";
+
+    P[31] = "En un proceso exotérmico el sistema pierde energía.";
+    R[31] = "V";
+
+    P[32] = "En un proceso exotérmico el sistema gana energía.";
+    R[32] = "F";
+
+    P[33] = "En un proceso endotérmico el calor se transfiere desde los alrededores al sistema.";
+    R[33] = "V";
+
+    P[34] = "En un proceso endotérmico el calor se transfiere desde el sistema a sus alrededores.";
+    R[34] = "F";
+
+    P[35] = "En un proceso endotérmico el sistema gana energía.";
+    R[35] = "V";
+
+    P[36] = "En un proceso endotérmico el sistema pierde energía.";
+    R[36] = "F";
+
+    P[38] = "Si el sistema se expande, entonces el sistema realiza trabajo.";
+    R[38] = "V";
+    
+    P[39] = "Si el sistema se expande, entonces los alrededores realizan trabajo.";
+    R[39] = "F";
+    
+    P[40] = "Si el sistema se comprime, entonces los alrededores realizan trabajo.";
+    R[40] = "V";
+    
+    P[41] = "Si el sistema se comprime, entonces el sistema realiza trabajo.";
+    R[41] = "F";
+
+    P[42] = "Si el sistema se expande, entonces el sistema pierde energía.";
+    R[42] = "V";
+    
+    P[43] = "Si el sistema se expande, entonces los alrededores pierden energía.";
+    R[43] = "F";
+
+    P[44] = "Si el sistema se comprime, entonces el sistema gana energía.";
+    R[44] = "V";
+    
+    P[45] = "Si el sistema se comprime, entonces los alrededores ganan energía.";
+    R[45] = "F";
+
+    P[46] = "Si el sistema se expande, entonces los alrededores ganan energía.";
+    R[46] = "V";
+    
+    P[47] = "Si el sistema se expande, entonces los alrededores pierden energía.";
+    R[47] = "F";
+
+    P[48] = "Si el sistema se comprime, entonces los alrededores pierde energía.";
+    R[48] = "V";
+    
+    P[49] = "Si el sistema se comprime, entonces los alrededores ganan energía.";
+    R[49] = "F";
+
+    P[50] = "En un proceso exotérmico los alrededores ganan energía.";
+    R[50] = "V";
+
+    P[51] = "En un proceso exotérmico los alrededores pierden energía.";
+    R[51] = "F";
+
+    P[52] = "En un proceso endotérmico los alrededores pierden energía.";
+    R[52] = "V";
+
+    P[53] = "En un proceso endotérmico los alrededores ganan energía.";
+    R[53] = "F";
+
+    P[54] = "En un proceso isobárico la presión permanece constante.";
+    R[54] = "V";
+
+    P[55] = "En un proceso isobárico el volumen permanece constante.";
+    R[55] = "F";
+
+    P[56] = "En un proceso isocórico el volumen permanece constante.";
+    R[56] = "V";
+
+    P[57] = "En un proceso isocórico la presión permanece constante.";
+    R[57] = "F";
+
+    P[58] = "En un proceso isocórico el trabajo PV es nulo.";
+    R[58] = "V";
+
+    P[59] = "En un proceso isocórico el trabajo PV es mayor que cero.";
+    R[59] = "F";
+
+    P[60] = "Si el índice politrópico es 0, el proceso es isobárico.";
+    R[60] = "V";
+
+    P[61] = "Si el índice politrópico es 0, el proceso es isobárico.";
+    R[61] = "F";
+    
+    P[62] = "Si el índice politrópico es 1, el proceso es isotérmico.";
+    R[62] = "V";
+
+    P[63] = "Si el índice politrópico es 1 el proceso es adiabático.";
+    R[63] = "F";
+
+    P[64] = "Si el índice politrópico es muy grande, el proceso es isocórico.";
+    R[64] = "V";
+
+    P[65] = "Si el índice politrópico es muy grande, el proceso es isobárico.";
+    R[65] = "F";
+
+    P[66] = "La energía interna es una variable de estado.";
+    R[66] = "V";
+
+    P[67] = "La energía interna es una variable de trayectoria.";
+    R[67] = "F";
+
+    P[68] = "La entalpía es una variable de estado.";
+    R[68] = "V";
+
+    P[69] = "La entalpía es una variable de trayectoria.";
+    R[69] = "F";
+
+    P[70] = "El calor es una variable de trayectoria.";
+    R[70] = "V";
+
+    P[71] = "El calor es una variable de estado.";
+    R[71] = "F";
+
+    P[72] = "El trabajo es una variable de trayectoria.";
+    R[72] = "V";
+
+    P[73] = "El trabajo es una variable de estado.";
+    R[73] = "F";    
+
+    P[74] = "En un proceso a volumen constante, el calor es igual al cambio en la energía interna.";
+    R[74] = "V";
+
+    P[75] = "En un proceso a volumen constante, el calor es igual al cambio en la entalpía.";
+    R[75] = "F";  
+
+    P[76] = "En un proceso a presión constante, el calor es igual al cambio en la entalpía.";
+    R[76] = "V";
+
+    P[77] = "En un proceso a volumen constante, el calor es igual al cambio en la energía interna.";
+    R[77] = "F";  
+
+    P[78] = "En un proceso isotérmico, la energía interna (de un gas ideal) permanece constante.";
+    R[78] = "V";
+    
+    P[79] = "En un proceso isotérmico, el cambio en la energía interna (de un gas ideal) es mayor que cero.";
+    R[79] = "F";
+
+    P[80] = "En un proceso isotérmico, la entalpía (de un gas ideal) permanece constante.";
+    R[80] = "V";
+    
+    P[81] = "En un proceso isotérmico, el cambio en la entalpía (de un gas ideal) es mayor que cero.";
+    R[81] = "F";
+
+    
+    //----------------------------------------------------
+    
+    var MAX = 81;
+       
+    if(contador===1)
+    {
+        rnd = irand(1,MAX);
+        registro[contador] = rnd;
+    }
+    else
+    {
+        while(1)
+        {
+            rnd = irand(1,MAX);
+            if(registro.includes(rnd)===false)
+            {
+                registro[contador] = rnd;
+                break;
+            }
+        }
+    }
+    contador += 1;
+
+
+    LaPregunta = P[rnd];
+    LaRespuesta = R[rnd];
+    
+    console.log(contador, registro);
+    
+}
+
+
+//----------------------------------------------------- EX_2_CONCEPTOS
 function HacerPreguntas_ex2()
 {
     
@@ -772,9 +1055,26 @@ function ex_2_problemas()
 function ex_3_conceptos()
 {
 
-    QUESTION = "Proximamente :D"
+    contador = 0;
+    registro = [];
+
+    QUESTION  = "<center><b>Tercer Examen Parcial de Termodinámica: Conceptos.</b></center><br>";
+    QUESTION += "<center>Prof. Octavio Juárez.</center><br>";
+    QUESTION += "<b>Instrucciones:</b> Contesta ¿Falso o Verdadero?<br>"
+    ANSWER = "<center><b>Respuestas</b></center><br>"
     
-    ANSWER = "Ten paciencia! :V"
+    QUESTION +="<ol>";
+    ANSWER +="<ol>";
+    
+    for(var i=0;i<20;i++)
+    {
+        HacerPreguntas_ex3()
+        QUESTION +="<li>" + LaPregunta + "<br><br>";
+        ANSWER   +="<li>" + LaRespuesta + "<br><br>";  
+    }
+    
+    QUESTION +="</ol>";
+    ANSWER += "</ol>";
     
 }
 
