@@ -401,7 +401,7 @@ function HacerPreguntas_ex1()
     console.log(contador, registro);
     
 }
-
+ 
 //----------------------------------------------------- EX_3_CONCEPTOS
 function HacerPreguntas_ex3()
 {
@@ -589,7 +589,7 @@ function HacerPreguntas_ex3()
     P[60] = "Si el índice politrópico es 0, el proceso es isobárico.";
     R[60] = "V";
 
-    P[61] = "Si el índice politrópico es 0, el proceso es isobárico.";
+    P[61] = "Si el índice politrópico es 0, el proceso es isocórico.";
     R[61] = "F";
     
     P[62] = "Si el índice politrópico es 1, el proceso es isotérmico.";
@@ -637,7 +637,7 @@ function HacerPreguntas_ex3()
     P[76] = "En un proceso a presión constante, el calor es igual al cambio en la entalpía.";
     R[76] = "V";
 
-    P[77] = "En un proceso a volumen constante, el calor es igual al cambio en la energía interna.";
+    P[77] = "En un proceso a presión constante, el calor es igual al cambio en la energía interna.";
     R[77] = "F";  
 
     P[78] = "En un proceso isotérmico, la energía interna (de un gas ideal) permanece constante.";
@@ -1082,7 +1082,7 @@ function ex_3_conceptos()
 function ex_3_problemas()
 {
 
-    //NOTA: REVISAR ISOCORICO Y ADIABATICO
+
     
     QUESTION = ""
     ANSWER = ""
@@ -1137,6 +1137,8 @@ function ex_4_conceptos()
     QUESTION = "Proximamente :D"
     
     ANSWER = "Ten paciencia! :V"
+
+
     
 }
 
@@ -1144,11 +1146,102 @@ function ex_4_conceptos()
 function ex_4_problemas()
 {
 
-    QUESTION = "Proximamente :D"
+    QUESTION = ""
+    ANSWER = ""
+
+    QUESTION  = "<center><b>Cuarto Examen Parcial de Termodinámica: Problemas.</b></center><br>";
+    QUESTION += "<center>Prof. Octavio Juárez.</center><br>";
     
-    ANSWER = "Ten paciencia! :V"
+    QUESTION += "<b>Problema 1:</b><br><br>"
+    ANSWER += "<b>Respuesta 1:</b><br>"
+    prob_ex4_eficiencia(irand(1,4));
     
 }
+
+
+function prob_ex4_eficiencia(op)
+{
+ 
+    if(op===1)
+    {
+
+        var w_out = irand(10,90); //kJ
+        var q_inp = irand(2,5)*w_out; //kJ
+        var e = w_out/q_inp;
+        
+        QUESTION += "Una maquina térmica produce "+w_out+" kJ de trabajo cuando se ";
+        QUESTION += "alimenta con "+q_inp+" kJ de calor. ";
+        QUESTION += "Calcular la eficiencia de la máquina.<br>";
+        QUESTION += "<br>";      
+        
+        ANSWER += "&epsilon; = "+e*100+" %<br>";
+        ANSWER += "<br>";
+        
+    }
+
+    if(op===2)
+    {
+
+        while(1)
+        {
+            var q_inp = irand(10,90);
+            var q_out = irand(10,90);
+            var w_out = q_inp - q_out;
+            var e = w_out/q_inp;
+            if(e>0 && e<1) break;
+        }
+        
+        QUESTION += "Una maquina térmica se alimenta con "+q_inp+" kJ de calor ";
+        QUESTION += "y desecha "+q_out+" kJ en forma de calor. ";
+        QUESTION += "Calcular la eficiencia de la máquina.<br>";
+        QUESTION += "<br>";      
+        
+        ANSWER += "&epsilon; = "+e*100+" %<br>";
+        ANSWER += "<br>";
+        
+    }
+
+    if(op===3)
+    {
+
+        while(1)
+        {
+            var q_out = irand(10,90);
+            var w_out = irand(10,90);
+            var q_inp = q_out + w_out;
+            var e = w_out/q_inp;
+            if(e>0 && e<1) break;
+        }
+        
+        QUESTION += "Una maquina térmica produce "+w_out+" kJ de trabajo y ";
+        QUESTION += "desecha "+q_out+" kJ de calor. ";
+        QUESTION += "Calcular la eficiencia de la máquina.<br>";
+        QUESTION += "<br>";       
+        
+        ANSWER += "&epsilon; = "+e*100+" %<br>";
+        ANSWER += "<br>";
+        
+    }
+
+    if(op===4)
+    {
+
+        var e = irand(10,95);
+        var q_inp = irand(10,90);
+        var w_out = (e/100.0)*q_inp;
+        
+        
+        QUESTION += "Una maquina térmica (con eficiencia del "+e+"%) se alimenta con "+q_inp+" kJ de calor. ";
+        QUESTION += "Calcular la cantidad de trabajo producido. ";
+        QUESTION += "<br>";       
+        
+        ANSWER += "w<sub>out</sub> = "+w_out+" kJ.<br>";
+        ANSWER += "<br>";
+        
+    }
+    
+}
+
 
 //----------------------------------------------------- 1a LEY
 function prob_ex3_1aLey(op)
@@ -1244,7 +1337,7 @@ function prob_ex3_adiabatico(op)
         var Cv = Cp - R;
         var gamma = Cp/Cv;
         
-        QUESTION += "Un gas ideal (C<sub>p</sub> = "+Cp+" J/K) ocupa "+V1+" dm<sup>3</sup> a "+P1+" kPa. ";
+        QUESTION += "Un mol de gas ideal (C<sub>p</sub> = "+Cp+" J/K) ocupa "+V1+" dm<sup>3</sup> a "+P1+" kPa. ";
         QUESTION += "El gas se somete a un proceso adiabático y su presión cambia a "+P2+" kPa. ";
         QUESTION += "Calcular (en dm<sup>3</sup>) el volumen final del gas.<br>";
         QUESTION += "<br>";        
@@ -1256,7 +1349,7 @@ function prob_ex3_adiabatico(op)
         ANSWER += "&gamma; = "+round4(gamma)+"<br>";
         ANSWER += "</gray>";
         
-        ANSWER += "V2 = "+round4(V2)+" m<sup>3</sup><br>";
+        ANSWER += "V2 = "+round4(V2)+" dm<sup>3</sup><br>";
         ANSWER += "<br>";
         
     }
@@ -1276,7 +1369,7 @@ function prob_ex3_adiabatico(op)
 
         var c = Cv/R;
         
-        QUESTION += "Un gas ideal (C<sub>v</sub> = "+Cv+" J/K) ocupa "+V1+" dm<sup>3</sup> a "+T1+" K. ";
+        QUESTION += "Un mol de gas ideal (C<sub>v</sub> = "+Cv+" J/K) ocupa "+V1+" dm<sup>3</sup> a "+T1+" K. ";
         QUESTION += "El gas se somete a un proceso adiabático y su volumen cambia a "+V2+" dm<sup>3</sup>. ";
         QUESTION += "Calcular (en °C) la temperatura final del gas.<br>";
         QUESTION += "<br>";        
@@ -1369,7 +1462,7 @@ function prob_ex3_isocorico(op)
         var q = irand(1,10); //kJ     
         var Cv = irand(15,50); //J/K
         
-        QUESTION += "Un gas ideal (C<sub>v</sub> = "+Cv+" J/K) se somete a un proceso isocórico. ";
+        QUESTION += "Un mol de gas ideal (C<sub>v</sub> = "+Cv+" J/K) se somete a un proceso isocórico. ";
         QUESTION += "La temperatura de los alrededores es de "+T2+" °C. ";
         QUESTION += "Calcular (en °C) la temperatura necesaria para que el gas absorba "+q+" kJ en forma de calor.<br>";
         QUESTION += "<br>";        
@@ -1400,7 +1493,7 @@ function prob_ex3_isocorico(op)
         else
             {var deltaU = -irand(1,9)*10.0;} //kJ
 		
-        QUESTION += "Un gas ideal, a "+T1+" °C, se somete a un proceso isocórico ("+V+" dm<sup>3</sup>) ";
+        QUESTION += "Un mol de gas ideal, a "+T1+" °C, se somete a un proceso isocórico ("+V+" dm<sup>3</sup>) ";
         QUESTION += "cuando sus alrededores se encuentran a "+T2+" °C. ";
         QUESTION += "Calcular (en J/mol K) la capacidad calorífica molar a presión constante del gas ";
         QUESTION += "si su cambio de energía interna fue de "+deltaU+" kJ. <br>";
@@ -1438,7 +1531,7 @@ function prob_ex3_isobarico(op)
 		
 		var Cp = irand(15,50); //J/K
 		
-        QUESTION += "Un gas ideal (C<sub>p</sub> = "+Cp+" J/K) se somete a un proceso isobárico ("+P+" kPa). ";
+        QUESTION += "Un mol de gas ideal (C<sub>p</sub> = "+Cp+" J/K) se somete a un proceso isobárico ("+P+" kPa). ";
         QUESTION += "El volumen del gas cambia desde "+V1+" dm<sup>3</sup> hasta "+V2+" dm<sup>3</sup>. ";
         QUESTION += "Calcular (en kJ) el trabajo asociado al proceso.<br>";
         QUESTION += "<br>";
@@ -1457,7 +1550,7 @@ function prob_ex3_isobarico(op)
         var q = irand(1,9)*10.0; //kJ
 		var Cp = irand(15,50); //J/K
 		
-        QUESTION += "Un gas ideal (C<sub>p</sub> = "+Cp+" J/K) se somete a un proceso isobárico ("+P+" kPa). ";
+        QUESTION += "Un mol de gas ideal (C<sub>p</sub> = "+Cp+" J/K) se somete a un proceso isobárico ("+P+" kPa). ";
         QUESTION += "La temperatura de los alrededores es de "+T2+" °C. ";
         QUESTION += "Calcular (en °C) la temperatura del gas necesaria para que libere "+q+" kJ en forma de calor.<br>";
         QUESTION += "<br>";
