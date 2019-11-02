@@ -475,7 +475,7 @@ function HacerPreguntas_ex3()
     P[21] = "En un sistema aislado la energía interna permanece constante.";
     R[21] = "V";
 
-    P[22] = "En un sistema aislado la energía interna es variable (no es constante).";
+    P[22] = "En un sistema aislado el cambio en la energía interna es mayor que cero.";
     R[22] = "F";
 
     P[23] = "Según la IUPAC, toda la energía que entra al sistema se considera positiva.";
@@ -532,16 +532,17 @@ function HacerPreguntas_ex3()
     P[41] = "Si el sistema se comprime, entonces el sistema realiza trabajo.";
     R[41] = "F";
 
-    P[42] = "Si el sistema se expande, entonces el sistema pierde energía.";
+/*
+    P[42] = "Si el sistema se expande, entonces el sistema pierde energía en forma de trabajo PV.";
     R[42] = "V";
     
-    P[43] = "Si el sistema se expande, entonces los alrededores pierden energía.";
+    P[43] = "Si el sistema se expande, entonces los alrededores pierden energía en forma de trabajo PV.";
     R[43] = "F";
 
-    P[44] = "Si el sistema se comprime, entonces el sistema gana energía.";
+    P[44] = "Si el sistema se comprime, entonces el sistema gana energía en forma de trabajo PV.";
     R[44] = "V";
     
-    P[45] = "Si el sistema se comprime, entonces los alrededores ganan energía.";
+    P[45] = "Si el sistema se comprime, entonces los alrededores ganan energía en forma de trabajo PV.";
     R[45] = "F";
 
     P[46] = "Si el sistema se expande, entonces los alrededores ganan energía.";
@@ -555,107 +556,108 @@ function HacerPreguntas_ex3()
     
     P[49] = "Si el sistema se comprime, entonces los alrededores ganan energía.";
     R[49] = "F";
+*/
 
-    P[50] = "En un proceso exotérmico los alrededores ganan energía.";
+    P[42] = "En un proceso exotérmico los alrededores ganan energía.";
+    R[42] = "V";
+
+    P[43] = "En un proceso exotérmico los alrededores pierden energía.";
+    R[43] = "F";
+
+    P[44] = "En un proceso endotérmico los alrededores pierden energía.";
+    R[44] = "V";
+
+    P[45] = "En un proceso endotérmico los alrededores ganan energía.";
+    R[45] = "F";
+
+    P[46] = "En un proceso isobárico la presión permanece constante.";
+    R[46] = "V";
+
+    P[47] = "En un proceso isobárico el volumen permanece constante.";
+    R[47] = "F";
+
+    P[48] = "En un proceso isocórico el volumen permanece constante.";
+    R[48] = "V";
+
+    P[49] = "En un proceso isocórico la presión permanece constante.";
+    R[49] = "F";
+
+    P[50] = "En un proceso isocórico el trabajo PV es nulo.";
     R[50] = "V";
 
-    P[51] = "En un proceso exotérmico los alrededores pierden energía.";
+    P[51] = "En un proceso isocórico el trabajo PV es mayor que cero.";
     R[51] = "F";
 
-    P[52] = "En un proceso endotérmico los alrededores pierden energía.";
+    P[52] = "Si el índice politrópico es 0, el proceso es isobárico.";
     R[52] = "V";
 
-    P[53] = "En un proceso endotérmico los alrededores ganan energía.";
+    P[53] = "Si el índice politrópico es 0, el proceso es isocórico.";
     R[53] = "F";
-
-    P[54] = "En un proceso isobárico la presión permanece constante.";
+    
+    P[54] = "Si el índice politrópico es 1, el proceso es isotérmico.";
     R[54] = "V";
 
-    P[55] = "En un proceso isobárico el volumen permanece constante.";
+    P[55] = "Si el índice politrópico es 1 el proceso es adiabático.";
     R[55] = "F";
 
-    P[56] = "En un proceso isocórico el volumen permanece constante.";
+    P[56] = "Si el índice politrópico es muy grande, el proceso es isocórico.";
     R[56] = "V";
 
-    P[57] = "En un proceso isocórico la presión permanece constante.";
+    P[57] = "Si el índice politrópico es muy grande, el proceso es isobárico.";
     R[57] = "F";
 
-    P[58] = "En un proceso isocórico el trabajo PV es nulo.";
+    P[58] = "La energía interna es una variable de estado.";
     R[58] = "V";
 
-    P[59] = "En un proceso isocórico el trabajo PV es mayor que cero.";
+    P[59] = "La energía interna es una variable de trayectoria.";
     R[59] = "F";
 
-    P[60] = "Si el índice politrópico es 0, el proceso es isobárico.";
+    P[60] = "La entalpía es una variable de estado.";
     R[60] = "V";
 
-    P[61] = "Si el índice politrópico es 0, el proceso es isocórico.";
+    P[61] = "La entalpía es una variable de trayectoria.";
     R[61] = "F";
-    
-    P[62] = "Si el índice politrópico es 1, el proceso es isotérmico.";
+
+    P[62] = "El calor es una variable de trayectoria.";
     R[62] = "V";
 
-    P[63] = "Si el índice politrópico es 1 el proceso es adiabático.";
+    P[63] = "El calor es una variable de estado.";
     R[63] = "F";
 
-    P[64] = "Si el índice politrópico es muy grande, el proceso es isocórico.";
+    P[64] = "El trabajo es una variable de trayectoria.";
     R[64] = "V";
 
-    P[65] = "Si el índice politrópico es muy grande, el proceso es isobárico.";
-    R[65] = "F";
+    P[65] = "El trabajo es una variable de estado.";
+    R[65] = "F";    
 
-    P[66] = "La energía interna es una variable de estado.";
+    P[66] = "En un proceso a volumen constante, el calor es igual al cambio en la energía interna.";
     R[66] = "V";
 
-    P[67] = "La energía interna es una variable de trayectoria.";
-    R[67] = "F";
+    P[67] = "En un proceso a volumen constante, el calor es igual al cambio en la entalpía.";
+    R[67] = "F";  
 
-    P[68] = "La entalpía es una variable de estado.";
+    P[68] = "En un proceso a presión constante, el calor es igual al cambio en la entalpía.";
     R[68] = "V";
 
-    P[69] = "La entalpía es una variable de trayectoria.";
-    R[69] = "F";
+    P[69] = "En un proceso a presión constante, el calor es igual al cambio en la energía interna.";
+    R[69] = "F";  
 
-    P[70] = "El calor es una variable de trayectoria.";
+    P[70] = "En un proceso isotérmico, la energía interna (de un gas ideal) permanece constante.";
     R[70] = "V";
-
-    P[71] = "El calor es una variable de estado.";
+    
+    P[71] = "En un proceso isotérmico, el cambio en la energía interna (de un gas ideal) es mayor que cero.";
     R[71] = "F";
 
-    P[72] = "El trabajo es una variable de trayectoria.";
+    P[72] = "En un proceso isotérmico, la entalpía (de un gas ideal) permanece constante.";
     R[72] = "V";
-
-    P[73] = "El trabajo es una variable de estado.";
-    R[73] = "F";    
-
-    P[74] = "En un proceso a volumen constante, el calor es igual al cambio en la energía interna.";
-    R[74] = "V";
-
-    P[75] = "En un proceso a volumen constante, el calor es igual al cambio en la entalpía.";
-    R[75] = "F";  
-
-    P[76] = "En un proceso a presión constante, el calor es igual al cambio en la entalpía.";
-    R[76] = "V";
-
-    P[77] = "En un proceso a presión constante, el calor es igual al cambio en la energía interna.";
-    R[77] = "F";  
-
-    P[78] = "En un proceso isotérmico, la energía interna (de un gas ideal) permanece constante.";
-    R[78] = "V";
     
-    P[79] = "En un proceso isotérmico, el cambio en la energía interna (de un gas ideal) es mayor que cero.";
-    R[79] = "F";
-
-    P[80] = "En un proceso isotérmico, la entalpía (de un gas ideal) permanece constante.";
-    R[80] = "V";
-    
-    P[81] = "En un proceso isotérmico, el cambio en la entalpía (de un gas ideal) es mayor que cero.";
-    R[81] = "F";
+    P[73] = "En un proceso isotérmico, el cambio en la entalpía (de un gas ideal) es mayor que cero.";
+    R[73] = "F";
 
     
     //----------------------------------------------------
     
-    var MAX = 81;
+    var MAX = 73;
        
     if(contador===1)
     {
