@@ -150,7 +150,12 @@ function guia_4()
 {
 
 
-    TXT += "Proximamente :D";
+    TXT += "<center><b>Guía para el Cuarto Examen Parcial de Termodinámica</b></center><br>";
+    TXT += "<center><sup>Prof. Octavio Juárez.</sup></center><br>";
+    
+    TXT +="<br>";
+    TXT +='<center><a href="https://drive.google.com/open?id=1D5yF_E_jPEIXJUq1e_jx23DEOQYO-KuS">Click Me :D</a></center>';
+    TXT +="<br>";
     
     
 }
