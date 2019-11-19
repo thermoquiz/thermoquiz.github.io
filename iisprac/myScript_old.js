@@ -401,293 +401,8 @@ function HacerPreguntas_ex1()
     console.log(contador, registro);
     
 }
- 
-//----------------------------------------------------- EX_3_CONCEPTOS
-function HacerPreguntas_ex3()
-{
-    
-    var P = [];
-    var R = [];
-    var rnd = 1;
 
-    //-------------------------------------------- 
-    
-    P[1] = "Un sistema abierto permite la transferencia de materia y energía con sus alrededores.";
-    R[1] = "V"
-
-    P[2] = "Un sistema abierto no permite la transferencia de materia y energía con sus alrededores.";
-    R[2] = "F"
-
-    P[3] = "Un sistema cerrado permite sólo la transferencia de energía con sus alrededores.";
-    R[3] = "V";
-
-    P[4] = "Un sistema cerrado no permite la transferencia de energía con sus alrededores.";
-    R[4] = "F";
-
-    P[5] = "Un sistema cerrado no permite la transferencia de materia con sus alrededores.";
-    R[5] = "V";
-
-    P[6] = "Un sistema cerrado permite la transferencia de materia con sus alrededores.";
-    R[6] = "F";
-
-    P[7] = "Un sistema aislado no permite la transferencia de materia con sus alrededores.";
-    R[7] = "V";
-
-    P[8] = "Un sistema aislado permite la transferencia de materia con sus alrededores.";
-    R[8] = "F";
-
-    P[9] = "Un sistema aislado no permite la transferencia de energía con sus alrededores.";
-    R[9] = "V";
-
-    P[10] = "Un sistema aislado permite la transferencia de energía con sus alrededores.";
-    R[10] = "F";
-
-    P[11] = "Una frontera diatérmica permite la transferencia de calor entre el sistema y sus alrededores.";
-    R[11] = "V";
-    
-    P[12] = "Una frontera diatérmica no permite la transferencia de calor entre el sistema y sus alrededores.";
-    R[12] = "F";
-
-    P[13] = "Una frontera adiabática no permite la transferencia de calor entre el sistema y sus alrededores.";
-    R[13] = "V";
-
-    P[14] = "Una frontera adiabática permite la transferencia de calor entre el sistema y sus alrededores.";
-    R[14] = "F";
-
-    P[15] = "Una frontera permeable permite la transferencia de materia entre el sistema y sus alrededores.";
-    R[15] = "V";
-    
-    P[16] = "Una frontera permeable no permite la transferencia de materia entre el sistema y sus alrededores.";
-    R[16] = "F";
-
-    P[17] = "Una frontera impermeable no permite la transferencia de materia entre el sistema y sus alrededores.";
-    R[17] = "V";
-
-    P[18] = "Una frontera impermeable permite la transferencia de materia entre el sistema y sus alrededores.";
-    R[18] = "F";    
-
-    P[19] = "Si la temperatura del sistema es diferente a la temperatura de los alrededores, entonces hay transferencia de calor";
-    R[19] = "V";
-
-    P[20] = "Si la temperatura del sistema es igual a la temperatura de los alrededores, entonces hay transferencia de calor";
-    R[20] = "F";
-    
-    P[21] = "En un sistema aislado la energía interna permanece constante.";
-    R[21] = "V";
-
-    P[22] = "En un sistema aislado el cambio en la energía interna es mayor que cero.";
-    R[22] = "F";
-
-    P[23] = "Según la IUPAC, toda la energía que entra al sistema se considera positiva.";
-    R[23] = "V";
-
-    P[24] = "Según la IUPAC, toda la energía que entra al sistema se considera negativa.";
-    R[24] = "F";
-
-    P[25] = "Según la IUPAC, toda la energía que sale del sistema se considera negativa.";
-    R[25] = "V";
-
-    P[26] = "Según la IUPAC, toda la energía que sale del sistema se considera positiva.";
-    R[26] = "F";
-    
-    P[27] = "En un proceso adiabático no hay transferencia de calor entre el sistema y sus alrededores.";
-    R[27] = "V";
-
-    P[28] = "En un proceso adiabático hay transferencia de calor entre el sistema y sus alrededores.";
-    R[28] = "F";
-    
-    P[29] = "En un proceso exotérmico el calor se transfiere desde el sistema a sus alrededores.";
-    R[29] = "V";
-
-    P[30] = "En un proceso exotérmico el calor se transfiere desde los alrededores al sistema.";
-    R[30] = "F";
-
-    P[31] = "En un proceso exotérmico el sistema pierde energía.";
-    R[31] = "V";
-
-    P[32] = "En un proceso exotérmico el sistema gana energía.";
-    R[32] = "F";
-
-    P[33] = "En un proceso endotérmico el calor se transfiere desde los alrededores al sistema.";
-    R[33] = "V";
-
-    P[34] = "En un proceso endotérmico el calor se transfiere desde el sistema a sus alrededores.";
-    R[34] = "F";
-
-    P[35] = "En un proceso endotérmico el sistema gana energía.";
-    R[35] = "V";
-
-    P[36] = "En un proceso endotérmico el sistema pierde energía.";
-    R[36] = "F";
-
-    P[38] = "Si el sistema se expande, entonces el sistema realiza trabajo.";
-    R[38] = "V";
-    
-    P[39] = "Si el sistema se expande, entonces los alrededores realizan trabajo.";
-    R[39] = "F";
-    
-    P[40] = "Si el sistema se comprime, entonces los alrededores realizan trabajo.";
-    R[40] = "V";
-    
-    P[41] = "Si el sistema se comprime, entonces el sistema realiza trabajo.";
-    R[41] = "F";
-
-/*
-    P[42] = "Si el sistema se expande, entonces el sistema pierde energía en forma de trabajo PV.";
-    R[42] = "V";
-    
-    P[43] = "Si el sistema se expande, entonces los alrededores pierden energía en forma de trabajo PV.";
-    R[43] = "F";
-
-    P[44] = "Si el sistema se comprime, entonces el sistema gana energía en forma de trabajo PV.";
-    R[44] = "V";
-    
-    P[45] = "Si el sistema se comprime, entonces los alrededores ganan energía en forma de trabajo PV.";
-    R[45] = "F";
-
-    P[46] = "Si el sistema se expande, entonces los alrededores ganan energía.";
-    R[46] = "V";
-    
-    P[47] = "Si el sistema se expande, entonces los alrededores pierden energía.";
-    R[47] = "F";
-
-    P[48] = "Si el sistema se comprime, entonces los alrededores pierde energía.";
-    R[48] = "V";
-    
-    P[49] = "Si el sistema se comprime, entonces los alrededores ganan energía.";
-    R[49] = "F";
-*/
-
-    P[42] = "En un proceso exotérmico los alrededores ganan energía.";
-    R[42] = "V";
-
-    P[43] = "En un proceso exotérmico los alrededores pierden energía.";
-    R[43] = "F";
-
-    P[44] = "En un proceso endotérmico los alrededores pierden energía.";
-    R[44] = "V";
-
-    P[45] = "En un proceso endotérmico los alrededores ganan energía.";
-    R[45] = "F";
-
-    P[46] = "En un proceso isobárico la presión permanece constante.";
-    R[46] = "V";
-
-    P[47] = "En un proceso isobárico el volumen permanece constante.";
-    R[47] = "F";
-
-    P[48] = "En un proceso isocórico el volumen permanece constante.";
-    R[48] = "V";
-
-    P[49] = "En un proceso isocórico la presión permanece constante.";
-    R[49] = "F";
-
-    P[50] = "En un proceso isocórico el trabajo PV es nulo.";
-    R[50] = "V";
-
-    P[51] = "En un proceso isocórico el trabajo PV es mayor que cero.";
-    R[51] = "F";
-
-    P[52] = "Si el índice politrópico es 0, el proceso es isobárico.";
-    R[52] = "V";
-
-    P[53] = "Si el índice politrópico es 0, el proceso es isocórico.";
-    R[53] = "F";
-    
-    P[54] = "Si el índice politrópico es 1, el proceso es isotérmico.";
-    R[54] = "V";
-
-    P[55] = "Si el índice politrópico es 1 el proceso es adiabático.";
-    R[55] = "F";
-
-    P[56] = "Si el índice politrópico es muy grande, el proceso es isocórico.";
-    R[56] = "V";
-
-    P[57] = "Si el índice politrópico es muy grande, el proceso es isobárico.";
-    R[57] = "F";
-
-    P[58] = "La energía interna es una variable de estado.";
-    R[58] = "V";
-
-    P[59] = "La energía interna es una variable de trayectoria.";
-    R[59] = "F";
-
-    P[60] = "La entalpía es una variable de estado.";
-    R[60] = "V";
-
-    P[61] = "La entalpía es una variable de trayectoria.";
-    R[61] = "F";
-
-    P[62] = "El calor es una variable de trayectoria.";
-    R[62] = "V";
-
-    P[63] = "El calor es una variable de estado.";
-    R[63] = "F";
-
-    P[64] = "El trabajo es una variable de trayectoria.";
-    R[64] = "V";
-
-    P[65] = "El trabajo es una variable de estado.";
-    R[65] = "F";    
-
-    P[66] = "En un proceso a volumen constante, el calor es igual al cambio en la energía interna.";
-    R[66] = "V";
-
-    P[67] = "En un proceso a volumen constante, el calor es igual al cambio en la entalpía.";
-    R[67] = "F";  
-
-    P[68] = "En un proceso a presión constante, el calor es igual al cambio en la entalpía.";
-    R[68] = "V";
-
-    P[69] = "En un proceso a presión constante, el calor es igual al cambio en la energía interna.";
-    R[69] = "F";  
-
-    P[70] = "En un proceso isotérmico, la energía interna (de un gas ideal) permanece constante.";
-    R[70] = "V";
-    
-    P[71] = "En un proceso isotérmico, el cambio en la energía interna (de un gas ideal) es mayor que cero.";
-    R[71] = "F";
-
-    P[72] = "En un proceso isotérmico, la entalpía (de un gas ideal) permanece constante.";
-    R[72] = "V";
-    
-    P[73] = "En un proceso isotérmico, el cambio en la entalpía (de un gas ideal) es mayor que cero.";
-    R[73] = "F";
-
-    
-    //----------------------------------------------------
-    
-    var MAX = 73;
-       
-    if(contador===1)
-    {
-        rnd = irand(1,MAX);
-        registro[contador] = rnd;
-    }
-    else
-    {
-        while(1)
-        {
-            rnd = irand(1,MAX);
-            if(registro.includes(rnd)===false)
-            {
-                registro[contador] = rnd;
-                break;
-            }
-        }
-    }
-    contador += 1;
-
-
-    LaPregunta = P[rnd];
-    LaRespuesta = R[rnd];
-    
-    console.log(contador, registro);
-    
-}
-
-
-//----------------------------------------------------- EX_2_CONCEPTOS
+//----------------------------------------------------- EX_1_CONCEPTOS
 function HacerPreguntas_ex2()
 {
     
@@ -1057,26 +772,9 @@ function ex_2_problemas()
 function ex_3_conceptos()
 {
 
-    contador = 0;
-    registro = [];
-
-    QUESTION  = "<center><b>Tercer Examen Parcial de Termodinámica: Conceptos.</b></center><br>";
-    QUESTION += "<center>Prof. Octavio Juárez.</center><br>";
-    QUESTION += "<b>Instrucciones:</b> Contesta ¿Falso o Verdadero?<br>"
-    ANSWER = "<center><b>Respuestas</b></center><br>"
+    QUESTION = "Proximamente :D"
     
-    QUESTION +="<ol>";
-    ANSWER +="<ol>";
-    
-    for(var i=0;i<20;i++)
-    {
-        HacerPreguntas_ex3()
-        QUESTION +="<li>" + LaPregunta + "<br><br>";
-        ANSWER   +="<li>" + LaRespuesta + "<br><br>";  
-    }
-    
-    QUESTION +="</ol>";
-    ANSWER += "</ol>";
+    ANSWER = "Ten paciencia! :V"
     
 }
 
@@ -1084,51 +782,27 @@ function ex_3_conceptos()
 function ex_3_problemas()
 {
 
-
-    
     QUESTION = ""
     ANSWER = ""
 
     QUESTION  = "<center><b>Tercer Examen Parcial de Termodinámica: Problemas.</b></center><br>";
     QUESTION += "<center>Prof. Octavio Juárez.</center><br>";
-    
+
     QUESTION += "<b>Problema 1:</b><br><br>"
     ANSWER += "<b>Respuesta 1:</b><br>"
-    prob_ex3_1aLey(irand(1,4));
-    
+    prob_ex3_proc_isobarico();
+
     QUESTION += "<b>Problema 2:</b><br><br>"
     ANSWER += "<b>Respuesta 2:</b><br>"
-    prob_ex3_isobarico(irand(1,3));
+    prob_ex3_proc_isotermico();
 
     QUESTION += "<b>Problema 3:</b><br><br>"
-    ANSWER += "<b>Respuesta 3:</b><br>"
-    prob_ex3_isotermico(irand(1,4));
+    ANSWER += "<br><b>Respuesta 3:</b><br>"
+    prob_ex3_proc_isocorico();
 
     QUESTION += "<b>Problema 4:</b><br><br>"
-    ANSWER += "<b>Respuesta 4:</b><br>"
-    prob_ex3_isocorico(irand(1,3));
-    
-    QUESTION += "<b>Problema 5:</b><br><br>"
-    ANSWER += "<br><b>Respuesta 5:</b><br>"
-    prob_ex3_adiabatico(irand(1,3));
-
-    QUESTION += "<b>Problema 6:</b><br><br>"
-    ANSWER += "<b>Respuesta 6:</b><br>"
-    if(irand(1,2)===1)
-        prob_ex3_isobarico(irand(1,3));
-    else
-        prob_ex3_isotermico(irand(1,4));
-
-    QUESTION += "<b>Problema 7:</b><br><br>"
-    ANSWER += "<b>Respuesta 7:</b><br>"
-    if(irand(1,2)===1)
-        prob_ex3_isocorico(irand(1,3));
-    else
-        prob_ex3_adiabatico(irand(1,3));
-
-    QUESTION += "<b>Problema 8:</b><br><br>"
-    ANSWER += "<b>Respuesta 8:</b><br>"
-    prob_ex3_1aLey(irand(1,4));
+    ANSWER += "<br><b>Respuesta 4:</b><br>"
+    prob_ex3_proc_adiabatico();
     
 }
 
@@ -1139,8 +813,6 @@ function ex_4_conceptos()
     QUESTION = "Proximamente :D"
     
     ANSWER = "Ten paciencia! :V"
-
-
     
 }
 
@@ -1148,1083 +820,304 @@ function ex_4_conceptos()
 function ex_4_problemas()
 {
 
-    QUESTION = ""
-    ANSWER = ""
-
-    QUESTION  = "<center><b>Cuarto Examen Parcial de Termodinámica: Problemas.</b></center><br>";
-    QUESTION += "<center>Prof. Octavio Juárez.</center><br>";
+    QUESTION = "Proximamente :D"
     
-    QUESTION += "<b>Problema 1:</b><br><br>"
-    ANSWER += "<b>Respuesta 1:</b><br>"
-    prob_ex4_eficiencia(irand(1,7));
-
-    QUESTION += "<b>Problema 2:</b><br><br>"
-    ANSWER += "<b>Respuesta 2:</b><br>"
-    prob_ex4_delta_s_sist(irand(1,4));
-
-    QUESTION += "<b>Problema 3:</b><br><br>"
-    ANSWER += "<b>Respuesta 3:</b><br>"
-    prob_ex4_cambio_fase(irand(1,7));
-
-    QUESTION += "<b>Problema 4:</b><br><br>"
-    ANSWER += "<b>Respuesta 4:</b><br>"
-    prob_ex4_proc_quim(irand(1,6));
-    
-}
-
-//----------------------------------------------------- PROCESOS QUIMICOA
-function prob_ex4_proc_quim(op)
-{
-    
-    if(op===1)        
-    {
-        
-        var q = 890.25; //kJ/mol
-        var m = irand(1,9)*100.0; //g
-        var n = m/(12.0+4.0);
-        
-        QUESTION += "Considera el siguiente proceso químico:";
-        QUESTION += "<br>";
-        QUESTION += "CH<sub>4</sub> + 2O<sub>2</sub> &rarr; CO<sub>2</sub> + 2H<sub>2</sub>O; &Delta;H = &minus;890.25 kJ/mol";
-        QUESTION += "<br>";
-        QUESTION += "Calcular (en kJ) el calor producido cuando se consumen "+m+" g de CH<sub>4</sub>";
-        QUESTION += "<br>";
-        QUESTION += "<br>";
-        
-        q = n*q/1.0;
-
-        ANSWER += "q = "+round2(q)+" kJ.<br>";
-        ANSWER += "<br>";        
-        
-    }
-
-    if(op===2)        
-    {
-        
-        var q = 890.25; //kJ/mol
-        var m = irand(1,9)*100.0; //g
-        var n = m/(12.0+16.0);
-        
-        QUESTION += "Considera el siguiente proceso químico:";
-        QUESTION += "<br>";
-        QUESTION += "CH<sub>4</sub> + 2O<sub>2</sub> &rarr; CO<sub>2</sub> + 2H<sub>2</sub>O; &Delta;H = &minus;890.25 kJ/mol";
-        QUESTION += "<br>";
-        QUESTION += "Calcular (en kJ) el calor producido cuando se producen "+m+" g de CO<sub>2</sub>";
-        QUESTION += "<br>";
-        QUESTION += "<br>";
-        
-        q = n*q/1.0;
-
-        ANSWER += "q = "+round2(q)+" kJ.<br>";
-        ANSWER += "<br>";        
-        
-    }
-
-    if(op===3)        
-    {
-        
-        var dH = -890.25; //kJ/mol
-        var q = -1000.0*irand(1,9); 
-        var M = 12.0 + 4.0;
-        
-        QUESTION += "Considera el siguiente proceso químico:";
-        QUESTION += "<br>";
-        QUESTION += "CH<sub>4</sub> + 2O<sub>2</sub> &rarr; CO<sub>2</sub> + 2H<sub>2</sub>O; &Delta;H = &minus;890.25 kJ/mol";
-        QUESTION += "<br>";
-        QUESTION += "Calcular los gramos necesarios de CH<sub>4</sub> para producir "+q+" kJ de calor.";
-        QUESTION += "<br>";
-        QUESTION += "<br>";
-        
-        n = 1 * q / dH;
-        
-        m = n*M;
-
-        ANSWER += "masa de CH<sub>4</sub> = "+round2(m)+" g.<br>";
-        ANSWER += "<br>";        
-        
-    }
-
-    if(op===4)        
-    {
-        
-        var dH = -2801.0; //kJ/mol
-        var m = irand(1,9)*100.0; //g
-        var M = 6*12 + 12 + 6*16;
-        var n = m/M;
-        
-        QUESTION += "Considera el siguiente proceso químico:";
-        QUESTION += "<br>";
-        QUESTION += "C<sub>6</sub>H<sub>12</sub>O<sub>6</sub> + 6O<sub>2</sub> &rarr; 6CO<sub>2</sub> + 6H<sub>2</sub>O; &Delta;H = &minus;2801.0 kJ/mol";
-        QUESTION += "<br>";
-        QUESTION += "Calcular (en kJ) el calor producido cuando se consumen "+m+" g de glucosa.";
-        QUESTION += "<br>";
-        QUESTION += "<br>";
-        
-        var q = n*dH/1.0;
-
-        ANSWER += "q = "+round2(q)+" kJ.<br>";
-        ANSWER += "<br>";        
-        
-    }
-
-    if(op===5)        
-    {
-        
-        var dH = -2801.0; //kJ/mol
-        var m = irand(1,9)*100.0; //g
-        var M = 2 + 16;
-        var n = m/M;
-        
-        QUESTION += "Considera el siguiente proceso químico:";
-        QUESTION += "<br>";
-        QUESTION += "C<sub>6</sub>H<sub>12</sub>O<sub>6</sub> + 6O<sub>2</sub> &rarr; 6CO<sub>2</sub> + 6H<sub>2</sub>O; &Delta;H = &minus;2801.0 kJ/mol";
-        QUESTION += "<br>";
-        QUESTION += "Calcular (en kJ) el calor producido cuando se producen "+m+" g de agua.";
-        QUESTION += "<br>";
-        QUESTION += "<br>";
-        
-        var q = n*dH/6.0;
-
-        ANSWER += "q = "+round2(q)+" kJ.<br>";
-        ANSWER += "<br>";        
-        
-    }
-
-    if(op===6)        
-    {
-        
-        var dH = -2801.0; //kJ/mol
-        var q = -1000.0*irand(1,9); 
-        var M = 32;
-        
-        QUESTION += "Considera el siguiente proceso químico:";
-        QUESTION += "<br>";
-        QUESTION += "C<sub>6</sub>H<sub>12</sub>O<sub>6</sub> + 6O<sub>2</sub> &rarr; 6CO<sub>2</sub> + 6H<sub>2</sub>O; &Delta;H = &minus;2801.0 kJ/mol";
-        QUESTION += "<br>";
-        QUESTION += "Calcular los gramos necesarios de O<sub>2</sub> para producir "+q+" kJ de calor.";
-        QUESTION += "<br>";
-        QUESTION += "<br>";
-        
-        n = 6 * q / dH;
-        
-        m = n*M;
-
-        ANSWER += "masa de O<sub>2</sub> = "+round2(m)+" g.<br>";
-        ANSWER += "<br>";       
-        
-    }
-    
-}
-
-
-//----------------------------------------------------- TRANSICION DE FASE
-function prob_ex4_cambio_fase(op)
-{
-    
-    if(op===1)        
-    {
-    
-        var Tevap = irand(50,99); // temp ebullicion
-        var qevap = irand(20,99); //calor evaporación
-        var qcond = -qevap; //calor de condensación
-
-        QUESTION += "Cierta sustancia hierve a "+Tevap+" °C y 1 atm. El calor de evaporación de dicha sustancia es ";
-        QUESTION += "de "+qevap+" kJ/mol. ";
-        QUESTION += "Calcular (en J/mol K) los cambios de entropía (molares) para las transiciones: <br>";
-        QUESTION += "a) líquido &rarr; vapor .<br>";
-        QUESTION += "b) vapor &rarr; líquido .<br>";
-        QUESTION += "<br>";
-
-        Tevap += 273.15;
-        
-        var dSevap = qevap*1000/Tevap;
-        var dScond = qcond*1000/Tevap;
-        
-        ANSWER += "&Delta;S<sub>sist, liq &rarr; vap</sub> = "+round2(dSevap)+" J/mol K.<br>";
-        ANSWER += "&Delta;S<sub>sist, vap &rarr; liq</sub> = "+round2(-dSevap)+" J/mol K.<br>";
-        ANSWER += "<br>";
-
-    }    
-
-    if(op===2)        
-    {
-    
-        var Tevap = irand(50,99); // temp ebullicion
-        var qevap = irand(20,99); //calor evaporación
-        var qcond = -qevap; //calor de condensación
-
-        QUESTION += "Una sustancia desconocida tiene un calor de evaporación ";
-        QUESTION += "de "+qevap+" kJ/mol. ";
-        QUESTION += "Si dicha sustancia hierve a "+Tevap+" °C y 1 atm, calcular (en J/mol K): <br>";
-        QUESTION += "a) el &Delta;S de condensación. <br>";
-        QUESTION += "a) el &Delta;S de evaporación. <br>";
-        QUESTION += "<br>";
-
-        Tevap += 273.15;
-        
-        var dSevap = qevap*1000/Tevap;
-        var dScond = qcond*1000/Tevap;
-        
-        ANSWER += "&Delta;S<sub>sist, liq &rarr; vap</sub> = "+round2(dSevap)+" J/mol K.<br>";
-        ANSWER += "&Delta;S<sub>sist, vap &rarr; liq</sub> = "+round2(dScond)+" J/mol K.<br>";
-        ANSWER += "<br>";
-
-    } 
-
-    if(op===3)        
-    {
-    
-        var Tevap = irand(50,99); // temp ebullicion
-        var qevap = irand(20,99); //calor evaporación
-        var qcond = -qevap; //calor de condensación
-        var n = irand(2,9); //mol
-
-        QUESTION += "Cierta sustancia desconocida hierve a "+Tevap+" °C y 1 atm. ";
-        QUESTION += "Para evaporar 1 mol de dicha sustancia se necesitan "+qevap+" kJ de calor. ";
-        QUESTION += "Calcular (en J/K) el &Delta;S<sub>sist</sub> resultante si se condensan "+n+" mol de dicha sustancia. <br>";
-        QUESTION += "<br>";
-
-        Tevap += 273.15;
-        
-        var dSevap = n*qevap*1000/Tevap;
-        var dScond = n*qcond*1000/Tevap;
-        
-        ANSWER += "&Delta;S<sub>sist, cond</sub> = "+round2(dScond)+" J/K.<br>";
-        ANSWER += "<br>";
-
-    } 
-
-    if(op===4)        
-    {
-    
-        var Tevap = 100.0; // temp ebullicion
-        var qevap = 40.585; //calor evaporación kJ/mol
-        var qcond = -qevap; //calor de condensación
-        var m = irand(1,9)*100; //g
-        var n = m/18.0;
-
-        QUESTION += "Para hervir (a 100 °C y 1 atm) 1 mol de agua líquida ";
-        QUESTION += "se necesitan "+qevap+" kJ de calor. <br>";
-        QUESTION += "Calcular: <br>";
-        QUESTION += "a) el calor (en kJ) necesario para hervir "+m+" g de agua líquida. <br>";
-        QUESTION += "b) el cambio de entropía (en J/K) del agua durante el proceso. <br>";
-        QUESTION += "<br>";
-
-        Tevap += 273.15;
-        
-        var q = n*qevap;
-        
-        var dSevap = q*1000/Tevap;
-        
-        ANSWER += "q = "+round2(q)+" kJ.<br>";
-        ANSWER += "&Delta;S<sub>sist, liq &rarr; vap</sub> = "+round2(dSevap)+" J/K.<br>";
-        ANSWER += "<br>";
-
-    } 
-
-    if(op===5)        
-    {
-    
-        var Tevap = 100.0; // temp ebullicion
-        var qevap = 40.585; //calor evaporación kJ/mol
-        var qcond = -qevap; //calor de condensación
-        var m = irand(1,9)*100; //g
-        var n = m/18.0;
-
-        QUESTION += "Para hervir (a 100 °C y 1 atm) 1 mol de agua líquida ";
-        QUESTION += "se necesitan "+qevap+" kJ de calor. ";
-        QUESTION += "Calcular: <br>";
-        QUESTION += "a) el calor (en kJ) necesario para condensar "+m+" g de vapor de agua. <br>";
-        QUESTION += "b) el cambio de entropía (en J/K) del agua durante el proceso. <br>";
-        QUESTION += "<br>";
-
-        Tevap += 273.15;
-        
-        var q = n*qcond;
-        
-        var dScond = q*1000/Tevap;
-        
-        ANSWER += "q = "+round2(q)+" kJ.<br>";
-        ANSWER += "&Delta;S<sub>sist, vap &rarr; liq</sub> = "+round2(dScond)+" J/K.<br>";
-        ANSWER += "<br>";
-
-    } 
-
-    if(op===6)        
-    {
-    
-        var Tfus = 0.0; // temp fusion
-        var qfus = 6.0; // calor fusion kJ/mol
-        var qsol = -qfus; //calor de solidificación (congelacion)
-        var m = irand(1,9)*100; //g
-        var n = m/18.0;
-
-        QUESTION += "Para fundir (a 0 °C y 1 atm) 1 mol de agua sólida (hielo) ";
-        QUESTION += "se necesitan "+qfus+" kJ de calor. <br>";
-        QUESTION += "Calcular: <br>";
-        QUESTION += "a) el calor (en kJ) necesario para fundir "+m+" g de agua sólida. <br>";
-        QUESTION += "b) el cambio de entropía (en J/K) del agua durante el proceso. <br>";
-        QUESTION += "<br>";
-
-        Tfus += 273.15;
-        
-        var q = n*qfus;
-        
-        var dSfus = q*1000/Tfus;
-        
-        ANSWER += "q = "+round2(q)+" kJ.<br>";
-        ANSWER += "&Delta;S<sub>sist, sol &rarr; liq</sub> = "+round2(dSfus)+" J/K.<br>";
-        ANSWER += "<br>";
-
-    } 
-
-    if(op===7)        
-    {
-    
-        var Tfus = 0.0; // temp fusion
-        var qfus = 6.0; // calor fusion kJ/mol
-        var qsol = -qfus; //calor de solidificación (congelacion)
-        var m = irand(1,9)*100; //g
-        var n = m/18.0;
-
-        QUESTION += "Para fundir (a 0 °C y 1 atm) 1 mol de agua sólida (hielo) ";
-        QUESTION += "se necesitan "+qfus+" kJ de calor. <br>";
-        QUESTION += "Calcular: <br>";
-        QUESTION += "a) el calor (en kJ) necesario para congelar "+m+" g de agua líquida. <br>";
-        QUESTION += "b) el cambio de entropía (en J/K) del agua durante el proceso. <br>";
-        QUESTION += "<br>";
-
-        Tfus += 273.15;
-        
-        var q = n*qsol;
-        
-        var dSsol = q*1000/Tfus;
-        
-        ANSWER += "q = "+round2(q)+" kJ.<br>";
-        ANSWER += "&Delta;S<sub>sist, sol &rarr; liq</sub> = "+round2(dSsol)+" J/K.<br>";
-        ANSWER += "<br>";
-
-    } 
-    
-}
-
-
-//----------------------------------------------------- DELTA S_SISTEMA
-function prob_ex4_delta_s_sist(op)
-{
-    
-    if(op===1)        
-    {
-    
-        while(1)
-        {
-            var T1 = irand(10,800); //°C
-            var T2 = irand(10,800); //°C
-            if(Math.abs(T1-T2) >= 200.0) break;
-        }
-        var R = 8.314;
-        var V = irand(20,50);
-        var Cp = irand(15,50); //J/K
-        var Cv = Cp - R;
-
-        QUESTION += "Un mol de gas ideal (C<sub>p</sub> = "+Cp+" J/K) ocupa "+V+" dm<sup>3</sup> a "+T1+" °C. ";
-        QUESTION += "El gas se somete a un proceso isocórico mientras que la temperatura de los alrededores es de "+T2+" °C. ";
-        QUESTION += "Calcular (en J/K) el cambio en la entropía del sistema.<br>";
-        QUESTION += "<br>";
-
-        T1 = T1 + 273.15;
-        T2 = T2 + 273.15;
-        Tprom = (T1+T2)/2.0;
-        
-        var q = Cv*(T2 - T1);
-        var deltaS = q/Tprom;
-        
-        ANSWER += "&Delta;S<sub>sistema</sub> = "+round2(deltaS)+" J/K.<br>";
-        ANSWER += "<br>";
-
-    }
-
-	if(op===2)
-	{
-        while(1)
-        {
-            var T1 = irand(10,800); //°C
-            var T2 = irand(10,800); //°C
-            if(Math.abs(T1-T2) >= 200.0) break;
-        }
-        var R = 8.314;
-        var V = irand(20,50);
-        var Cp = irand(15,50); //J/K
-        var Cv = Cp - R;
-
-        QUESTION += "Un mol de gas ideal (C<sub>p</sub> = "+Cv+" J/K) ocupa "+V+" dm<sup>3</sup> a "+T1+" °C. ";
-        QUESTION += "El gas se somete a un proceso isobárico mientras que la temperatura de los alrededores es de "+T2+" °C. ";
-        QUESTION += "Calcular (en J/K) el cambio en la entropía del sistema.<br>";
-        QUESTION += "<br>";
-
-        T1 = T1 + 273.15;
-        T2 = T2 + 273.15;
-        Tprom = (T1+T2)/2.0;
-        
-        var q = Cp*(T2 - T1);
-        var deltaS = q/Tprom;
-        
-        ANSWER += "&Delta;S<sub>sistema</sub> = "+round2(deltaS)+" J/K.<br>";
-        ANSWER += "<br>";
-			
-	}
-
-    if(op===3)
-    {
-        while(1)
-        {
-            var P1 = irand(1,10)*10.0; //kPa
-            var P2 = irand(1,10)*10.0; //kPa
-            if(Math.abs(P1-P2)>=20) break;
-        }
-
-        var T = irand(25,400); //°C
-
-        QUESTION += "Un mol de gas ideal se somete a un proceso isotérmico ("+T+" °C). "
-        QUESTION += "La presión del gas cambia desde "+P1+" kPa hasta "+P2+" kPa. "
-        QUESTION += "Calcular (en J/K) el cambio en la entropía del sistema.<br>";
-        QUESTION += "<br>";
-
-        T = T + 273.15;
-        R = 8.314; 
-        var w = -1*R*T*Math.log(P1/P2); //J
-        var q = -w;
-        var deltaS = q/T;
-
-        ANSWER += "&Delta;S<sub>sistema</sub> = "+round2(deltaS)+" J/K.<br>";
-        ANSWER += "<br>";
-    }
-
-    if(op===4)
-    {
-        while(1)
-        {
-            var T1 = irand(10,500); //°C
-            var T2 = irand(10,500); //°C
-            if(Math.abs(T1-T2) >= 50.0) break;
-        }
-
-        var R = 8.314;
-        var V1 = irand(10,50); //dm**3
-        var Cp = irand(15,50); //J/K
-        var Cv = Cp - R;
-        
-        QUESTION += "Un mol de gas ideal (C<sub>p</sub> = "+Cp+" J/K) ocupa "+V1+" dm<sup>3</sup> a "+T1+" °C. ";
-        QUESTION += "El gas se somete a un proceso adiabático y su temperatura cambia a "+T2+" °C. ";
-        QUESTION += "Calcular (en J/K) el cambio en la entropía del sistema.<br>";
-        QUESTION += "<br>";        
-                
-        T1 = T1 + 273.15;//K
-        T2 = T2 + 273.15;//K
-        
-        var deltaU = Cv*(T2-T1)/1000.0; //kJ
-        var deltaS = 0;
-        
-        ANSWER += "&Delta;S<sub>sistema</sub> = "+round2(deltaS)+" J/K.<br>";
-        ANSWER += "<br>";
-        
-    }    
-    
-}
-
-
-//----------------------------------------------------- EX4 EFICIENCIA
-function prob_ex4_eficiencia(op)
-{
- 
-    if(op===1)
-    {
-
-        var w_out = irand(10,90); //kJ
-        var q_inp = irand(2,5)*w_out; //kJ
-        var e = w_out/q_inp;
-        
-        QUESTION += "Una maquina térmica produce "+w_out+" kJ de trabajo cuando se ";
-        QUESTION += "alimenta con "+q_inp+" kJ de calor. ";
-        QUESTION += "Calcular la eficiencia de la máquina.<br>";
-        QUESTION += "<br>";      
-        
-        ANSWER += "&epsilon; = "+round2(e*100)+" %<br>";
-        ANSWER += "<br>";
-        
-    }
-
-    if(op===2)
-    {
-
-        while(1)
-        {
-            var q_inp = irand(10,90);
-            var q_out = irand(10,90);
-            var w_out = q_inp - q_out;
-            var e = w_out/q_inp;
-            if(e>0 && e<1) break;
-        }
-        
-        QUESTION += "Una maquina térmica se alimenta con "+q_inp+" kJ de calor ";
-        QUESTION += "y desecha "+q_out+" kJ en forma de calor. ";
-        QUESTION += "Calcular la eficiencia de la máquina.<br>";
-        QUESTION += "<br>";      
-        
-        ANSWER += "&epsilon; = "+round2(e*100)+" %<br>";
-        ANSWER += "<br>";
-        
-    }
-
-    if(op===3)
-    {
-
-        while(1)
-        {
-            var q_out = irand(10,90);
-            var w_out = irand(10,90);
-            var q_inp = q_out + w_out;
-            var e = w_out/q_inp;
-            if(e>0 && e<1) break;
-        }
-        
-        QUESTION += "Una maquina térmica produce "+w_out+" kJ de trabajo y ";
-        QUESTION += "desecha "+q_out+" kJ de calor. ";
-        QUESTION += "Calcular la eficiencia de la máquina.<br>";
-        QUESTION += "<br>";       
-        
-        ANSWER += "&epsilon; = "+round2(e*100)+" %<br>";
-        ANSWER += "<br>";
-        
-    }
-
-    if(op===4)
-    {
-
-        var e = irand(10,95);
-        var q_inp = irand(10,90);
-        var w_out = (e/100.0)*q_inp;
-        
-        
-        QUESTION += "Una maquina térmica (con eficiencia del "+e+"%) se alimenta con "+q_inp+" kJ de calor. ";
-        QUESTION += "Calcular la cantidad de trabajo producido. <br>";
-        QUESTION += "<br>";       
-        
-        ANSWER += "w<sub>out</sub> = "+w_out+" kJ.<br>";
-        ANSWER += "<br>";
-        
-    }
-
-    if(op===5)
-    {
-
-        var Tcold = irand(5,100);
-        var Thot = Tcold + irand(100,800);        
-        
-        QUESTION += "Una maquina térmica opera con las siguientes temperaturas: "+Tcold+" °C y "+Thot+" °C. ";
-        QUESTION += "Calcular la eficiencia de la máquina.<br>";
-        QUESTION += "<br>";       
-        
-        Tcold += 273.15;
-        Thot += 273.15;
-        
-        var e = 1 - Tcold/Thot;
-        
-        ANSWER += "&epsilon; = "+round2(e*100)+" %<br>";
-        ANSWER += "<br>";
-        
-    }
-
-    if(op===6)
-    {
-
-        var Tcold = irand(100,500);
-        var Thot = Tcold + irand(100,500);        
-        var e = 1 - Tcold/Thot;
-        
-        QUESTION += "Una maquina térmica debe operar con una eficiencia del "+round2(e*100)+"%, ";
-        QUESTION += "Calcular la temperatura <i>fría</i> necesaria si la temperatura <i>caliente</i> es de "+Thot+" K. <br>";
-        QUESTION += "<br>";       
-                
-        ANSWER += "T<sub>cold</sub> = "+Tcold+" K.<br>";
-        ANSWER += "<br>";
-        
-    }
-
-    if(op===7)
-    {
-
-        var Tcold = irand(100,500);
-        var Thot = Tcold + irand(100,500);        
-        var e = 1 - Tcold/Thot;
-        
-        QUESTION += "Una maquina térmica debe operar con una eficiencia del "+round2(e*100)+"%, ";
-        QUESTION += "Calcular la temperatura <i>caliente</i> necesaria si la temperatura <i>fría</i> es de "+Tcold+" K. <br>";
-        QUESTION += "<br>";       
-                
-        ANSWER += "T<sub>hot</sub> = "+Thot+" K.<br>";
-        ANSWER += "<br>";
-        
-    }
-    
-}
-
-
-//----------------------------------------------------- 1a LEY
-function prob_ex3_1aLey(op)
-{
-    
-    if(op===1) // expansion
-    {
-        
-        var w = -irand(10,90); //kJ
-        var q = -irand(2,5)*w; //kJ
-        var deltaU = q + w;
-        
-        QUESTION += "Un gas ideal absorbe "+q+" kJ en forma de calor. ";
-        QUESTION += "Debido a esto, el gas se expande y realiza "+-w+" kJ de trabajo. ";
-        QUESTION += "Calcular (en kJ) el cambio en la energía interna del gas.<br>";
-        QUESTION += "<br>";      
-        
-        ANSWER += "&Delta;U = "+deltaU+" kJ.<br>";
-        ANSWER += "<br>";
-        
-    }
-
-    if(op===2) // expansion
-    {
-        
-        var w = -irand(10,90); //kJ
-        var q = -w; //kJ
-        
-        QUESTION += "Un mol de gas ideal se expande y realiza "+-w+" kJ de trabajo. ";
-        QUESTION += "Si la energía del gas permanece constante, ";
-        QUESTION += "calcular (en kJ) cuánto calor absorbe el gas.<br>";
-        QUESTION += "<br>";      
-        
-        ANSWER += "q = "+q+" kJ.<br>";
-        ANSWER += "<br>";
-        
-    }
-    
-    if(op===3) // compresion
-    {
-        
-        var w = irand(10,90); //kJ
-        var q = -irand(2,5)*w; //kJ
-        var deltaU = w + q;
-        
-        QUESTION += "Los alrededores realizan "+w+" kJ de trabajo sobre un gas ideal. ";
-        QUESTION += "Debido a esto, el gas se comprime y libera "+-q+" kJ en forma de calor. ";
-        QUESTION += "Calcular (en kJ) el cambio en la energía interna del gas.<br>";
-        QUESTION += "<br>";      
-        
-        ANSWER += "&Delta;U = "+deltaU+" kJ.<br>";
-        ANSWER += "<br>";
-        
-    }
-
-    if(op===4) // compresion
-    {
-        
-        var w = irand(10,90); //kJ
-        var q = -irand(2,5)*w; //kJ
-        var deltaU = w + q;        
-        
-        QUESTION += "Un gas ideal se comprime liberando "+-q+" kJ en forma de calor. ";
-        QUESTION += "Calcular (en kJ) la cantidad trabajo que debe ingresar al gas ";
-        QUESTION += "para que el cambio en su energía interna sea de "+deltaU+" kJ.<br>";
-        QUESTION += "<br>";      
-        
-        ANSWER += "w = "+w+" kJ.<br>";
-        ANSWER += "<br>";
-        
-    }
+    ANSWER = "Ten paciencia! :V"
     
 }
 
 //----------------------------------------------------- PROCESO ADIABATICO
-function prob_ex3_adiabatico(op)
+function prob_ex3_proc_adiabatico()
 {
-        
-    if(op===1)
+
+	var n = irand(2,5);
+    var R = 8.314;
+	if(irand(1,2)===1)
+		{var Cv = 3.0/2.0*R;}
+	else
+		{var Cv = 5.0/2.0*R;}	
+		
+    var c = Cv/(n*R);
+    var Cp = n*R + Cv;
+    var gamma = Cp/Cv;
+    
+    while(1)
     {
-        
-        while(1)
-        {
-            var P1 = irand(10,90)*10.0; //kPa
-            var P2 = irand(10,90)*10.0; //kPa
-            if(Math.abs(P1-P2) >= 50.0) break;
-        }
-
-        R = 8.314; //J/mol/K
-        var Cp = irand(15,50); //J/K
-        V1 = irand(10,90); //dm**3, L
-        
-        var Cv = Cp - R;
-        var gamma = Cp/Cv;
-        
-        QUESTION += "Un mol de gas ideal (C<sub>p</sub> = "+Cp+" J/K) ocupa "+V1+" dm<sup>3</sup> a "+P1+" kPa. ";
-        QUESTION += "El gas se somete a un proceso adiabático y su presión cambia a "+P2+" kPa. ";
-        QUESTION += "Calcular (en dm<sup>3</sup>) el volumen final del gas.<br>";
-        QUESTION += "<br>";        
-                
-        V2 = P1*Math.pow(V1,gamma)/P2; // V2**gamma
-        V2 = Math.pow(V2,1.0/gamma); //dm**3
-        
-        ANSWER += "<gray>";
-        ANSWER += "&gamma; = "+round4(gamma)+"<br>";
-        ANSWER += "</gray>";
-        
-        ANSWER += "V2 = "+round4(V2)+" dm<sup>3</sup><br>";
-        ANSWER += "<br>";
-        
+        var T1 = irand(10,300);
+        var T2 = irand(10,300);
+        if(Math.abs(T1-T2)>10) break;
     }
+    
+    var V1 = irand(10,50); //L
+    var P1 = n*0.08206*(T1+273.15)/V1;//atm
+    var V2 = V1*Math.pow(T1+273.15,c)/Math.pow(T2+273.15,c); //L
+    var P2 = P1*Math.pow(V1,gamma)/Math.pow(V2,gamma);//atm
+    
+    
+	QUESTION += n +" mol de gas ideal (C<sub>v</sub> = "+Cv+" J/K) ocupan "+V1+" L a "+T1+" °C y "+round2(P1)+ " atm. ";   
+	QUESTION += "El gas se somete a un proceso adiabático y su temperatura y volumen cambian a "+T2+" °C y "+round2(V2)+" L. ";
+	QUESTION += "Calcular el trabajo, el calor, el cambio en la energía interna y el cambio de entalpía.<br>";
+	QUESTION += "<br>";
 
-    if(op===2)
-    {
-        while(1)
-        {
-            var V1 = irand(10,150); //dm**3, L
-            var V2 = irand(10,150); //dm**3, L
-            if(Math.abs(V1-V2) >= 50.0) break;
-        }
-
-        R = 8.314; //J/mol/K
-        var Cv = irand(15,50); //J/K
-        T1 = irand(200,900); //K
-
-        var c = Cv/R;
-        
-        QUESTION += "Un mol de gas ideal (C<sub>v</sub> = "+Cv+" J/K) ocupa "+V1+" dm<sup>3</sup> a "+T1+" K. ";
-        QUESTION += "El gas se somete a un proceso adiabático y su volumen cambia a "+V2+" dm<sup>3</sup>. ";
-        QUESTION += "Calcular (en °C) la temperatura final del gas.<br>";
-        QUESTION += "<br>";        
-                
-        T2 = V1*Math.pow(T1,c)/V2; // T2**c
-        T2 = Math.pow(T2,1.0/c); //K
-        
-        T2 = T2 - 273.15;
-                
-        ANSWER += "<gray>";
-        ANSWER += "c = "+round4(c)+"<br>";
-        ANSWER += "</gray>";
-        ANSWER += "T2 = "+round4(T2)+" °C<br>";
-        ANSWER += "<br>";
-        
-    }
-
-    if(op===3)
-    {
-        while(1)
-        {
-            var T1 = irand(10,500); //°C
-            var T2 = irand(10,500); //°C
-            if(Math.abs(T1-T2) >= 50.0) break;
-        }
-
-        var R = 8.314;
-        var V1 = irand(10,50); //dm**3
-        var Cp = irand(15,50); //J/K
-        var Cv = Cp - R;
-        
-        QUESTION += "Un mol de gas ideal (C<sub>p</sub> = "+Cp+" J/K) ocupa "+V1+" dm<sup>3</sup> a "+T1+" °C. ";
-        QUESTION += "El gas se somete a un proceso adiabático y su temperatura cambia a "+T2+" °C. ";
-        QUESTION += "Calcular (en kJ) el cambio en la energía interna del gas.<br>";
-        QUESTION += "<br>";        
-                
-        T1 = T1 + 273.15;//K
-        T2 = T2 + 273.15;//K
-        
-        var deltaU = Cv*(T2-T1)/1000.0; //kJ
-        
-        ANSWER += "&Delta;U = "+round2(deltaU)+" kJ.<br>";
-        ANSWER += "<br>";
-        
-    }
+	T1 = T1 + 273.15;
+	T2 = T2 + 273.15;
+    V1 = V1/1000.0; //m3
+    V2 = V2/1000.0; //m3
+    P1 = P1*101325.0; //Pa
+    P2 = P2*101325.0; //Pa
+    
+	var q = 0;
+	var w = Cv*(T2-T1);
+	var deltaU = q + w;
+    var deltaH = deltaU + (P2*V2- P1*V1);
+			
+	ANSWER += "w = "+round2(w)+" J.<br>";
+	ANSWER += "q = "+round2(q)+" J.<br>";
+	ANSWER += "&Delta;U = "+round2(deltaU)+" J.<br>";
+    ANSWER += "&Delta;H = "+round2(deltaH)+" J.<br><br>";
     
 }
 
 
 //----------------------------------------------------- PROCESO ISOCORICO
-function prob_ex3_isocorico(op)
+function prob_ex3_proc_isocorico()
 {
-    
-    if(op===1)        
-    {
-    
-        while(1)
-        {
-            var T1 = irand(10,800); //°C
-            var T2 = irand(10,800); //°C
-            if(Math.abs(T1-T2) >= 200.0) break;
-        }
-        var R = 8.314;
-        var V = irand(20,50);
-        var Cp = irand(15,50); //J/K
-        var Cv = Cp - R;
 
-        
-        QUESTION += "Un mol de gas ideal (C<sub>p</sub> = "+Cp+" J/K) ocupa "+V+" dm<sup>3</sup> a "+T1+" °C. ";
-        QUESTION += "El gas se somete a un proceso isocórico mientras que la temperatura de los alrededores es de "+T2+" °C. ";
-        QUESTION += "Calcular (en kJ) el cambio en la energía interna del gas.<br>";
-        QUESTION += "<br>";
+    var n = irand(2,5);
+	var Ts = irand(10,300);
+	var Ta = irand(10,300);
+	var R = 8.314;
+    var V = irand(20,50);
+	if(irand(1,2)===1)
+		{var C = 3.0/2.0*R;}
+	else
+		{var C = 5.0/2.0*R;}	
 
-        T1 = T1 + 273.15;
-        T2 = T2 + 273.15;
-        
-        var q = Cv*(T2 - T1);
-        var deltaU = q;
-        
-        ANSWER += "&Delta;U = "+round2(deltaU/1000.0)+" kJ.<br>";
-        ANSWER += "<br>";
-
-
-    }
-    
-    if(op===2)
-    {
-        
-        var T2 = irand(10,900); //°C
-        var q = irand(1,10); //kJ     
-        var Cv = irand(15,50); //J/K
-        
-        QUESTION += "Un mol de gas ideal (C<sub>v</sub> = "+Cv+" J/K) se somete a un proceso isocórico. ";
-        QUESTION += "La temperatura de los alrededores es de "+T2+" °C. ";
-        QUESTION += "Calcular (en °C) la temperatura necesaria para que el gas absorba "+q+" kJ en forma de calor.<br>";
-        QUESTION += "<br>";        
-        
-        q = q*1000.0; //J
-        T2 = T2 + 273.15; //K
-        
-        T1 = T2 - q/Cv; //K
-        T1 = T1 - 273.15; //°C
-
-        ANSWER += "T1 = "+round4(T1)+" °C.<br>";
-        ANSWER += "<br>";
-        
-    }
-
-	if(op===3)
-	{
-		var V = irand(1,9)*10.0; //dm**3
-		while(1)
-		{
-			var T1 = irand(1,600); //°C
-			var T2 = irand(1,600); //°C
-			if( Math.abs(T1 - T2) > 30) break;
-		}
-        
-        if(T2 > T1) 
-            {var deltaU = irand(1,9)*10.0;} //kJ
-        else
-            {var deltaU = -irand(1,9)*10.0;} //kJ
+    var P1 = 0.08206*(Ts+273.15)/V; //atm
+    var P2 = 0.08206*(Ta+273.15)/V; //atm
 		
-        QUESTION += "Un mol de gas ideal, a "+T1+" °C, se somete a un proceso isocórico ("+V+" dm<sup>3</sup>) ";
-        QUESTION += "cuando sus alrededores se encuentran a "+T2+" °C. ";
-        QUESTION += "Calcular (en J/mol K) la capacidad calorífica molar a presión constante del gas ";
-        QUESTION += "si su cambio de energía interna fue de "+deltaU+" kJ. <br>";
-        QUESTION += "<br>";
-        
-        var q = deltaU*1000.0;
-        var R = 8.314; //J/molK
-        
-        T1 = T1 + 273.15;
-        T2 = T2 + 273.15;
-        
-        var Cv = q/(T2 - T1);                
-        var Cp = R + Cv;
-        
-		ANSWER += "C<sub>p</sub> = "+round2(Cp)+" J/K.<br>";
-        ANSWER += "<br>";
+    
+	QUESTION += n + " mol de gas ideal (C<sub>v</sub> = "+C+" J/K) ocupan "+V+" L a "+Ts+" °C y "+round2(P1)+" atm. ";
+	QUESTION += "El gas se somete a un proceso isocórico mientras que la temperatura de los alrededores es de "+Ta+" °C. ";
+	QUESTION += "Calcular el trabajo, el calor, el cambio en la energía interna y el cambio de Entalpía.<br>";
+	QUESTION += "<br>";
+
+	Ts = Ts + 273.15;
+	Ta = Ta + 273.15;
+    
+    V = V/1000.0; //m3
+    
+    P1 = P1*101325.0; //Pa
+    P2 = P2*101325.0; //Pa
+
+	var q = C*(Ta - Ts);
+	var w = 0;
+	var deltaU = q + w;
+    var deltaH = deltaU + V*(P2-P1);
 			
-	}
+	ANSWER += "w = "+w+" J.<br>";
+	ANSWER += "q = "+round2(q)+" J.<br>";
+	ANSWER += "&Delta;U = "+round2(deltaU)+" J.<br>";
+    ANSWER += "&Delta;H = "+round2(deltaH)+" J.<br><br>";
     
 }
 
 //----------------------------------------------------- PROCESO ISOBARICO
-function prob_ex3_isobarico(op)
+function prob_ex3_proc_isobarico()
 {
-    
-	if(op===1)
+	
+	if(irand(1,2)===1) //EXPANSION
 	{
-		var P = irand(1,9)*100.0; //kPa
+		var R = 0.08206; 
+		var P = irand(1,10);
+		var n = irand(1,5);		
 		while(1)
 		{
-			var V1 = irand(1,50); //dm**3
-			var V2 = irand(1,50); //dm**3
-			if( Math.abs(V2 - V1) > 20 ) break;
+			var V1 = irand(1,50);
+			var V2 = irand(1,50);
+			if( V2 > V1) break;
 		}
+		var T1 = P*V1/(n*R);
+		var T2 = P*V2/(n*R);
 		
-		var Cp = irand(15,50); //J/K
+		var T1_C = round2(T1 - 273.15);
+		var T2_C = round2(T2 - 273.15);
+		var V1_m3 = V1/1000.0;
+		var V2_m3 = V2/1000.0;
+		var P_Pa = P*101325.0;
 		
-        QUESTION += "Un mol de gas ideal (C<sub>p</sub> = "+Cp+" J/K) se somete a un proceso isobárico ("+P+" kPa). ";
-        QUESTION += "El volumen del gas cambia desde "+V1+" dm<sup>3</sup> hasta "+V2+" dm<sup>3</sup>. ";
-        QUESTION += "Calcular (en kJ) el trabajo asociado al proceso.<br>";
-        QUESTION += "<br>";
-
-        var w = -1000*P * (V2/1000.0 - V1/1000.0) / 1000.0; //kJ.
-        		
-		ANSWER += "w = "+round4(w)+" kJ.<br>";
-        ANSWER += "<br>";
+		var w = round2(-P_Pa * (V2_m3 - V1_m3));
+		var q = round2(-rand(1,3)*w);
+		var deltaU = round2(w + q);
+        var deltaH = q;
+		
+		if(irand(1,2)===1)
+		{			
+			QUESTION += "Un gas ideal ("+n+" mol) se somete a un proceso isobárico ("+P+" atm). ";
+			QUESTION += "El volumen inicial es de "+V1+" L y el final de "+V2+" L. ";
+			QUESTION += "El gas absorbe "+q+" J en forma de calor durante el proceso. ";
+			QUESTION += "Calcular el trabajo, el calor, el cambio en la energía interna y el cambio de entalpía.<br>";
+			QUESTION += "<br>";
+		}
+		else
+		{
+			QUESTION += "Un gas ideal ("+n+" mol) se somete a un proceso isobárico ("+P+" atm). ";
+			QUESTION += "La temperatura inicial es de "+T1_C+" °C y la final de "+T2_C+" °C. ";
+			QUESTION += "El gas absorbe "+q+" J en forma de calor durante el proceso. ";
+			QUESTION += "Calcular el trabajo, el calor, el cambio en la energía interna y el cambio de entalpía.<br>";
+			QUESTION += "<br>";
+		}
+				
+		ANSWER += "w = "+w+" J.<br>";
+		ANSWER += "q = "+q+" J.<br>";
+		ANSWER += "&Delta;U = "+deltaU+" J.<br>";
+        ANSWER += "&Delta;H = "+deltaH+" J.<br><br>";
 			
 	}
-
-	if(op===2)
+	else // COMPRESION
 	{
-		var P = irand(1,9)*100.0; //kPa
-        var T2 = irand(5,20); //°C
-        var q = irand(1,9)*10.0; //kJ
-		var Cp = irand(15,50); //J/K
-		
-        QUESTION += "Un mol de gas ideal (C<sub>p</sub> = "+Cp+" J/K) se somete a un proceso isobárico ("+P+" kPa). ";
-        QUESTION += "La temperatura de los alrededores es de "+T2+" °C. ";
-        QUESTION += "Calcular (en °C) la temperatura del gas necesaria para que libere "+q+" kJ en forma de calor.<br>";
-        QUESTION += "<br>";
-
-        T2 = T2 + 273.15;//K
-        q = q*1000.0;//J
-        
-        T1 = q/Cp + T2;
-        T1 = T1 - 273.15; //°C
-        		
-		ANSWER += "T1 = "+round2(T1)+" °C.<br>";
-        ANSWER += "<br>";
-			
-	}
-
-	
-	if(op===3)
-	{
-		var P = irand(1,9)*100.0; //kPa
+		var R = 0.08206; 
+		var P = irand(1,10);
+		var n = irand(1,5);		
 		while(1)
 		{
-			var T1 = irand(1,600); //°C
-			var T2 = irand(1,600); //°C
-			if( Math.abs(T1 - T2) > 30) break;
+			var V1 = irand(1,50);
+			var V2 = irand(1,50);
+			if( V2 < V1) break;
 		}
-        
-        if(T2 > T1) 
-            {var deltaH = irand(1,9)*10.0;} //kJ
-        else
-            {var deltaH = -irand(1,9)*10.0;} //kJ
+		var T1 = P*V1/(n*R);
+		var T2 = P*V2/(n*R);
 		
-        QUESTION += "Un mol de gas ideal, a "+T1+" °C, se somete a un proceso isobárico ("+P+" kPa) ";
-        QUESTION += "cuando sus alrededores se encuentran a "+T2+" °C. ";
-        QUESTION += "Calcular (en J/K) la capacidad calorífica a volumen constante del gas ";
-        QUESTION += "si su cambio de entalpía fue de "+deltaH+" kJ. <br>";
-        QUESTION += "<br>";
-        
-        var q = deltaH*1000.0;
-        var R = 8.314; //J/molK
-        
-        T1 = T1 + 273.15;
-        T2 = T2 + 273.15;
-        
-        var Cp = q/(T2 - T1);                
-        var Cv = Cp - R;
-        
-		ANSWER += "C<sub>v</sub> = "+round2(Cv)+" J/K.<br>";
-        ANSWER += "<br>";
-			
+		var T1_C = round2(T1 - 273.15);
+		var T2_C = round2(T2 - 273.15);
+		var V1_m3 = V1/1000.0;
+		var V2_m3 = V2/1000.0;
+		var P_Pa = P*101325.0;
+		
+		var w = round2(-P_Pa * (V2_m3 - V1_m3));
+		var q = round2(-rand(1,3)*w);
+		var deltaU = round2(w + q);
+        var deltaH = q;
+		
+		if(irand(1,2)===1)
+		{			
+			QUESTION += "Un gas ideal ("+n+" mol) se somete a un proceso isobárico ("+P+" atm). ";
+			QUESTION += "El volumen inicial es de "+V1+" L y el final de "+V2+" L. ";
+			QUESTION += "El gas pierde "+-q+" J en forma de calor durante el proceso. ";
+			QUESTION += "Calcular el trabajo, el calor, el cambio en la energía interna y el cambio de entalpía.<br>";
+			QUESTION += "<br>";
+		}
+		else
+		{
+			QUESTION += "Un gas ideal ("+n+" mol) se somete a un proceso isobárico ("+P+" atm). ";
+			QUESTION += "La temperatura inicial es de "+T1_C+" °C y la final de "+T2_C+" °C. ";
+			QUESTION += "El gas pierde "+-q+" J en forma de calor durante el proceso. ";
+			QUESTION += "Calcular el trabajo, el calor, el cambio en la energía interna y el cambio de entalpía.<br>";
+			QUESTION += "<br>";
+		}
+				
+		ANSWER += "w = "+w+" J.<br>";
+		ANSWER += "q = "+q+" J.<br>";
+		ANSWER += "&Delta;U = "+deltaU+" J.<br>";
+        ANSWER += "&Delta;H = "+deltaH+" J.<br><br>";
 	}
-	
 		
 		
     
 }
 
-
 //----------------------------------------------------- PROCESO ISOTERMICO
-function prob_ex3_isotermico(op)
+function prob_ex3_proc_isotermico()
 {
     
-    if(op===1)
+    var rnd = irand(1,2);
+    
+    if(rnd===1)
     {
         while(1)
         {
-            var P1 = irand(1,10)*10.0; //kPa
-            var P2 = irand(1,10)*10.0; //kPa
-            if(Math.abs(P1-P2)>=20) break;
+            var P1 = irand(1,10);
+            var P2 = irand(1,10);
+            if(Math.abs(P1-P2)>=2) break;
         }
 
-        var T = irand(25,400); //°C
+        var V1 = 1;
+        var V2 = 1;
+        var n = irand(2,5);
+        var R = 8.314;
+        var T = irand(25,400);
+        var w = 0;
+        var w_ = 0;
+        var q = 0;
+        var deltaU = 0;
+        var deltaH = 0;
 
-        QUESTION += "Un mol de gas ideal se somete a un proceso isotérmico ("+T+" °C). "
-        QUESTION += "La presión del gas cambia desde "+P1+" kPa hasta "+P2+" kPa. "
-        QUESTION += "Calcular (en kJ) la transferencia de calor.<br>";
+        QUESTION += "Un gas ideal ("+n+" mol) se somete a un proceso isotérmico ("+T+" °C). "
+        QUESTION += "La presión inicial es de "+P1+" atm y la final de "+P2+" atm. "
+        QUESTION += "Calcular el trabajo, el calor, el cambio en la energía interna y el cambio de Entalpía.<br>";
         QUESTION += "<br>";
 
         T = T + 273.15;
-        R = 8.314; 
-        var w = -1*R*T*Math.log(P1/P2)/1000.0; //kJ
-        var q = -w;
-
-        ANSWER += "q = "+round4(q)+" kJ.<br>";
+        P1 = P1*101325.0; //Pa
+        P2 = P2*101325.0; //Pa
+        V1 = n * R * T / P1; //m3
+        V2 = n * R * T / P2; //m3
+        w = -n * R * T * Math.log(P1/P2); // J
+        q = -w;
+        deltaU = 0;
+        deltaH = 0.0; //deltaU + (P1*V1 - P2*V2);
+        
+            
+        ANSWER += "w = "+round2(w)+" J.<br>";
+        ANSWER += "q = "+round2(q)+" J.<br>";
+        ANSWER += "&Delta;U = "+deltaU+" J.<br>";
+        ANSWER += "&Delta;H = "+deltaH+" J.<br>";
         ANSWER += "<br>";
     }
 
-    if(op===2)
+    if(rnd===2)
     {
-        
-        var V1 = irand(1,10)*100; //dm**3
-        var V2 = V1 + irand(1,10)*100; //dm**3
+        while(1)
+        {
+            var V1 = irand(1,40);
+            var V2 = irand(1,40);
+            if(Math.abs(V1-V2)>=5) break;
+        }
 
+        var P1 = 1;
+        var P2 = 1;
+        var n = irand(2,5);
         var R = 8.314;
-        var T = irand(25,800); //°C
-        var w = -1*R*(T+273.15)*Math.log(V2/V1);
+        var T = irand(25,400);
+        var w = 0;
+        var w_ = 0;
+        var q = 0;
+        var deltaU = 0;
+        var deltaH = 0;
 
-        QUESTION += "Un mol de gas ideal se somete a un proceso de expansión isotérmica ("+T+" °C) ";
-        QUESTION += "generando "+round4(-w/1000.0)+" kJ de trabajo. ";
-        QUESTION += "Al final del proceso, el volumen del gas es de "+V2+" dm<sup>3</sup>. "
-        QUESTION += "Calcular (en dm<sup>3</sup>) el volumen del gas antes del proceso.<br>";
+        QUESTION += "Un gas ideal ("+n+" mol) se somete a un proceso isotérmico ("+T+" °C). "
+        QUESTION += "El volumen inicial es de "+V1+" L y el final de "+V2+" L. "
+        QUESTION += "Calcular el trabajo, el calor, el cambio en la energía interna y el cambio de Entalpía.<br>";
         QUESTION += "<br>";
 
-        ANSWER += "V1 = "+V1+" dm<sup>3</sup>.<br>";
+        T = T + 273.15;
+        V1 = V1/1000.0; //m3
+        V2 = V2/1000.0; //m3
+        P1 = n * R * T / V1; //Pa
+        P2 = n * R * T / V2; //Pa
+        w = -n * R * T * Math.log(V2/V1); // J
+        q = -w;
+        deltaU = 0;
+        deltaH = 0; //deltaU + (P1*V1 - P2*V2);
+            
+        ANSWER += "w = "+round2(w)+" J.<br>";
+        ANSWER += "q = "+round2(q)+" J.<br>";
+        ANSWER += "&Delta;U = "+deltaU+" J.<br>";
+        ANSWER += "&Delta;H = "+deltaH+" J.<br>";
         ANSWER += "<br>";
     }
 
-    if(op===3)
-    {
-        
-        var V1 = irand(1,10)*100; //dm**3
-        var V2 = V1 + irand(1,10)*100; //dm**3
 
-        var R = 8.314;
-        var T = irand(200,800); //K
-        var w = -1*R*T*Math.log(V2/V1);
-
-        QUESTION += "Un mol de gas ideal ocupa "+V1+" dm<sup>3</sup>. ";
-        QUESTION += "Calcular (en dm<sup>3</sup>) el cambio de volumen necesario para que ";
-        QUESTION += "el gas produzca "+round4(-w/1000.0)+" kJ de trabajo en un proceso isotérmico ("+T+" K). <br>";
-        QUESTION += "<br>";
-
-        var deltaV = V2 - V1;
-        
-        ANSWER += "&Delta;V = "+deltaV+" dm<sup>3</sup>.<br>";
-        ANSWER += "<br>";
-    }
-
-    if(op===4)
-    {
-        
-        var V2 = irand(1,10)*100; //dm**3
-        var V1 = V2 + irand(1,10)*100; //dm**3
-
-        var R = 8.314;
-        var T = irand(200,800); //°C
-        var w = -1*R*(T+273.15)*Math.log(V2/V1);
-        var q = -w;
-
-        QUESTION += "Un mol de gas ideal se somete a un proceso isotérmico. ";
-        QUESTION += "Su volumen cambia desde "+V1+" dm<sup>3</sup> hasta "+V2+" dm<sup>3</sup>. ";
-        QUESTION += "Calcular (en °C) la temperatura necesaria para que ";
-        QUESTION += "el gas libere "+round4(-q/1000.0)+" kJ de calor. <br>";
-        QUESTION += "<br>";
-        
-        ANSWER += "T = "+T+" °C.<br>";
-        ANSWER += "<br>";
-    }
     
 }
 

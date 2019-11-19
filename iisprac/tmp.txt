@@ -1,0 +1,60 @@
+//----------------------------------------------------- LEY DE BOYLE
+function prob_ex2_vanderwaals()
+{
+    var rnd = irand(1,4);
+    var NAME;
+    var a;
+    var b;
+    var T;
+    var P,
+    var R=0.08206;
+    var n=1;
+    var V;
+    
+    if(rnd===1)
+    {
+        NAME = "Ar";
+        a = 1.337;
+        b = 3.20e-2;
+    }
+
+    if(rnd===2)
+    {
+        NAME = "CO2";
+        a = 3.61;
+        b = 4.29e-2;
+    }
+    
+    if(rnd===3)
+    {
+        NAME = "He";
+        a = 0.0341;
+        b = 2.38e-2;
+    }
+    
+    if(rnd===4)
+    {
+        NAME = "Xe";
+        a = 4.137;
+        b = 5.16e-2;
+    }
+
+    P = rand(5,15)*10;
+    T = rand(50,100)*10;
+    
+
+    QUESTION += "Calcular el volumen (mediante la ecuación de van der Waals) de 1 mol de "+NAME+" a "+P+" atm y "+P+" K. ";
+    QUESTION += "<i>a</i>" = +a+" atm L<sup>2</sup> / mol<sup>2</sup>. ";
+    QUESTION += "<i>b</i>" = +b+" L / mol. ";
+    QUESTION += "¿Cuál es la presión final (en kPa) del gas?<br>";
+    QUESTION += "<br>";
+
+    V = n*R*T/P;
+
+
+    ANSWER += V + " L.<br>";
+    ANSWER += "<br>";
+
+    
+}
+
