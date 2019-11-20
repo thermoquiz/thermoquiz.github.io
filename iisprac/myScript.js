@@ -1164,11 +1164,27 @@ function ex_4_problemas()
 
     QUESTION += "<b>Problema 3:</b><br><br>"
     ANSWER += "<b>Respuesta 3:</b><br>"
-    prob_ex4_cambio_fase(irand(1,7));
+    prob_ex4_cambio_fase(irand(1,13));
 
     QUESTION += "<b>Problema 4:</b><br><br>"
     ANSWER += "<b>Respuesta 4:</b><br>"
-    prob_ex4_proc_quim(irand(1,6));
+    prob_ex4_proc_quim(irand(1,8));
+
+    QUESTION += "<b>Problema 5:</b><br><br>"
+    ANSWER += "<b>Respuesta 5:</b><br>"
+    prob_ex4_eficiencia(irand(1,7));
+
+    QUESTION += "<b>Problema 6:</b><br><br>"
+    ANSWER += "<b>Respuesta 6:</b><br>"
+    prob_ex4_delta_s_sist(irand(1,4));
+
+    QUESTION += "<b>Problema 7:</b><br><br>"
+    ANSWER += "<b>Respuesta 7:</b><br>"
+    prob_ex4_cambio_fase(irand(1,13));
+
+    QUESTION += "<b>Problema 8:</b><br><br>"
+    ANSWER += "<b>Respuesta 8:</b><br>"
+    prob_ex4_proc_quim(irand(1,8));
     
 }
 
@@ -1313,6 +1329,53 @@ function prob_ex4_proc_quim(op)
         ANSWER += "<br>";       
         
     }
+
+    if(op===7)        
+    {
+        
+        var dH = -566.0; //kJ/mol
+        var m = irand(1,9)*100.0; //g
+        var M = 12 + 16;
+        var n = m/M;
+        
+        QUESTION += "Considera el siguiente proceso químico:";
+        QUESTION += "<br>";
+        QUESTION += "2CO<sub>2</sub> + O<sub>2</sub> &rarr; 2CO<sub>2</sub>; &Delta;H = &minus;566.0 kJ/mol";
+        QUESTION += "<br>";
+        QUESTION += "Calcular (en kJ) el calor producido cuando se consumen "+m+" g de CO.";
+        QUESTION += "<br>";
+        QUESTION += "<br>";
+        
+        var q = n*dH/2.0;
+
+        ANSWER += "q = "+round2(q)+" kJ.<br>";
+        ANSWER += "<br>";        
+        
+    }
+    
+    if(op===8)        
+    {
+        
+        var dH = -566.0; //kJ/mol
+        var q = -1000.0*irand(1,9); 
+        var M = 32;
+        
+        QUESTION += "Considera el siguiente proceso químico:";
+        QUESTION += "<br>";
+        QUESTION += "2CO<sub>2</sub> + O<sub>2</sub> &rarr; 2CO<sub>2</sub>; &Delta;H = &minus;566.0 kJ/mol";
+        QUESTION += "<br>";
+        QUESTION += "Calcular los gramos necesarios de O<sub>2</sub> para producir "+q+" kJ de calor.";
+        QUESTION += "<br>";
+        QUESTION += "<br>";
+        
+        n = q / dH;
+        
+        m = n*M;
+
+        ANSWER += "masa de O<sub>2</sub> = "+round2(m)+" g.<br>";
+        ANSWER += "<br>";       
+        
+    }
     
 }
 
@@ -1330,9 +1393,8 @@ function prob_ex4_cambio_fase(op)
 
         QUESTION += "Cierta sustancia hierve a "+Tevap+" °C y 1 atm. El calor de evaporación de dicha sustancia es ";
         QUESTION += "de "+qevap+" kJ/mol. ";
-        QUESTION += "Calcular (en J/mol K) los cambios de entropía (molares) para las transiciones: <br>";
+        QUESTION += "Calcular (en J/mol K) los cambios de entropía (molares) para la transición: <br>";
         QUESTION += "a) líquido &rarr; vapor .<br>";
-        QUESTION += "b) vapor &rarr; líquido .<br>";
         QUESTION += "<br>";
 
         Tevap += 273.15;
@@ -1341,7 +1403,6 @@ function prob_ex4_cambio_fase(op)
         var dScond = qcond*1000/Tevap;
         
         ANSWER += "&Delta;S<sub>sist, liq &rarr; vap</sub> = "+round2(dSevap)+" J/mol K.<br>";
-        ANSWER += "&Delta;S<sub>sist, vap &rarr; liq</sub> = "+round2(-dSevap)+" J/mol K.<br>";
         ANSWER += "<br>";
 
     }    
@@ -1353,11 +1414,10 @@ function prob_ex4_cambio_fase(op)
         var qevap = irand(20,99); //calor evaporación
         var qcond = -qevap; //calor de condensación
 
-        QUESTION += "Una sustancia desconocida tiene un calor de evaporación ";
+        QUESTION += "Cierta sustancia hierve a "+Tevap+" °C y 1 atm. El calor de evaporación de dicha sustancia es ";
         QUESTION += "de "+qevap+" kJ/mol. ";
-        QUESTION += "Si dicha sustancia hierve a "+Tevap+" °C y 1 atm, calcular (en J/mol K): <br>";
-        QUESTION += "a) el &Delta;S de condensación. <br>";
-        QUESTION += "a) el &Delta;S de evaporación. <br>";
+        QUESTION += "Calcular (en J/mol K) los cambios de entropía (molares) para la transición: <br>";
+        QUESTION += "a) vapor &rarr; líquido .<br>";
         QUESTION += "<br>";
 
         Tevap += 273.15;
@@ -1365,13 +1425,60 @@ function prob_ex4_cambio_fase(op)
         var dSevap = qevap*1000/Tevap;
         var dScond = qcond*1000/Tevap;
         
-        ANSWER += "&Delta;S<sub>sist, liq &rarr; vap</sub> = "+round2(dSevap)+" J/mol K.<br>";
-        ANSWER += "&Delta;S<sub>sist, vap &rarr; liq</sub> = "+round2(dScond)+" J/mol K.<br>";
+        ANSWER += "&Delta;S<sub>sist, vap &rarr; liq</sub> = "+round2(-dSevap)+" J/mol K.<br>";
+        ANSWER += "<br>";
+
+    }    
+    
+    
+    if(op===3)        
+    {
+    
+        var Tevap = irand(50,99); // temp ebullicion
+        var qevap = irand(20,99); //calor evaporación
+        var qcond = -qevap; //calor de condensación
+
+        QUESTION += "Una sustancia desconocida tiene un calor de evaporación ";
+        QUESTION += "de "+qevap+" kJ/mol. ";
+        QUESTION += "Si dicha sustancia hierve a "+Tevap+" °C y 1 atm, calcular (en J/mol K) <br>";
+        QUESTION += " el &Delta;S de condensación. <br>";
+        QUESTION += "<br>";
+
+        Tevap += 273.15;
+        
+        var dSevap = qevap*1000/Tevap;
+        var dScond = qcond*1000/Tevap;
+        
+        ANSWER += "&Delta;S<sub>sist, cond</sub> = "+round2(dScond)+" J/mol K.<br>";
         ANSWER += "<br>";
 
     } 
 
-    if(op===3)        
+    if(op===4)        
+    {
+    
+        var Tevap = irand(50,99); // temp ebullicion
+        var qevap = irand(20,99); //calor evaporación
+        var qcond = -qevap; //calor de condensación
+
+        QUESTION += "Una sustancia desconocida tiene un calor de evaporación ";
+        QUESTION += "de "+qevap+" kJ/mol. ";
+        QUESTION += "Si dicha sustancia hierve a "+Tevap+" °C y 1 atm, calcular (en J/mol K) <br>";
+        QUESTION += " el &Delta;S de evaporación. <br>";
+        QUESTION += "<br>";
+
+        Tevap += 273.15;
+        
+        var dSevap = qevap*1000/Tevap;
+        var dScond = qcond*1000/Tevap;
+        
+        ANSWER += "&Delta;S<sub>sist, evap</sub> = "+round2(dSevap)+" J/mol K.<br>";
+        ANSWER += "<br>";
+
+    }     
+    
+    
+    if(op===5)        
     {
     
         var Tevap = irand(50,99); // temp ebullicion
@@ -1394,7 +1501,7 @@ function prob_ex4_cambio_fase(op)
 
     } 
 
-    if(op===4)        
+    if(op===6)        
     {
     
         var Tevap = 100.0; // temp ebullicion
@@ -1405,9 +1512,8 @@ function prob_ex4_cambio_fase(op)
 
         QUESTION += "Para hervir (a 100 °C y 1 atm) 1 mol de agua líquida ";
         QUESTION += "se necesitan "+qevap+" kJ de calor. <br>";
-        QUESTION += "Calcular: <br>";
-        QUESTION += "a) el calor (en kJ) necesario para hervir "+m+" g de agua líquida. <br>";
-        QUESTION += "b) el cambio de entropía (en J/K) del agua durante el proceso. <br>";
+        QUESTION += "Calcular ";
+        QUESTION += "el calor (en kJ) necesario para hervir "+m+" g de agua líquida. <br>";
         QUESTION += "<br>";
 
         Tevap += 273.15;
@@ -1417,12 +1523,39 @@ function prob_ex4_cambio_fase(op)
         var dSevap = q*1000/Tevap;
         
         ANSWER += "q = "+round2(q)+" kJ.<br>";
+        ANSWER += "<br>";
+
+    } 
+
+    if(op===7)        
+    {
+    
+        var Tevap = 100.0; // temp ebullicion
+        var qevap = 40.585; //calor evaporación kJ/mol
+        var qcond = -qevap; //calor de condensación
+        var m = irand(1,9)*100; //g
+        var n = m/18.0;
+
+        QUESTION += "Para hervir (a 100 °C y 1 atm) 1 mol de agua líquida ";
+        QUESTION += "se necesitan "+qevap+" kJ de calor. <br>";
+        QUESTION += "Calcular ";
+        QUESTION += "el cambio de entropía (en J/K) resultante cuando se evaporan "+m+" g de agua líquida. <br>";
+        QUESTION += "<br>";
+
+        Tevap += 273.15;
+        
+        var q = n*qevap;
+        
+        var dSevap = q*1000/Tevap;
+        
         ANSWER += "&Delta;S<sub>sist, liq &rarr; vap</sub> = "+round2(dSevap)+" J/K.<br>";
         ANSWER += "<br>";
 
     } 
 
-    if(op===5)        
+    
+    
+    if(op===8)        
     {
     
         var Tevap = 100.0; // temp ebullicion
@@ -1433,9 +1566,8 @@ function prob_ex4_cambio_fase(op)
 
         QUESTION += "Para hervir (a 100 °C y 1 atm) 1 mol de agua líquida ";
         QUESTION += "se necesitan "+qevap+" kJ de calor. ";
-        QUESTION += "Calcular: <br>";
-        QUESTION += "a) el calor (en kJ) necesario para condensar "+m+" g de vapor de agua. <br>";
-        QUESTION += "b) el cambio de entropía (en J/K) del agua durante el proceso. <br>";
+        QUESTION += "Calcular ";
+        QUESTION += "el calor (en kJ) necesario para condensar "+m+" g de vapor de agua. <br>";
         QUESTION += "<br>";
 
         Tevap += 273.15;
@@ -1445,12 +1577,37 @@ function prob_ex4_cambio_fase(op)
         var dScond = q*1000/Tevap;
         
         ANSWER += "q = "+round2(q)+" kJ.<br>";
-        ANSWER += "&Delta;S<sub>sist, vap &rarr; liq</sub> = "+round2(dScond)+" J/K.<br>";
         ANSWER += "<br>";
 
     } 
 
-    if(op===6)        
+    if(op===9)        
+    {
+    
+        var Tevap = 100.0; // temp ebullicion
+        var qevap = 40.585; //calor evaporación kJ/mol
+        var qcond = -qevap; //calor de condensación
+        var m = irand(1,9)*100; //g
+        var n = m/18.0;
+
+        QUESTION += "Para hervir (a 100 °C y 1 atm) 1 mol de agua líquida ";
+        QUESTION += "se necesitan "+qevap+" kJ de calor. ";
+        QUESTION += "Calcular ";
+        QUESTION += "el cambio de entropía (en J/K) resultante cuando se condensan "+m+" g de vapor de agua. <br>";
+        QUESTION += "<br>";
+
+        Tevap += 273.15;
+        
+        var q = n*qcond;
+        
+        var dScond = q*1000/Tevap;
+        
+        ANSWER += "&Delta;S<sub>sist, vap &rarr; liq</sub> = "+round2(dScond)+" J/K.<br>";
+        ANSWER += "<br>";
+
+    } 
+    
+    if(op===10)        
     {
     
         var Tfus = 0.0; // temp fusion
@@ -1461,9 +1618,8 @@ function prob_ex4_cambio_fase(op)
 
         QUESTION += "Para fundir (a 0 °C y 1 atm) 1 mol de agua sólida (hielo) ";
         QUESTION += "se necesitan "+qfus+" kJ de calor. <br>";
-        QUESTION += "Calcular: <br>";
-        QUESTION += "a) el calor (en kJ) necesario para fundir "+m+" g de agua sólida. <br>";
-        QUESTION += "b) el cambio de entropía (en J/K) del agua durante el proceso. <br>";
+        QUESTION += "Calcular ";
+        QUESTION += "el calor (en kJ) necesario para fundir "+m+" g de agua sólida. <br>";
         QUESTION += "<br>";
 
         Tfus += 273.15;
@@ -1473,12 +1629,11 @@ function prob_ex4_cambio_fase(op)
         var dSfus = q*1000/Tfus;
         
         ANSWER += "q = "+round2(q)+" kJ.<br>";
-        ANSWER += "&Delta;S<sub>sist, sol &rarr; liq</sub> = "+round2(dSfus)+" J/K.<br>";
         ANSWER += "<br>";
 
     } 
 
-    if(op===7)        
+    if(op===11)        
     {
     
         var Tfus = 0.0; // temp fusion
@@ -1489,9 +1644,33 @@ function prob_ex4_cambio_fase(op)
 
         QUESTION += "Para fundir (a 0 °C y 1 atm) 1 mol de agua sólida (hielo) ";
         QUESTION += "se necesitan "+qfus+" kJ de calor. <br>";
-        QUESTION += "Calcular: <br>";
-        QUESTION += "a) el calor (en kJ) necesario para congelar "+m+" g de agua líquida. <br>";
-        QUESTION += "b) el cambio de entropía (en J/K) del agua durante el proceso. <br>";
+        QUESTION += "Calcular el cambio de entropía (en J/K) resultante cuando se funden "+m+" g de agua sólida. <br>";
+        QUESTION += "<br>";
+
+        Tfus += 273.15;
+        
+        var q = n*qfus;
+        
+        var dSfus = q*1000/Tfus;
+
+        ANSWER += "&Delta;S<sub>sist, sol &rarr; liq</sub> = "+round2(dSfus)+" J/K.<br>";
+        ANSWER += "<br>";
+
+    } 
+    
+    if(op===12)        
+    {
+    
+        var Tfus = 0.0; // temp fusion
+        var qfus = 6.0; // calor fusion kJ/mol
+        var qsol = -qfus; //calor de solidificación (congelacion)
+        var m = irand(1,9)*100; //g
+        var n = m/18.0;
+
+        QUESTION += "Para fundir (a 0 °C y 1 atm) 1 mol de agua sólida (hielo) ";
+        QUESTION += "se necesitan "+qfus+" kJ de calor. <br>";
+        QUESTION += "Calcular: ";
+        QUESTION += "el calor (en kJ) necesario para congelar "+m+" g de agua líquida. <br>";
         QUESTION += "<br>";
 
         Tfus += 273.15;
@@ -1501,10 +1680,37 @@ function prob_ex4_cambio_fase(op)
         var dSsol = q*1000/Tfus;
         
         ANSWER += "q = "+round2(q)+" kJ.<br>";
+        ANSWER += "<br>";
+
+    } 
+
+    if(op===13)        
+    {
+    
+        var Tfus = 0.0; // temp fusion
+        var qfus = 6.0; // calor fusion kJ/mol
+        var qsol = -qfus; //calor de solidificación (congelacion)
+        var m = irand(1,9)*100; //g
+        var n = m/18.0;
+
+        QUESTION += "Para fundir (a 0 °C y 1 atm) 1 mol de agua sólida (hielo) ";
+        QUESTION += "se necesitan "+qfus+" kJ de calor. <br>";
+        QUESTION += "Calcular: ";
+        QUESTION += "el cambio de entropía (en J/K) resultante cuando se congelan "+m+" g de agua líquida. <br>";
+        QUESTION += "<br>";
+
+        Tfus += 273.15;
+        
+        var q = n*qsol;
+        
+        var dSsol = q*1000/Tfus;
+        
         ANSWER += "&Delta;S<sub>sist, sol &rarr; liq</sub> = "+round2(dSsol)+" J/K.<br>";
         ANSWER += "<br>";
 
     } 
+    
+    
     
 }
 
