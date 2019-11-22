@@ -1763,7 +1763,7 @@ function prob_ex4_delta_s_sist(op)
         var Cp = irand(15,50); //J/K
         var Cv = Cp - R;
 
-        QUESTION += "Un mol de gas ideal (C<sub>p</sub> = "+Cv+" J/K) ocupa "+V+" dm<sup>3</sup> a "+T1+" °C. ";
+        QUESTION += "Un mol de gas ideal (C<sub>p</sub> = "+Cp+" J/K) ocupa "+V+" dm<sup>3</sup> a "+T1+" °C. ";
         QUESTION += "El gas se somete a un proceso isobárico mientras que la temperatura de los alrededores es de "+T2+" °C. ";
         QUESTION += "Calcular (en J/K) el cambio en la entropía del sistema.<br>";
         QUESTION += "<br>";
