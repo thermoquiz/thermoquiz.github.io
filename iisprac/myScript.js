@@ -687,6 +687,139 @@ function HacerPreguntas_ex3()
 }
 
 
+//----------------------------------------------------- EX_4_CONCEPTOS
+function HacerPreguntas_ex4()
+{
+    
+    var P = [];
+    var R = [];
+    var rnd = 1;
+
+    //-------------------------------------------- 
+    
+    P[1] = "El enunciado de Clausius asegura que es imposible construir una máquina que sólo transfiere calor desde una región a baja temperatura a una región de alta temperatura.";
+    R[1] = "V"
+
+    P[2] = "El enunciado de Clausius asegura que es imposible construir una máquina térmica que transforme todo el calor de entrada en trabajo.";
+    R[2] = "F"
+
+    P[3] = "El enunciado de Kelvin-Planck asegura que es imposible construir una máquina térmica que transforme todo el calor de entrada en trabajo.";
+    R[3] = "V"
+
+    P[4] = "El enunciado de Kelvin-Planck asegura que es imposible construir una máquina que sólo transfiere calor desde una región a baja temperatura a una región de alta temperatura.";
+    R[4] = "F"
+    
+    P[5] = "Una máquina de movimiento perpetuo (del primer tipo) asegura producir trabajo sin necesitar energía de entrada.";
+    R[5] = "V"
+
+    P[6] = "Una máquina de movimiento perpetuo (del primer tipo) asegura transformar el 100% del calor de entrada en trabajo útil.";
+    R[6] = "F"
+    
+    P[7] = "Una máquina de movimiento perpetuo (del segundo tipo) asegura transformar el 100% del calor de entrada en trabajo útil.";
+    R[7] = "V"
+
+    P[8] = "Una máquina de movimiento perpetuo (del segundo tipo) asegura producir trabajo sin necesitar energía de entrada.";
+    R[8] = "F"
+    
+    P[9] = "El cambio en la energía libre de Helmholtz representa el trabajo total asociado al proceso.";
+    R[9] = "V"
+
+    P[10] = "El cambio en la energía libre de Gibbs representa el trabajo total asociado al proceso.";
+    R[10] = "F"
+
+    P[11] = "La entropía del universo aumenta durante un proceso espontáneo.";
+    R[11] = "V"
+
+    P[12] = "La entropía del universo disminuye durante un proceso espontáneo.";
+    R[12] = "F"
+
+    P[13] = "La energía libre de Gibbs disminuye durante un proceso espontáneo.";
+    R[13] = "V"
+
+    P[14] = "La energía libre de Gibbs aumenta durante un proceso espontáneo.";
+    R[14] = "F"
+
+    P[15] = "La energía libre de Helmholtz disminuye durante un proceso espontáneo.";
+    R[15] = "V"
+
+    P[16] = "La energía libre de Helmholtz aumenta durante un proceso espontáneo.";
+    R[16] = "F"    
+
+    P[17] = "Todos los procesos naturales son irreversibles.";
+    R[17] = "V"
+
+    P[18] = "Todos los procesos naturales son reversibles.";
+    R[18] = "F"
+
+    P[19] = "Si la entropía total aumenta, entonces la energía libre disminuye.";
+    R[19] = "V"
+
+    P[20] = "Si la entropía total aumenta, entonces la energía libre aumenta.";
+    R[20] = "F"    
+
+    P[21] = "El ciclo de Carnot consta de 4 etapas.";
+    R[21] = "V"
+
+    P[22] = "El ciclo de Carnot consta de 5 etapas.";
+    R[22] = "F"
+
+    P[23] = "dG = dH - TdS; a presión y temperatura constantes.";
+    R[23] = "V"
+
+    P[24] = "dG = dU - TdS; a presión y temperatura constantes.";
+    R[24] = "F"
+
+    P[25] = "dA = dU - TdS; a presión y temperatura constantes.";
+    R[25] = "V"
+
+    P[26] = "dA = dH - TdS; a presión y temperatura constantes.";
+    R[26] = "F"
+
+    P[27] = "La máquina térmica más eficiente es la máquina de Carnot.";
+    R[27] = "V"
+
+    P[28] = "Es posible construir una máquina térmica que opere con el 100% de eficiencia.";
+    R[28] = "F"
+    
+    P[29] = "Todo proceso se detiene al llegar al cero absoluto de temperatura.";
+    R[29] = "V"
+
+    P[30] = "Es posible alcanzar el cero absoluto de temperatura mediante una serie finita de procesos.";
+    R[30] = "F"
+    
+
+    //----------------------------------------------------
+    
+    var MAX = 30;
+       
+    if(contador===1)
+    {
+        rnd = irand(1,MAX);
+        registro[contador] = rnd;
+    }
+    else
+    {
+        while(1)
+        {
+            rnd = irand(1,MAX);
+            if(registro.includes(rnd)===false)
+            {
+                registro[contador] = rnd;
+                break;
+            }
+        }
+    }
+    contador += 1;
+
+
+    LaPregunta = P[rnd];
+    LaRespuesta = R[rnd];
+    
+    console.log(contador, registro);
+    
+}
+
+
 //----------------------------------------------------- EX_2_CONCEPTOS
 function HacerPreguntas_ex2()
 {
@@ -1136,9 +1269,27 @@ function ex_3_problemas()
 function ex_4_conceptos()
 {
 
-    QUESTION = "Proximamente :D"
+
+    contador = 0;
+    registro = [];
+
+    QUESTION  = "<center><b>Cuarto Examen Parcial de Termodinámica: Conceptos.</b></center><br>";
+    QUESTION += "<center>Prof. Octavio Juárez.</center><br>";
+    QUESTION += "<b>Instrucciones:</b> Contesta ¿Falso o Verdadero?<br>"
+    ANSWER = "<center><b>Respuestas</b></center><br>"
     
-    ANSWER = "Ten paciencia! :V"
+    QUESTION +="<ol>";
+    ANSWER +="<ol>";
+    
+    for(var i=0;i<20;i++)
+    {
+        HacerPreguntas_ex4()
+        QUESTION +="<li>" + LaPregunta + "<br><br>";
+        ANSWER   +="<li>" + LaRespuesta + "<br><br>";  
+    }
+    
+    QUESTION +="</ol>";
+    ANSWER += "</ol>";
 
 
     
