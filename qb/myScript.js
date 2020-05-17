@@ -39,7 +39,7 @@ function iniciar(){
 
 	contador = 0;
 	numero_de_preguntas = 20; 
-	tiempo_maximo = numero_de_preguntas*2;
+	tiempo_maximo = numero_de_preguntas*20;
 	tiempo_restante = tiempo_maximo;
 	
 	nombre_del_estudiante = document.getElementById("nombre_del_estudiante").value;
