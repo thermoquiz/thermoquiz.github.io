@@ -53,8 +53,8 @@ function start(){
 	isgameover = false;
 
 	uname = document.getElementById("student_name").value;
-	console.log(uname);
-	console.log(uname.length);
+	// console.log(uname);
+	// console.log(uname.length);
 
 	document.getElementById("user_name").style.display = "none";
 	document.getElementById("buttons").style.display = "block";
@@ -226,7 +226,7 @@ function round2(num) {
 //------------------------------------------------------------------------------
 function showAns(){
 	
-	console.log(ii, ANS);
+	//console.log(ii, ANS);
 
 	var trueANS = "";
 
