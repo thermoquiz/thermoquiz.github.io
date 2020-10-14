@@ -26,9 +26,9 @@ var z1,z2,z3,z4; //fakes
 var act=22;
 var uname;
 var ii=1; //contador
-var iimax=25; //num de preguntas
+var iimax=20; //num de preguntas
 var maxtleft=iimax*60;
-var pnts=4;
+var pnts=5;
 var tleft=maxtleft;
 var isgameover=false;
 
@@ -87,12 +87,14 @@ function play(){
 //------------------------------------------------------------------------------
 function test(){
 
-	let op = rndi(1,4);
+	// let op = rndi(1,4);
 
-	if(op===1)  isocorico(rndi(1,3)); 	
-	if(op===2) isotermico(rndi(1,5));
-	if(op===3)  isobarico(rndi(1,4));
-	if(op===4) adiabatico(rndi(1,4));
+	// if(op===1)  isocorico(rndi(1,3)); 	
+	// if(op===2) isotermico(rndi(1,5));
+	// if(op===3)  isobarico(rndi(1,4));
+	// if(op===4) adiabatico(rndi(1,4));
+
+	isocorico(rndi(1,3));
 
 }
 
@@ -275,7 +277,7 @@ function isotermico(op)
 
         T = rndi(25,400); //°C
 
-        QTN  = "Un mol de gas ideal se somete a un proceso isotérmico ("+T+" °C). ";
+        QTN  = "Un mol de gas ideal se somete a un proceso isotérmico reversible ("+T+" °C). ";
         QTN += "El volumen del gas cambia desde "+V1+" L hasta "+V2+" L. ";
         QTN += "Calcular el trabajo asociado al proceso.<br>";
         QTN += "<br>";
@@ -299,7 +301,7 @@ function isotermico(op)
 
         T = rndi(25,400); //°C
 
-        QTN  = "Un mol de gas ideal se somete a un proceso isotérmico ("+T+" °C). ";
+        QTN  = "Un mol de gas ideal se somete a un proceso isotérmico reversible ("+T+" °C). ";
         QTN += "La presión del gas cambia desde "+P1+" kPa hasta "+P2+" kPa. ";
         QTN += "Calcular el trabajo asociado al proceso.<br>";
         QTN += "<br>";
@@ -324,7 +326,7 @@ function isotermico(op)
 
         T = rndi(25,400); //°C
 
-        QTN  = "Un mol de gas ideal se somete a un proceso isotérmico ("+T+" °C). ";
+        QTN  = "Un mol de gas ideal se somete a un proceso isotérmico reversible ("+T+" °C). ";
         QTN += "El volumen del gas cambia desde "+V1+" L hasta "+V2+" L. ";
         QTN += "Calcular el calor asociado al proceso.<br>";
         QTN += "<br>";
@@ -349,7 +351,7 @@ function isotermico(op)
 
         T = rndi(25,400); //°C
 
-        QTN  = "Un mol de gas ideal se somete a un proceso isotérmico ("+T+" °C). ";
+        QTN  = "Un mol de gas ideal se somete a un proceso isotérmico reversible ("+T+" °C). ";
         QTN += "La presión del gas cambia desde "+P1+" kPa hasta "+P2+" kPa. ";
         QTN += "Calcular el calor asociado al proceso.<br>";
         QTN += "<br>";
@@ -377,7 +379,7 @@ function isotermico(op)
 		
 		if(coin()===1){
 
-			QTN  = "Un mol de gas ideal se somete a un proceso isotérmico ("+T+" °C). ";
+			QTN  = "Un mol de gas ideal se somete a un proceso isotérmico reversible ("+T+" °C). ";
 			QTN += "El volumen se duplica durante el proceso.";
 			QTN += "Calcular el trabajo asociado al proceso.<br>";
 			QTN += "<br>";
@@ -391,7 +393,7 @@ function isotermico(op)
 			
 		}else{
 			
-			QTN  = "Un mol de gas ideal se somete a un proceso isotérmico ("+T+" °C). ";
+			QTN  = "Un mol de gas ideal se somete a un proceso isotérmico reversible ("+T+" °C). ";
 			QTN += "El volumen se triplica durante el proceso. ";
 			QTN += "Calcular el trabajo asociado al proceso.<br>";
 			QTN += "<br>";
